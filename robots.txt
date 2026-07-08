@@ -1,5 +1,5 @@
-# Robots.txt for itziai.com
+# Robots.txt for itzigroup.com
 User-agent: *
 Allow: /
 
-Sitemap: https://itziai.com/sitemap.xml
+Sitemap: https://itzigroup.com/sitemap.xml
