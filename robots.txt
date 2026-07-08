@@ -1,0 +1,5 @@
+# Robots.txt for itziai.com
+User-agent: *
+Allow: /
+
+Sitemap: https://itziai.com/sitemap.xml

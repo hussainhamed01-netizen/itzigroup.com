@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ItziGroup — Tech For Future | AI, Apps & Innovation</title>
+    <meta name="description" content="ItziGroup — Tech For Future. We build cutting-edge AI-powered apps, tools, and digital experiences. Explore our projects, apps, and connect with us.">
+    <meta name="keywords" content="ItziGroup, itziai, tech, AI, apps, innovation, future technology">
+    <meta name="author" content="ItziGroup">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a0a">
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io;">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="ItziGroup — Tech For Future">
+    <meta property="og:description" content="We build cutting-edge AI-powered apps, tools, and digital experiences.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://itziai.com">
+    <meta property="og:image" content="https://itziai.com/assets/logo.png">
+    <meta property="og:site_name" content="ItziGroup">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ItziGroup — Tech For Future">
+    <meta name="twitter:description" content="We build cutting-edge AI-powered apps, tools, and digital experiences.">
+    <meta name="twitter:image" content="https://itziai.com/assets/logo.png">
+    <link rel="canonical" href="https://itziai.com">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <img src="assets/logo.png" alt="ItziGroup Logo" class="logo-img">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#apps" class="nav-link">Apps</a>
+                <a href="#connect" class="nav-link">Connect</a>
+                <a href="#contact" class="nav-link nav-cta">Get In Touch</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Tech For Future</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">We Build The</span>
+                <span class="title-line title-gradient">Future of Tech</span>
+            </h1>
+            <p class="hero-subtitle">
+                ItziGroup is where innovation meets execution. We craft AI-powered apps, 
+                digital experiences, and next-generation tools that push boundaries.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">
+                    <span>Explore Our Work</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="#about" class="btn btn-secondary">
+                    <span>Learn More</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Projects Built</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Apps Launched</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1000">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Users Reached</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Us</span>
+                <h2 class="section-title">Driven by <span class="text-gradient">Innovation</span></h2>
+                <p class="section-subtitle">We're a tech collective passionate about building the tools and experiences of tomorrow.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card" data-aos="fade-up">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Leveraging cutting-edge AI to create intelligent solutions that learn, adapt, and evolve with your needs.</p>
+                </div>
+                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                    </div>
+                    <h3>App Development</h3>
+                    <p>Building beautiful, performant mobile and web applications that users love and businesses rely on.</p>
+                </div>
+                <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Digital Innovation</h3>
+                    <p>Pushing the boundaries of what's possible in tech, from concept to reality, with a relentless drive to innovate.</p>
+                </div>
+                <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <h3>Global Reach</h3>
+                    <p>Our solutions are designed for a global audience, breaking barriers and connecting people across the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Work</span>
+                <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+                <p class="section-subtitle">A showcase of our latest innovations and builds. Each project represents our commitment to excellence.</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card project-card-featured" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-view">View Project →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">Web App</span>
+                        </div>
+                        <h3>Project Name</h3>
+                        <p>A brief description of this amazing project and what it does. Coming soon with full details.</p>
+                        <a href="#" class="project-link">Learn More 
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-view">View Project →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Mobile</span>
+                            <span class="tag">iOS</span>
+                        </div>
+                        <h3>Project Name</h3>
+                        <p>Another incredible project showcase. Details will be updated soon.</p>
+                        <a href="#" class="project-link">Learn More 
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-view">View Project →</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Tool</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                        <h3>Project Name</h3>
+                        <p>An automation tool that simplifies complex workflows. More info coming.</p>
+                        <a href="#" class="project-link">Learn More 
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-cta">
+                <p>More projects are being built every day.</p>
+                <a href="#contact" class="btn btn-outline">Have an idea? Let's talk →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apps Section -->
+    <section class="section apps" id="apps">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Apps</span>
+                <h2 class="section-title">Apps We've <span class="text-gradient">Launched</span></h2>
+                <p class="section-subtitle">Download and experience our applications. Built with passion, designed for performance.</p>
+            </div>
+            <div class="apps-grid">
+                <!-- App Card 1 — ItziPDF -->
+                <div class="app-card" data-aos="fade-up">
+                    <div class="app-icon-wrapper">
+                        <div class="app-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        </div>
+                    </div>
+                    <h3>ItziPDF</h3>
+                    <p class="app-description">A smart, powerful PDF tool built by ItziGroup. Edit, merge, convert, and manage your PDFs with ease — all in one app.</p>
+                    <div class="app-meta">
+                        <span class="app-platform">📄 PDF Tool</span>
+                        <span class="app-status status-dev">● Coming Soon</span>
+                    </div>
+                    <div class="app-actions">
+                        <a href="#contact" class="btn btn-small btn-outline">Get Notified</a>
+                    </div>
+                </div>
+                <!-- App Card 2 — Coming Soon -->
+                <div class="app-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="app-icon-wrapper">
+                        <div class="app-icon app-icon-coming">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                    </div>
+                    <h3>More Coming Soon</h3>
+                    <p class="app-description">Something exciting is in the works. Stay tuned for our next big releases from ItziGroup.</p>
+                    <div class="app-meta">
+                        <span class="app-platform">🚀 Coming Soon</span>
+                        <span class="app-status status-dev">● In Development</span>
+                    </div>
+                    <div class="app-actions">
+                        <a href="#contact" class="btn btn-small btn-outline">Get Notified</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connect / Social Section -->
+    <section class="section connect" id="connect">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Stay Connected</span>
+                <h2 class="section-title">Find Us <span class="text-gradient">Everywhere</span></h2>
+                <p class="section-subtitle">Follow our journey across platforms. We share updates, behind-the-scenes, and more.</p>
+            </div>
+            <div class="social-grid">
+                <!-- Twitter/X -->
+                <a href="#" class="social-card" data-aos="fade-up" target="_blank" rel="noopener noreferrer">
+                    <div class="social-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </div>
+                    <div class="social-info">
+                        <h3>X (Twitter)</h3>
+                        <p>@ItziGroup</p>
+                    </div>
+                    <span class="social-arrow">→</span>
+                </a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/itzigroup/" class="social-card" data-aos="fade-up" data-aos-delay="50" target="_blank" rel="noopener noreferrer">
+                    <div class="social-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                    </div>
+                    <div class="social-info">
+                        <h3>Instagram</h3>
+                        <p>@itzigroup</p>
+                    </div>
+                    <span class="social-arrow">→</span>
+                </a>
+                <!-- LinkedIn -->
+                <a href="#" class="social-card" data-aos="fade-up" data-aos-delay="100" target="_blank" rel="noopener noreferrer">
+                    <div class="social-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </div>
+                    <div class="social-info">
+                        <h3>LinkedIn</h3>
+                        <p>ItziGroup</p>
+                    </div>
+                    <span class="social-arrow">→</span>
+                </a>
+                <!-- YouTube -->
+                <a href="#" class="social-card" data-aos="fade-up" data-aos-delay="150" target="_blank" rel="noopener noreferrer">
+                    <div class="social-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                    </div>
+                    <div class="social-info">
+                        <h3>YouTube</h3>
+                        <p>ItziGroup</p>
+                    </div>
+                    <span class="social-arrow">→</span>
+                </a>
+                <!-- GitHub -->
+                <a href="#" class="social-card" data-aos="fade-up" data-aos-delay="200" target="_blank" rel="noopener noreferrer">
+                    <div class="social-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                    </div>
+                    <div class="social-info">
+                        <h3>GitHub</h3>
+                        <p>ItziGroup</p>
+                    </div>
+                    <span class="social-arrow">→</span>
+                </a>
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=61591652615538" class="social-card" data-aos="fade-up" data-aos-delay="250" target="_blank" rel="noopener noreferrer">
+                    <div class="social-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </div>
+                    <div class="social-info">
+                        <h3>Facebook</h3>
+                        <p>ItziGroup</p>
+                    </div>
+                    <span class="social-arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">Get In Touch</span>
+                    <h2 class="section-title">Let's Build <span class="text-gradient">Together</span></h2>
+                    <p>Have an idea? Want to collaborate? Or just want to say hi? We'd love to hear from you. Reach out and let's create something extraordinary.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <span>itzigroup12@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            <span>itziai.com</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Let's collaborate!">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your idea..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="ItziGroup Logo" class="footer-logo">
+                    <p>Tech For Future — Building tomorrow's technology, today.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navigation</h4>
+                        <a href="#hero">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#apps">Apps</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Connect</h4>
+                        <a href="https://www.instagram.com/itzigroup/" target="_blank">Instagram</a>
+                        <a href="https://www.facebook.com/profile.php?id=61591652615538" target="_blank">Facebook</a>
+                        <a href="#" target="_blank">LinkedIn</a>
+                        <a href="#" target="_blank">GitHub</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>More</h4>
+                        <a href="#contact">Contact</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ItziGroup. All rights reserved.</p>
+                <p class="footer-domain">itziai.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
