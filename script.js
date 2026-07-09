@@ -263,7 +263,9 @@ function initCountUp() {
             if (entry.isIntersecting) {
                 const el = entry.target;
                 const target = parseInt(el.getAttribute('data-target'));
-                animateCount(el, target);
+                if (!isNaN(target)) {
+                    animateCount(el, target);
+                }
                 observer.unobserve(el);
             }
         });
