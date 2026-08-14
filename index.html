@@ -13,7 +13,7 @@
     <!-- Security Headers -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';">
 
     <!-- Open Graph / Social -->
     <meta property="og:title" content="ItziGroup — Tech For Future">
@@ -33,11 +33,8 @@
     <link rel="apple-touch-icon" href="assets/favicon.png">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260814">
 </head>
 <body>
     <!-- Cursor glow effect -->
@@ -239,25 +236,25 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Our Apps</span>
-                <h2 class="section-title">Apps We've <span class="text-gradient">Launched</span></h2>
-                <p class="section-subtitle">Download and experience our applications. Built with passion, designed for performance.</p>
+                <h2 class="section-title">Apps We're <span class="text-gradient">Building</span></h2>
+                <p class="section-subtitle">Preview the products taking shape at ItziGroup. Built with privacy, performance, and practical everyday use in mind.</p>
             </div>
             <div class="apps-grid">
                 <!-- App Card 1 — ItziPDF -->
-                <div class="app-card" data-aos="fade-up" style="cursor: pointer;" onclick="window.location.href='/itzipdf'">
+                <article class="app-card" data-aos="fade-up">
                     <div class="app-icon-wrapper">
                         <img src="assets/itzipdf-icon.png" alt="ItziPDF Icon" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover;">
                     </div>
                     <h3>ItziPDF</h3>
-                    <p class="app-description">A smart, powerful PDF tool built by ItziGroup. Edit, merge, convert, and manage your PDFs with ease — all in one app.</p>
+                    <p class="app-description">A local-first Android PDF workspace with bilingual English and Arabic support, a private document Library, reader tools, and everyday PDF processing in one app.</p>
                     <div class="app-meta">
-                        <span class="app-platform">📄 PDF Tool</span>
-                        <span class="app-status status-dev">● Coming Soon</span>
+                        <span class="app-platform">Android · v1.0.2 (build 3)</span>
+                        <span class="app-status status-beta">Pre-release</span>
                     </div>
                     <div class="app-actions">
                         <a href="/itzipdf" class="btn btn-small btn-outline">Learn More</a>
                     </div>
-                </div>
+                </article>
                 <!-- App Card 2 — Coming Soon -->
                 <div class="app-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="app-icon-wrapper">
@@ -268,8 +265,8 @@
                     <h3>More Coming Soon</h3>
                     <p class="app-description">Something exciting is in the works. Stay tuned for our next big releases from ItziGroup.</p>
                     <div class="app-meta">
-                        <span class="app-platform">🚀 Coming Soon</span>
-                        <span class="app-status status-dev">● In Development</span>
+                        <span class="app-platform">Future release</span>
+                        <span class="app-status status-dev">In development</span>
                     </div>
                     <div class="app-actions">
                         <a href="#contact" class="btn btn-small btn-outline">Get Notified</a>
@@ -367,15 +364,15 @@
                     </div>
                     <div class="footer-col">
                         <h4>Connect</h4>
-                        <a href="https://www.instagram.com/itzigroup/" target="_blank">Instagram</a>
-                        <a href="https://www.facebook.com/profile.php?id=61591652615538" target="_blank">Facebook</a>
+                        <a href="https://www.instagram.com/itzigroup/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://www.facebook.com/profile.php?id=61591652615538" target="_blank" rel="noopener noreferrer">Facebook</a>
                         <a href="https://x.com/ItziGroup" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
                     </div>
                     <div class="footer-col">
                         <h4>More</h4>
                         <a href="#contact">Contact</a>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
+                        <a href="/privacy">Website Privacy</a>
+                        <a href="/terms">Terms of Use</a>
                     </div>
                 </div>
             </div>
@@ -386,6 +383,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20260814"></script>
 </body>
 </html>

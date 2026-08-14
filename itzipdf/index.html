@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ItziPDF — Your Private PDF Workspace | ItziGroup</title>
-    <meta name="description" content="Manage everyday PDF tasks directly from your Android device with ItziPDF. Merge, split, convert, and protect tools in one simple app.">
+    <meta name="description" content="ItziPDF is a local-first Android PDF workspace with a private Library, reader tools, bilingual English and Arabic support, and practical PDF processing.">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0a0a0a">
 
@@ -24,11 +24,8 @@
     <link rel="icon" type="image/png" href="../assets/favicon.png">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles.css?v=20260814">
     <style>
         .app-hero {
             padding: 140px 0 80px;
@@ -82,10 +79,10 @@
             <a href="/" class="nav-logo">
                 <img src="../assets/logo.png" alt="ItziGroup Logo" class="logo-img">
             </a>
-            <div class="nav-links" id="navLinks">
+            <div class="subpage-nav-links">
                 <a href="/" class="nav-link">Home</a>
                 <a href="https://support.itzigroup.com" class="nav-link" target="_blank" rel="noopener noreferrer">Support</a>
-                <a href="mailto:itzigroup_support@itzigroup.com" class="nav-link nav-cta">Get In Touch</a>
+                <a href="mailto:itzigroup_support@itzigroup.com" class="nav-link nav-cta subpage-hide-mobile">Get In Touch</a>
             </div>
         </div>
     </nav>
@@ -96,11 +93,11 @@
             <img src="../assets/itzipdf-icon.png" alt="ItziPDF Icon" class="app-hero-icon">
             <h1 class="header-title">ItziPDF</h1>
             <p style="font-size: 24px; color: var(--grey-light); margin-bottom: 16px;">Your Private PDF Workspace</p>
-            <p>Manage everyday PDF tasks directly from your Android device. <br>ItziPDF brings essential PDF organization, conversion, editing, and protection tools into one simple bilingual application.</p>
+            <p>Manage, read, and organize PDFs directly on your Android device. <br>ItziPDF combines local-first processing, a private document Library, and complete English and Arabic interfaces in one practical workspace.</p>
             
             <div class="app-links">
-                <a href="#" class="btn btn-primary" onclick="alert('Coming soon to Android!')">Download for Android</a>
-                <a href="/itzipdf/privacy" class="btn btn-outline" style="border: 1px solid var(--grey-border); padding: 12px 28px; border-radius: 100px; color: var(--white); text-decoration: none;">Privacy Policy</a>
+                <span class="btn btn-primary btn-disabled" aria-disabled="true">Coming Soon on Android</span>
+                <a href="/itzipdf/privacy" class="btn btn-outline" style="border: 1px solid var(--grey-border); padding: 12px 28px; border-radius: 100px; color: var(--white); text-decoration: none;">App Privacy Policy</a>
             </div>
         </div>
     </section>
@@ -108,8 +105,8 @@
     <!-- Content -->
     <section class="content-section">
         <h2>What Is ItziPDF?</h2>
-        <p>ItziPDF is a local-first PDF toolkit created by Itzi Group. It helps students, professionals, businesses, and everyday users manage documents without relying on complicated desktop software.</p>
-        <p>No account is required. Supported tools process documents locally on your device, giving you greater privacy and control over your files.</p>
+        <p>ItziPDF is a local-first PDF toolkit created by ItziGroup. It helps students, professionals, businesses, and everyday users process, read, and organize documents without relying on complicated desktop software.</p>
+        <p>No account is required. The current pre-release build processes supported tools locally on your device, giving you greater privacy and control over your files.</p>
 
         <h3>What You Can Do</h3>
         <ul>
@@ -119,7 +116,9 @@
             <li>Compress PDF files</li>
             <li>Flatten PDF layers</li>
             <li>Remove hidden document metadata</li>
-            <li>Review PDFs opened from Android</li>
+            <li>Read PDFs with remembered page, bookmarks, view mode, rotation, and reading appearance</li>
+            <li>Keep completed PDFs in a private on-device Library</li>
+            <li>Review PDFs opened or shared from other Android apps</li>
             <li>Convert images into PDF</li>
             <li>Scan documents into PDF using your camera</li>
             <li>Convert written or pasted text into PDF</li>
@@ -127,12 +126,15 @@
             <li>Add customizable page numbers</li>
             <li>Protect PDFs with passwords</li>
             <li>Unlock PDFs when you know the password</li>
-            <li>Save or share processed documents</li>
+            <li>Save extra copies to a selected folder or share processed documents</li>
         </ul>
 
         <h3>Designed for Privacy</h3>
-        <p>Most available ItziPDF tools work locally. Your documents are not uploaded to Itzi Group servers when using local tools.</p>
-        <p>Files are accessed only after you select them. Temporary files may be stored in the app cache while processing and can be cleared through the app settings or Android system settings.</p>
+        <p>Available tools in the current pre-release build work locally. Your documents are not uploaded to ItziGroup servers.</p>
+        <p>Files are accessed only after you select them. Completed PDFs are kept in the app's private Library unless you delete them, clear app data, or uninstall the app. Temporary input files may be stored in the app cache while processing.</p>
+
+        <h3>Private Library and Reader</h3>
+        <p>Completed PDFs are automatically cataloged in the private ItziPDF Library with basic local details such as filename, tool, page count, size, and creation time. Reader progress and preferences are remembered locally for up to 200 recent documents. These Library details, reader records, and preferences are not uploaded to ItziGroup in this release.</p>
 
         <h3>Made for English and Arabic</h3>
         <p>ItziPDF includes complete English and Arabic interfaces, with proper right-to-left layout support for Arabic users.</p>
@@ -156,13 +158,14 @@
 
         <h3>Current Version</h3>
         <ul>
-            <li><strong>Version:</strong> 1.0.0</li>
-            <li><strong>Build:</strong> 1</li>
+            <li><strong>Version:</strong> 1.0.2</li>
+            <li><strong>Build:</strong> 3</li>
+            <li><strong>Status:</strong> Pre-release development build</li>
             <li><strong>Platform:</strong> Android</li>
             <li><strong>Languages:</strong> English and Arabic</li>
             <li><strong>Processing model:</strong> Local-first</li>
-            <li><strong>Developer:</strong> Itzi Group</li>
-            <li><strong>Last updated:</strong> July 2026</li>
+            <li><strong>Developer:</strong> ItziGroup</li>
+            <li><strong>Last updated:</strong> July 30, 2026</li>
         </ul>
 
         <h3>Coming Later</h3>
@@ -196,7 +199,9 @@
                     <div class="footer-col">
                         <h4>More</h4>
                         <a href="https://support.itzigroup.com" target="_blank" rel="noopener noreferrer">Support</a>
-                        <a href="/itzipdf/privacy">Privacy Policy</a>
+                        <a href="/itzipdf/privacy">App Privacy</a>
+                        <a href="/privacy">Website Privacy</a>
+                        <a href="/terms">Terms of Use</a>
                     </div>
                 </div>
             </div>

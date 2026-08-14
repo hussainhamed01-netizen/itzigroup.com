@@ -10,11 +10,8 @@
     <link rel="icon" type="image/png" href="../../assets/favicon.png">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../styles.css?v=20260814">
     <style>
         .privacy-hero {
             padding: 140px 0 40px;
@@ -54,8 +51,10 @@
             <a href="/" class="nav-logo">
                 <img src="../../assets/logo.png" alt="ItziGroup Logo" class="logo-img">
             </a>
-            <div class="nav-links">
+            <div class="subpage-nav-links">
                 <a href="/itzipdf" class="nav-link">← Back to ItziPDF</a>
+                <a href="/privacy" class="nav-link">Website Privacy</a>
+                <a href="/terms" class="nav-link subpage-hide-mobile">Terms</a>
             </div>
         </div>
     </nav>
@@ -71,12 +70,12 @@
     <!-- Content -->
     <section class="content-section">
         <h2>Developer and contact</h2>
-        <p>ItziPDF is provided by Itzi Group. For privacy or support questions:</p>
+        <p>ItziPDF is provided by ItziGroup. For privacy or support questions:</p>
         <ul>
             <li>Email: <a href="mailto:itzigroup_support@itzigroup.com">itzigroup_support@itzigroup.com</a></li>
             <li>Website: <a href="https://itzigroup.com">https://itzigroup.com</a></li>
             <li>Instagram: <a href="https://www.instagram.com/itzigroup/">https://www.instagram.com/itzigroup/</a></li>
-            <li>Facebook: <a href="https://www.facebook.com/profile.php?id=61591652615538">Itzi Group</a></li>
+            <li>Facebook: <a href="https://www.facebook.com/profile.php?id=61591652615538">ItziGroup</a></li>
             <li>X: <a href="https://x.com/ItziGroup">https://x.com/ItziGroup</a></li>
         </ul>
 
@@ -87,13 +86,13 @@
         <p>When you select PDFs, images, text, or camera scans, the app uses that data only to perform the tool you selected. Local tools process files on your device. Completed PDFs are automatically kept in the private ItziPDF Library with basic local catalog details such as filename, tool, page count, size, and creation time. You can choose to place an additional copy in a selected folder or share it with another app. If you open a PDF from another app using &ldquo;Open with,&rdquo; the chosen file is copied into app cache so it can be reviewed or processed.</p>
 
         <h2>Reader state and preferences</h2>
-        <p>The app locally remembers the last page you read, bookmarks, view mode, page rotation, and reading appearance for up to 200 recent documents. To recognize a reselected or renamed document, it stores a compact local fingerprint derived from file size and small beginning/end samples; the samples and PDF contents are not stored in the reader-state record. It also stores settings such as language, theme, and your selected output folder. Reader state, Library catalog details, and preferences are not uploaded to Itzi Group in this release.</p>
+        <p>The app locally remembers the last page you read, bookmarks, view mode, page rotation, and reading appearance for up to 200 recent documents. To recognize a reselected or renamed document, it stores a compact local fingerprint derived from file size and small beginning/end samples; the samples and PDF contents are not stored in the reader-state record. It also stores settings such as language, theme, and your selected output folder. Reader state, Library catalog details, and preferences are not uploaded to ItziGroup in this release.</p>
 
         <h2>Permissions</h2>
         <p>Camera permission is used only when you start Scan to PDF. File access is handled through Android&rsquo;s file picker or share/open flow, which gives ItziPDF access only to the items you select. If you select a custom output folder, Android&rsquo;s folder picker grants ongoing access to that folder so the app can create future copies there. When you switch back to the automatic Library or choose another folder, the app stops using the previous folder and asks Android to release its ongoing access; storage-provider behavior may prevent immediate revocation. Access may also end if the folder is moved or deleted or the app&rsquo;s permission is removed. ItziPDF does not request contacts, SMS, call log, microphone, location, or All files access permissions.</p>
 
         <h2>Cloud/API tools</h2>
-        <p>In this pre-backend release, tools marked as requiring backend or cloud support do not upload your files. If cloud tools are enabled later, such as Office conversion, OCR, AI features, or advanced repair, only files you deliberately choose will be uploaded over a secure connection such as HTTPS to Itzi Group or a disclosed service provider. Files will be retained only as long as needed to complete the job or meet limited legal requirements.</p>
+        <p>In this pre-backend release, tools marked as requiring backend or cloud support do not upload your files. If cloud tools are enabled later, such as Office conversion, OCR, AI features, or advanced repair, only files you deliberately choose will be uploaded over a secure connection such as HTTPS to ItziGroup or a disclosed service provider. Files will be retained only as long as needed to complete the job or meet limited legal requirements.</p>
 
         <h2>Ads and identifiers</h2>
         <p>The app may be funded by Google AdMob ads. When ads are enabled, the Google Mobile Ads SDK may collect or share the advertising ID, device and app information, ad interactions, diagnostics, and approximate information needed for advertising, fraud prevention, security, and measurement. You can reset or delete your advertising ID in Android settings.</p>
@@ -128,7 +127,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 ItziGroup. All rights reserved.</p>
-                <p class="footer-domain">itzigroup.com</p>
+                <p class="footer-domain"><a href="/privacy">Website Privacy</a> · <a href="/terms">Terms of Use</a></p>
             </div>
         </div>
     </footer>
