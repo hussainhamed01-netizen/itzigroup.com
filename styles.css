@@ -996,6 +996,7 @@ a {
 .app-actions {
     display: flex;
     gap: 12px;
+    flex-wrap: wrap;
 }
 
 /* ============================================

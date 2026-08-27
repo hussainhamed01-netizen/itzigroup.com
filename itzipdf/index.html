@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ItziPDF — Your Private PDF Workspace | ItziGroup</title>
-    <meta name="description" content="ItziPDF is a local-first Android PDF workspace with a private Library, reader tools, bilingual English and Arabic support, and practical PDF processing.">
+    <title>ItziPDF — Android PDF Editor | ItziGroup</title>
+    <meta name="description" content="Download ItziPDF on Google Play. Read, create, organize, protect, and process PDFs locally on Android in English or Arabic.">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0a0a0a">
 
@@ -13,8 +13,8 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <!-- Open Graph / Social -->
-    <meta property="og:title" content="ItziPDF — Your Private PDF Workspace">
-    <meta property="og:description" content="A local-first PDF toolkit for Android created by ItziGroup.">
+    <meta property="og:title" content="ItziPDF — Available on Google Play">
+    <meta property="og:description" content="A local-first Android PDF editor with 18 ready tools, a private Library, and complete English and Arabic interfaces.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://itzigroup.com/itzipdf">
     <meta property="og:image" content="https://itzigroup.com/assets/itzipdf-icon.png">
@@ -23,19 +23,38 @@
     <link rel="canonical" href="https://itzigroup.com/itzipdf">
     <link rel="icon" type="image/png" href="../assets/favicon.png">
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "ItziPDF",
+        "operatingSystem": "Android",
+        "applicationCategory": "ProductivityApplication",
+        "softwareVersion": "1.0.3",
+        "url": "https://itzigroup.com/itzipdf",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.itzigroup.itzipdf&pcampaignid=web_share",
+        "description": "A local-first Android PDF editor for reading, creating, organizing, protecting, and processing PDFs in English and Arabic.",
+        "author": {
+            "@type": "Organization",
+            "name": "ItziGroup",
+            "url": "https://itzigroup.com"
+        }
+    }
+    </script>
+
     <!-- Google Fonts -->
 
-    <link rel="stylesheet" href="../styles.css?v=20260814">
+    <link rel="stylesheet" href="../styles.css?v=20260827">
     <style>
         .app-hero {
-            padding: 140px 0 80px;
+            padding: 140px 0 64px;
             text-align: center;
         }
         .app-hero-icon {
             width: 120px;
             height: 120px;
             border-radius: 24px;
-            margin-bottom: 32px;
+            margin: 0 auto 32px;
             box-shadow: 0 20px 40px rgba(232, 122, 46, 0.2);
         }
         .content-section {
@@ -70,6 +89,166 @@
             flex-wrap: wrap;
             margin-top: 40px;
         }
+        .release-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            padding: 7px 15px;
+            border: 1px solid rgba(76, 175, 80, 0.35);
+            border-radius: 999px;
+            background: rgba(76, 175, 80, 0.08);
+            color: #7ed983;
+            font-family: var(--font-mono);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .release-pill::before {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #4caf50;
+            content: '';
+            box-shadow: 0 0 12px rgba(76, 175, 80, 0.65);
+        }
+        .app-hero-copy {
+            max-width: 760px;
+            margin: 0 auto;
+            color: var(--grey-light);
+        }
+        .store-meta {
+            margin-top: 18px;
+            color: var(--grey);
+            font-family: var(--font-mono);
+            font-size: 12px;
+        }
+        .play-store-button {
+            gap: 10px;
+        }
+        .play-store-button svg {
+            width: 18px;
+            height: 18px;
+            flex: 0 0 auto;
+        }
+        .app-showcase {
+            padding: 64px 0 88px;
+            overflow: hidden;
+            border-top: 1px solid var(--grey-border);
+            border-bottom: 1px solid var(--grey-border);
+            background: var(--black-soft);
+        }
+        .showcase-heading {
+            max-width: 700px;
+            margin: 0 auto 32px;
+            text-align: center;
+        }
+        .showcase-heading h2 {
+            margin-bottom: 12px;
+            font-size: clamp(30px, 5vw, 44px);
+        }
+        .showcase-heading p {
+            color: var(--grey-light);
+        }
+        .gallery-switcher {
+            text-align: center;
+        }
+        .gallery-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+        .gallery-language-tab {
+            display: inline-flex;
+            min-width: 104px;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            border: 1px solid var(--grey-border);
+            border-radius: 999px;
+            background: transparent;
+            color: var(--grey-light);
+            font: inherit;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        .gallery-language-tab:hover {
+            border-color: rgba(232, 122, 46, 0.45);
+            color: var(--white);
+        }
+        .gallery-language-tab:focus-visible {
+            outline: 2px solid var(--orange-light);
+            outline-offset: 3px;
+        }
+        .gallery-language-tab[aria-selected="true"] {
+            border-color: var(--orange);
+            background: var(--orange);
+            color: var(--black);
+            font-weight: 700;
+        }
+        .gallery-panels {
+            margin-top: 32px;
+        }
+        .gallery-panel[hidden] {
+            display: none;
+        }
+        .screenshot-rail {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 4px 4px 22px;
+            scroll-padding-inline: 4px;
+            scroll-snap-type: x mandatory;
+            scrollbar-color: var(--orange) var(--grey-border);
+            scrollbar-width: thin;
+            overscroll-behavior-inline: contain;
+        }
+        .screenshot-rail:focus-visible {
+            outline: 2px solid var(--orange-light);
+            outline-offset: 6px;
+        }
+        .screenshot-card {
+            flex: 0 0 clamp(230px, 24vw, 280px);
+            overflow: hidden;
+            margin: 0;
+            border: 1px solid var(--grey-border);
+            border-radius: 22px;
+            background: var(--black-card);
+            scroll-snap-align: start;
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+        }
+        .screenshot-card img {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            object-fit: contain;
+            background: #f4f4f4;
+        }
+        .screenshot-card figcaption {
+            padding: 14px 16px 16px;
+            color: var(--grey-light);
+            font-size: 14px;
+            text-align: left;
+        }
+        .gallery-panel-ar .screenshot-card figcaption {
+            text-align: right;
+        }
+        .gallery-hint {
+            margin-top: 14px;
+            color: var(--grey);
+            font-size: 13px;
+        }
+        @media (max-width: 640px) {
+            .app-showcase {
+                padding: 52px 0 68px;
+            }
+            .screenshot-card {
+                flex-basis: min(82vw, 320px);
+            }
+            .screenshot-rail {
+                gap: 14px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -91,13 +270,113 @@
     <section class="app-hero">
         <div class="container">
             <img src="../assets/itzipdf-icon.png" alt="ItziPDF Icon" class="app-hero-icon">
+            <div class="release-pill">Available on Google Play</div>
             <h1 class="header-title">ItziPDF</h1>
             <p style="font-size: 24px; color: var(--grey-light); margin-bottom: 16px;">Your Private PDF Workspace</p>
-            <p>Manage, read, and organize PDFs directly on your Android device. <br>ItziPDF combines local-first processing, a private document Library, and complete English and Arabic interfaces in one practical workspace.</p>
+            <p class="app-hero-copy">Read, create, organize, and protect PDFs directly on your Android device. ItziPDF combines 18 ready tools, local-first processing, a private document Library, and complete English and Arabic interfaces in one practical workspace.</p>
             
             <div class="app-links">
-                <span class="btn btn-primary btn-disabled" aria-disabled="true">Coming Soon on Android</span>
+                <a href="https://play.google.com/store/apps/details?id=com.itzigroup.itzipdf&amp;pcampaignid=web_share" class="btn btn-primary play-store-button" target="_blank" rel="noopener noreferrer" aria-label="Get ItziPDF on Google Play">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.3a1 1 0 0 1 1.53-.84l12.1 8.7a1 1 0 0 1 0 1.68l-12.1 8.7A1 1 0 0 1 5 20.7V3.3Z"/></svg>
+                    Get it on Google Play
+                </a>
                 <a href="/itzipdf/privacy" class="btn btn-outline" style="border: 1px solid var(--grey-border); padding: 12px 28px; border-radius: 100px; color: var(--white); text-decoration: none;">App Privacy Policy</a>
+            </div>
+            <p class="store-meta">Version 1.0.3 (build 4) · Android · English &amp; Arabic</p>
+        </div>
+    </section>
+
+    <!-- App Screenshots -->
+    <section class="app-showcase" aria-labelledby="app-screenshots-title">
+        <div class="container">
+            <div class="showcase-heading">
+                <span class="section-tag">Inside the app</span>
+                <h2 id="app-screenshots-title">A closer look at ItziPDF</h2>
+                <p>Explore the local PDF tools, reader, private Library, and sharing workflow in English or Arabic.</p>
+            </div>
+
+            <div class="gallery-switcher">
+                <div class="gallery-tabs" role="tablist" aria-label="Screenshot language">
+                    <button class="gallery-language-tab" id="screenshots-en" type="button" role="tab" aria-selected="true" aria-controls="gallery-panel-en" data-gallery-panel="gallery-panel-en">English</button>
+                    <button class="gallery-language-tab" id="screenshots-ar" type="button" role="tab" aria-selected="false" aria-controls="gallery-panel-ar" data-gallery-panel="gallery-panel-ar" tabindex="-1" lang="ar" dir="rtl">العربية</button>
+                </div>
+
+                <div class="gallery-panels">
+                    <div class="gallery-panel gallery-panel-en" id="gallery-panel-en" role="tabpanel" aria-labelledby="screenshots-en" lang="en">
+                        <div class="screenshot-rail" tabindex="0" aria-label="English ItziPDF screenshots">
+                            <figure class="screenshot-card">
+                                <img src="../assets/itzipdf/screenshots/en-US/01-local-pdf-editor.png" width="1080" height="1920" alt="ItziPDF home screen showing local-first PDF tools" decoding="async">
+                                <figcaption>Your PDF editor, on device</figcaption>
+                            </figure>
+                            <figure class="screenshot-card">
+                                <img src="../assets/itzipdf/screenshots/en-US/02-reader-workspace.png" width="1080" height="1920" alt="ItziPDF reader workspace with navigation and reading controls" loading="lazy" decoding="async">
+                                <figcaption>Reader workspace</figcaption>
+                            </figure>
+                            <figure class="screenshot-card">
+                                <img src="../assets/itzipdf/screenshots/en-US/03-reorder-page-ranges.png" width="1080" height="1920" alt="ItziPDF tool for reordering PDF pages and page ranges" loading="lazy" decoding="async">
+                                <figcaption>Reorder pages and ranges</figcaption>
+                            </figure>
+                            <figure class="screenshot-card">
+                                <img src="../assets/itzipdf/screenshots/en-US/04-text-to-pdf.png" width="1080" height="1920" alt="ItziPDF Text to PDF editor with formatting options" loading="lazy" decoding="async">
+                                <figcaption>Create PDFs from text</figcaption>
+                            </figure>
+                            <figure class="screenshot-card">
+                                <img src="../assets/itzipdf/screenshots/en-US/05-private-library.png" width="1080" height="1920" alt="ItziPDF private Library showing saved documents" loading="lazy" decoding="async">
+                                <figcaption>Private on-device Library</figcaption>
+                            </figure>
+                            <figure class="screenshot-card">
+                                <img src="../assets/itzipdf/screenshots/en-US/06-save-and-share.png" width="1080" height="1920" alt="ItziPDF options for saving and sharing a completed PDF" loading="lazy" decoding="async">
+                                <figcaption>Save and share results</figcaption>
+                            </figure>
+                            <figure class="screenshot-card">
+                                <img src="../assets/itzipdf/screenshots/en-US/07-first-run-tour.png" width="1080" height="1920" alt="ItziPDF first-run tour introducing the private workspace" loading="lazy" decoding="async">
+                                <figcaption>Helpful first-run tour</figcaption>
+                            </figure>
+                            <figure class="screenshot-card">
+                                <img src="../assets/itzipdf/screenshots/en-US/08-help-and-community.png" width="1080" height="1920" alt="ItziPDF help, sharing, rating, and feedback options" loading="lazy" decoding="async">
+                                <figcaption>Help and community</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="gallery-panel gallery-panel-ar" id="gallery-panel-ar" role="tabpanel" aria-labelledby="screenshots-ar" lang="ar" dir="rtl" hidden>
+                        <div class="screenshot-rail" tabindex="0" aria-label="لقطات شاشة ItziPDF باللغة العربية">
+                            <figure class="screenshot-card">
+                                <img src="../assets/itzipdf/screenshots/ar/01-local-pdf-editor.png" width="1080" height="1920" alt="واجهة ItziPDF العربية تعرض أدوات PDF المحلية" loading="lazy" decoding="async">
+                                <figcaption>محرر PDF على جهازك</figcaption>
+                            </figure>
+                            <figure class="screenshot-card">
+                                <img src="../assets/itzipdf/screenshots/ar/02-reader-workspace.png" width="1080" height="1920" alt="مساحة قارئ PDF باللغة العربية" loading="lazy" decoding="async">
+                                <figcaption>مساحة عمل القارئ</figcaption>
+                            </figure>
+                            <figure class="screenshot-card">
+                                <img src="../assets/itzipdf/screenshots/ar/03-reorder-page-ranges.png" width="1080" height="1920" alt="إعادة ترتيب صفحات ونطاقات PDF باللغة العربية" loading="lazy" decoding="async">
+                                <figcaption>إعادة ترتيب الصفحات والنطاقات</figcaption>
+                            </figure>
+                            <figure class="screenshot-card">
+                                <img src="../assets/itzipdf/screenshots/ar/04-text-to-pdf.png" width="1080" height="1920" alt="أداة تحويل النص إلى PDF باللغة العربية" loading="lazy" decoding="async">
+                                <figcaption>إنشاء PDF من النص</figcaption>
+                            </figure>
+                            <figure class="screenshot-card">
+                                <img src="../assets/itzipdf/screenshots/ar/05-private-library.png" width="1080" height="1920" alt="مكتبة ItziPDF الخاصة باللغة العربية" loading="lazy" decoding="async">
+                                <figcaption>مكتبة خاصة على الجهاز</figcaption>
+                            </figure>
+                            <figure class="screenshot-card">
+                                <img src="../assets/itzipdf/screenshots/ar/06-save-and-share.png" width="1080" height="1920" alt="خيارات حفظ ومشاركة ملفات PDF باللغة العربية" loading="lazy" decoding="async">
+                                <figcaption>حفظ النتائج ومشاركتها</figcaption>
+                            </figure>
+                            <figure class="screenshot-card">
+                                <img src="../assets/itzipdf/screenshots/ar/07-first-run-tour.png" width="1080" height="1920" alt="جولة الاستخدام الأول في ItziPDF باللغة العربية" loading="lazy" decoding="async">
+                                <figcaption>جولة استخدام أولى مفيدة</figcaption>
+                            </figure>
+                            <figure class="screenshot-card">
+                                <img src="../assets/itzipdf/screenshots/ar/08-help-and-community.png" width="1080" height="1920" alt="خيارات المساعدة والمشاركة والتقييم في ItziPDF باللغة العربية" loading="lazy" decoding="async">
+                                <figcaption>المساعدة والمجتمع</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <p class="gallery-hint" data-english="Swipe or scroll horizontally to explore all screenshots." data-arabic="اسحب أو مرّر أفقيا لاستعراض جميع لقطات الشاشة.">Swipe or scroll horizontally to explore all screenshots.</p>
             </div>
         </div>
     </section>
@@ -106,15 +385,15 @@
     <section class="content-section">
         <h2>What Is ItziPDF?</h2>
         <p>ItziPDF is a local-first PDF toolkit created by ItziGroup. It helps students, professionals, businesses, and everyday users process, read, and organize documents without relying on complicated desktop software.</p>
-        <p>No account is required. The current pre-release build processes supported tools locally on your device, giving you greater privacy and control over your files.</p>
+        <p>No account is required. The current release processes supported tools locally on your device, giving you greater privacy and control over your files.</p>
 
         <h3>What You Can Do</h3>
         <ul>
             <li>Merge multiple PDFs into one document</li>
-            <li>Split a PDF at custom page points</li>
+            <li>Split PDFs by page ranges, every page, or custom breaks</li>
             <li>Reorder, extract, remove, and rotate pages</li>
             <li>Compress PDF files</li>
-            <li>Flatten PDF layers</li>
+            <li>Flatten annotations and form fields for a more stable copy</li>
             <li>Remove hidden document metadata</li>
             <li>Read PDFs with remembered page, bookmarks, view mode, rotation, and reading appearance</li>
             <li>Keep completed PDFs in a private on-device Library</li>
@@ -122,7 +401,7 @@
             <li>Convert images into PDF</li>
             <li>Scan documents into PDF using your camera</li>
             <li>Convert written or pasted text into PDF</li>
-            <li>Add text watermarks</li>
+            <li>Add text or image watermarks</li>
             <li>Add customizable page numbers</li>
             <li>Protect PDFs with passwords</li>
             <li>Unlock PDFs when you know the password</li>
@@ -130,7 +409,7 @@
         </ul>
 
         <h3>Designed for Privacy</h3>
-        <p>Available tools in the current pre-release build work locally. Your documents are not uploaded to ItziGroup servers.</p>
+        <p>Available tools in the current release work locally. Your documents are not uploaded to ItziGroup servers.</p>
         <p>Files are accessed only after you select them. Completed PDFs are kept in the app's private Library unless you delete them, clear app data, or uninstall the app. Temporary input files may be stored in the app cache while processing.</p>
 
         <h3>Private Library and Reader</h3>
@@ -158,14 +437,14 @@
 
         <h3>Current Version</h3>
         <ul>
-            <li><strong>Version:</strong> 1.0.2</li>
-            <li><strong>Build:</strong> 3</li>
-            <li><strong>Status:</strong> Pre-release development build</li>
+            <li><strong>Version:</strong> 1.0.3</li>
+            <li><strong>Build:</strong> 4</li>
+            <li><strong>Status:</strong> Available on Google Play</li>
             <li><strong>Platform:</strong> Android</li>
             <li><strong>Languages:</strong> English and Arabic</li>
             <li><strong>Processing model:</strong> Local-first</li>
             <li><strong>Developer:</strong> ItziGroup</li>
-            <li><strong>Last updated:</strong> July 30, 2026</li>
+            <li><strong>Last updated:</strong> August 25, 2026</li>
         </ul>
 
         <h3>Coming Later</h3>
@@ -211,5 +490,48 @@
             </div>
         </div>
     </footer>
+    <script>
+        (() => {
+            const galleryTabs = Array.from(document.querySelectorAll('.gallery-language-tab'));
+            const galleryPanels = Array.from(document.querySelectorAll('.gallery-panel'));
+            const galleryHint = document.querySelector('.gallery-hint');
+
+            const activateGalleryTab = (activeTab) => {
+                galleryTabs.forEach((tab) => {
+                    const isActive = tab === activeTab;
+                    tab.setAttribute('aria-selected', String(isActive));
+                    tab.tabIndex = isActive ? 0 : -1;
+                });
+
+                galleryPanels.forEach((panel) => {
+                    panel.hidden = panel.id !== activeTab.dataset.galleryPanel;
+                });
+
+                const isArabic = activeTab.id === 'screenshots-ar';
+                galleryHint.textContent = isArabic ? galleryHint.dataset.arabic : galleryHint.dataset.english;
+                galleryHint.lang = isArabic ? 'ar' : 'en';
+                galleryHint.dir = isArabic ? 'rtl' : 'ltr';
+            };
+
+            galleryTabs.forEach((tab, index) => {
+                tab.addEventListener('click', () => activateGalleryTab(tab));
+                tab.addEventListener('keydown', (event) => {
+                    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+                    event.preventDefault();
+                    let nextTab;
+                    if (event.key === 'Home') {
+                        nextTab = galleryTabs[0];
+                    } else if (event.key === 'End') {
+                        nextTab = galleryTabs[galleryTabs.length - 1];
+                    } else {
+                        const direction = event.key === 'ArrowRight' ? 1 : -1;
+                        nextTab = galleryTabs[(index + direction + galleryTabs.length) % galleryTabs.length];
+                    }
+                    activateGalleryTab(nextTab);
+                    nextTab.focus();
+                });
+            });
+        })();
+    </script>
 </body>
 </html>
