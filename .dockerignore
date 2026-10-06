@@ -1,0 +1,10 @@
+# Only the downloader needs to go into the Docker build context.
+*
+!downloader/
+!downloader-api/
+!assets/fonts/
+!assets/logo.png
+!assets/favicon.png
+downloader-api/tests/
+**/__pycache__/
+**/*.pyc

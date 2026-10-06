@@ -1,0 +1,8 @@
+# Extraction engines. Update these often: platforms change their sites weekly.
+yt-dlp[default,curl-cffi]>=2026.8.19
+gallery-dl>=1.32.15
+
+# Web server
+fastapi>=0.142
+uvicorn[standard]>=0.54
+httpx>=0.28
