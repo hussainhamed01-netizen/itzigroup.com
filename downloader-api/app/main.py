@@ -157,13 +157,13 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         return JSONResponse({"error": body}, status_code=exc.status, headers=exc.headers)
 
     def client_ip(request: Request) -> str:
+        # Only trust entries our own proxies appended: anything further left came from
+        # the visitor and can be forged to dodge rate limits.
         if settings.trust_proxy:
-            for header in ("cf-connecting-ip", "x-real-ip"):
-                if request.headers.get(header):
-                    return request.headers[header].strip()
-            forwarded = request.headers.get("x-forwarded-for")
+            forwarded = [part.strip() for part in request.headers.get("x-forwarded-for", "").split(",")
+                         if part.strip()]
             if forwarded:
-                return forwarded.split(",")[0].strip()
+                return forwarded[-min(settings.trust_proxy, len(forwarded))]
         return request.client.host if request.client else "unknown"
 
     def limit(request: Request, bucket: str, per_minute: int) -> None:

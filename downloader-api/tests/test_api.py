@@ -72,6 +72,17 @@ def test_rate_limit(tmp_path):
         assert codes == [400, 400, 429]
 
 
+def test_forged_forwarded_for_does_not_dodge_rate_limit(tmp_path):
+    with make_client(tmp_path, rate_extract=2, trust_proxy=1) as client:
+        codes = [client.post("/api/extract", json={"url": "nope"},
+                             headers={"X-Forwarded-For": f"10.0.0.{i}, 203.0.113.7"}).status_code
+                 for i in range(3)]
+        assert codes == [400, 400, 429]
+        other = client.post("/api/extract", json={"url": "nope"},
+                            headers={"X-Forwarded-For": "203.0.113.8"})
+        assert other.status_code == 400
+
+
 def test_full_flow_with_page_metadata(tmp_path, site):
     with make_client(tmp_path, allow_private_networks=True) as client:
         response = client.post("/api/extract", json={"url": f"Look {site}/post.html !"})

@@ -34,6 +34,13 @@ def _list(name: str, default: list[str]) -> list[str]:
     return [part.strip() for part in raw.split(",") if part.strip()]
 
 
+def _proxy_hops() -> int:
+    raw = os.environ.get("TRUST_PROXY", "").strip().lower()
+    if raw in {"true", "yes", "on"}:
+        return 1
+    return max(0, _int("TRUST_PROXY", 0))
+
+
 @dataclass(frozen=True)
 class Settings:
     # Origins allowed to call the API from a browser (CORS). "*" allows any.
@@ -59,7 +66,9 @@ class Settings:
     max_extractions: int
     rate_extract: int
     rate_download: int
-    trust_proxy: bool
+    # Number of reverse proxies in front of the API (0 = none). Each one appends the
+    # address it saw to X-Forwarded-For, so the client is that many entries from the end.
+    trust_proxy: int
     allow_private_networks: bool
     js_runtimes: list[str]
 
@@ -106,7 +115,7 @@ def get_settings() -> Settings:
         max_extractions=max(1, _int("MAX_EXTRACTIONS", 4)),
         rate_extract=_int("RATE_EXTRACT_PER_MIN", 30),
         rate_download=_int("RATE_DOWNLOAD_PER_MIN", 60),
-        trust_proxy=_bool("TRUST_PROXY"),
+        trust_proxy=_proxy_hops(),
         allow_private_networks=_bool("ALLOW_PRIVATE_NETWORKS"),
         js_runtimes=_list("JS_RUNTIMES", default_runtimes),
     )

@@ -95,7 +95,7 @@ traffic through a residential proxy.
 | `ALLOWED_ORIGINS` | itzigroup.com + localhost | Sites whose pages may call the API (comma-separated, `*` for any) |
 | `COOKIES_FILE` | — | Netscape cookies.txt for logged-in content |
 | `OUTBOUND_PROXY` | — | Proxy for all platform traffic, e.g. `http://user:pass@host:port` |
-| `TRUST_PROXY` | `0` | Read the visitor IP from `X-Forwarded-For` (set when behind Caddy/Nginx/Cloudflare) |
+| `TRUST_PROXY` | `0` | How many reverse proxies sit in front of the API: `1` behind Caddy, Nginx, Render or Railway; `2` with Cloudflare in front of one of those. Used to find the visitor's real IP for rate limits |
 | `AUTO_UPDATE` | `1` (Docker) | Upgrade yt-dlp and gallery-dl on start |
 | `MAX_FILESIZE_MB` | `2048` | Largest file the server will handle |
 | `MAX_DURATION_MIN` | `240` | Longest media it will merge or convert |
