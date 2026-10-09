@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ItziGroup Downloader — Save Videos, Reels, Stories &amp; Photos Without Watermark</title>
+    <meta name="description" content="Download videos, reels, stories, photos and audio from TikTok, Instagram, YouTube, X, Facebook, Snapchat, Pinterest and 1,000+ sites. Original quality, no TikTok watermark, free.">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="color-scheme" content="dark">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://dl.itzigroup.com; connect-src 'self' https://dl.itzigroup.com; media-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';">
+
+    <meta property="og:title" content="ItziGroup Downloader — No watermark, HD, free">
+    <meta property="og:description" content="Paste a link from TikTok, Instagram, YouTube, X, Facebook and more. Get the original video, photos or MP3.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://itzigroup.com/downloader/">
+    <meta property="og:image" content="https://itzigroup.com/assets/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://itzigroup.com/downloader/">
+
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/favicon.png">
+    <link rel="stylesheet" href="app.css?v=20261006">
+</head>
+<body>
+    <div class="backdrop" aria-hidden="true">
+        <div class="backdrop-grid"></div>
+        <div class="orb orb-a"></div>
+        <div class="orb orb-b"></div>
+    </div>
+
+    <header class="topbar">
+        <a class="brand" href="https://itzigroup.com/" aria-label="ItziGroup home">
+            <img src="/assets/logo.png" alt="ItziGroup" class="brand-logo" width="108" height="36">
+        </a>
+        <span class="brand-tool">Downloader</span>
+        <span class="engine" id="engineStatus" title="Checking the download engine…">
+            <span class="engine-dot"></span><span class="engine-label">Connecting</span>
+        </span>
+    </header>
+
+    <main>
+        <section class="hero">
+            <span class="eyebrow"><span class="eyebrow-dot"></span>No watermark · HD · Free</span>
+            <h1 class="hero-title">Download anything.<br><span class="grad">From anywhere.</span></h1>
+            <p class="hero-sub">Videos, reels, stories, photos and audio from TikTok, Instagram, YouTube, X, Facebook and 1,000+ more sites. You get the original quality, with no TikTok watermark.</p>
+
+            <form class="grab" id="grabForm" novalidate>
+                <div class="grab-field">
+                    <span class="grab-icon" id="grabIcon" aria-hidden="true"></span>
+                    <label class="sr-only" for="urlInput">Link to download</label>
+                    <input id="urlInput" name="url" type="url" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false"
+                           placeholder="Paste a link to a video, post, reel or story…" required>
+                    <button type="button" class="grab-paste" id="pasteBtn">
+                        <span class="grab-paste-icon" aria-hidden="true"></span><span class="grab-paste-text">Paste</span>
+                    </button>
+                    <button type="button" class="grab-clear" id="clearBtn" aria-label="Clear link" hidden></button>
+                </div>
+                <button type="submit" class="btn btn-primary grab-go" id="goBtn">
+                    <span class="grab-go-text">Download</span>
+                    <span class="grab-go-icon" aria-hidden="true"></span>
+                </button>
+            </form>
+            <p class="detect" id="detectLine" aria-live="polite"></p>
+
+            <ul class="platforms" id="platformList" aria-label="Supported platforms"></ul>
+        </section>
+
+        <section class="result" id="result" aria-live="polite" hidden></section>
+
+        <section class="recent" id="recent" hidden>
+            <div class="recent-head">
+                <h2>Recent</h2>
+                <button type="button" class="link-btn" id="clearHistory">Clear</button>
+            </div>
+            <ul class="recent-list" id="recentList"></ul>
+        </section>
+
+        <section class="steps" aria-labelledby="stepsTitle">
+            <span class="tag">How it works</span>
+            <h2 id="stepsTitle">Three taps. <span class="grad">Done.</span></h2>
+            <ol class="steps-grid">
+                <li><span class="step-num">01</span><h3>Copy the link</h3><p>Tap Share → Copy link on any post, reel, story or video.</p></li>
+                <li><span class="step-num">02</span><h3>Paste it here</h3><p>We detect the platform and find every photo, video and sound in the post.</p></li>
+                <li><span class="step-num">03</span><h3>Pick &amp; save</h3><p>Choose the quality: HD video, original photos, MP3, or everything as a ZIP.</p></li>
+            </ol>
+        </section>
+
+        <section class="features" aria-label="Features">
+            <article class="feature">
+                <span class="feature-icon" data-icon="shield"></span>
+                <h3>No watermark</h3>
+                <p>For TikTok we fetch the clean stream the app itself plays, without the logo overlay that in-app saving adds.</p>
+            </article>
+            <article class="feature">
+                <span class="feature-icon" data-icon="hd"></span>
+                <h3>Up to 4K</h3>
+                <p>Every available resolution, from 360p to 4K60. Separate video and audio tracks are merged for you.</p>
+            </article>
+            <article class="feature">
+                <span class="feature-icon" data-icon="stack"></span>
+                <h3>Carousels &amp; stories</h3>
+                <p>Multi-photo posts, slideshows and stories show every item. Save one, or all of them as a ZIP.</p>
+            </article>
+            <article class="feature">
+                <span class="feature-icon" data-icon="music"></span>
+                <h3>Audio to MP3</h3>
+                <p>Pull the sound from any video as a 192 kbps MP3, or keep the original audio track.</p>
+            </article>
+        </section>
+
+        <section class="faq" aria-labelledby="faqTitle">
+            <span class="tag">FAQ</span>
+            <h2 id="faqTitle">Good to know</h2>
+            <details>
+                <summary>Is the TikTok video really watermark-free?</summary>
+                <p>Yes. TikTok stores a clean version of every video for playback. We download that one. If a platform only offers a watermarked copy, the option is clearly labelled.</p>
+            </details>
+            <details>
+                <summary>Can I download stories and private posts?</summary>
+                <p>Public stories work on platforms that allow it, such as Snapchat. Instagram stories and anything private need a signed-in account on the server, which the site owner sets up. We will never ask for your password.</p>
+            </details>
+            <details>
+                <summary>Which sites are supported?</summary>
+                <p>TikTok, Instagram, YouTube (including Shorts), X / Twitter, Facebook, Snapchat, Threads, Pinterest, Reddit, Bluesky, Tumblr, Vimeo, Twitch, SoundCloud, Dailymotion, Bilibili and over a thousand others. If a link fails, paste the link to the post itself rather than a profile page.</p>
+            </details>
+            <details>
+                <summary>What do you keep about me?</summary>
+                <p>Your link is used only to fetch the media. Results and prepared files are deleted from the server automatically within about 30 minutes. Your recent links are stored only in this browser, and you can clear them at any time.</p>
+            </details>
+            <details>
+                <summary>Am I allowed to download this?</summary>
+                <p>Only download content you own, have permission to use, or that is licensed for reuse. Respect creators and each platform's terms.</p>
+            </details>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <p>&copy; 2026 ItziGroup · <a href="https://itzigroup.com/privacy">Privacy</a> · <a href="https://itzigroup.com/terms">Terms</a></p>
+        <p class="foot-note">Download only content you own or have permission to use. ItziGroup is not affiliated with any of the platforms listed.</p>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <div class="viewer" id="viewer" hidden>
+        <button type="button" class="viewer-close" id="viewerClose" aria-label="Close preview"></button>
+        <img class="viewer-img" id="viewerImg" alt="">
+    </div>
+
+    <script src="config.js?v=20261006"></script>
+    <script src="platforms.js?v=20261006"></script>
+    <script src="app.js?v=20261006"></script>
+</body>
+</html>
