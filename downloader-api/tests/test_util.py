@@ -73,3 +73,30 @@ def test_content_disposition_unicode():
 ])
 def test_classify_error(message, code):
     assert classify_error(message)[0] == code
+
+
+def test_unreadable_cookie_file_is_not_enabled(tmp_path, monkeypatch):
+    import dataclasses
+    import os
+
+    from app.config import get_settings
+
+    cookie = tmp_path / "cookies.txt"
+    cookie.write_text("# Netscape HTTP Cookie File\n")
+    settings = dataclasses.replace(get_settings(), cookies_file=cookie)
+    assert settings.cookies_enabled
+    monkeypatch.setattr(os, "access", lambda path, mode: False)
+    assert not settings.cookies_enabled
+    assert settings.read_cookies() == ""
+
+
+def test_render_uses_edge_ip_header(monkeypatch):
+    from app import config
+
+    monkeypatch.delenv("CLIENT_IP_HEADER", raising=False)
+    monkeypatch.setenv("RENDER", "true")
+    assert config._client_ip_header() == "cf-connecting-ip"
+    monkeypatch.delenv("RENDER")
+    assert config._client_ip_header() is None
+    monkeypatch.setenv("CLIENT_IP_HEADER", "True-Client-IP")
+    assert config._client_ip_header() == "true-client-ip"

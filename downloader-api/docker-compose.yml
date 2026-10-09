@@ -12,7 +12,7 @@ services:
     environment:
       # Browser origins allowed to call the API (the GitHub Pages site + this server).
       ALLOWED_ORIGINS: "https://itzigroup.com,https://www.itzigroup.com,http://localhost:8000"
-      # Number of reverse proxies in front (1 for Caddy/Nginx, 2 for Cloudflare + Caddy).
+      # Number of reverse proxies in front (1 behind Caddy or Nginx).
       TRUST_PROXY: "0"
       # Optional: logged-in cookies for Instagram stories, private posts, etc.
       # COOKIES_FILE: /secrets/cookies.txt

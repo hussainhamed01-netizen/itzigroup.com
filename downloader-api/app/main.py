@@ -118,6 +118,9 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         log.info("Downloader API %s ready (yt-dlp %s, gallery-dl %s, ffmpeg %s, cookies %s)",
                  __version__, _ytdl_version(), _gdl_version(),
                  "yes" if ffmpeg_available() else "NO", "yes" if settings.cookies_enabled else "no")
+        if settings.cookies_file and not settings.cookies_enabled:
+            log.warning("COOKIES_FILE is set but %s is missing or not readable by this user; "
+                        "logged-in downloads are off.", settings.cookies_file)
         try:
             yield
         finally:
@@ -157,6 +160,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         return JSONResponse({"error": body}, status_code=exc.status, headers=exc.headers)
 
     def client_ip(request: Request) -> str:
+        if settings.client_ip_header:
+            value = request.headers.get(settings.client_ip_header, "").split(",")[0].strip()
+            if value:
+                return value
         # Only trust entries our own proxies appended: anything further left came from
         # the visitor and can be forged to dodge rate limits.
         if settings.trust_proxy:

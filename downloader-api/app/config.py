@@ -41,6 +41,15 @@ def _proxy_hops() -> int:
     return max(0, _int("TRUST_PROXY", 0))
 
 
+def _client_ip_header() -> str | None:
+    raw = os.environ.get("CLIENT_IP_HEADER")
+    if raw is not None:
+        return raw.strip().lower() or None
+    # Render serves every web service through its own Cloudflare edge, which overwrites
+    # CF-Connecting-IP with the visitor's address, so it can't be forged there.
+    return "cf-connecting-ip" if os.environ.get("RENDER") else None
+
+
 @dataclass(frozen=True)
 class Settings:
     # Origins allowed to call the API from a browser (CORS). "*" allows any.
@@ -69,12 +78,17 @@ class Settings:
     # Number of reverse proxies in front of the API (0 = none). Each one appends the
     # address it saw to X-Forwarded-For, so the client is that many entries from the end.
     trust_proxy: int
+    # Header set by the hosting edge that holds the visitor's real IP (e.g. Render's
+    # Cloudflare edge sets CF-Connecting-IP). Checked before TRUST_PROXY.
+    client_ip_header: str | None
     allow_private_networks: bool
     js_runtimes: list[str]
 
     @property
     def cookies_enabled(self) -> bool:
-        return bool(self.cookies_file and self.cookies_file.is_file())
+        # The container runs as a non-root user, so a file that exists may still be unreadable.
+        return bool(self.cookies_file and self.cookies_file.is_file()
+                    and os.access(self.cookies_file, os.R_OK))
 
     def read_cookies(self) -> str:
         if not self.cookies_enabled:
@@ -116,6 +130,7 @@ def get_settings() -> Settings:
         rate_extract=_int("RATE_EXTRACT_PER_MIN", 30),
         rate_download=_int("RATE_DOWNLOAD_PER_MIN", 60),
         trust_proxy=_proxy_hops(),
+        client_ip_header=_client_ip_header(),
         allow_private_networks=_bool("ALLOW_PRIVATE_NETWORKS"),
         js_runtimes=_list("JS_RUNTIMES", default_runtimes),
     )

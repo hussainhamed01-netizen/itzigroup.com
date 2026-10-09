@@ -9,4 +9,9 @@ if [ "${AUTO_UPDATE:-1}" != "0" ]; then
         || echo "Engine update failed; starting with the installed versions."
 fi
 
+# "serve" starts the API on $PORT (hosts such as Render set it), or 8000 by default.
+if [ "$1" = "serve" ]; then
+    set -- uvicorn app.main:app --host 0.0.0.0 --port "${PORT:-8000}" --workers 1
+fi
+
 exec "$@"

@@ -59,11 +59,24 @@ The page at `https://itzigroup.com/downloader/` expects the API at
 **`https://dl.itzigroup.com`**.
 
 1. Run the Docker image on any server: a small VPS, Render, Railway, Fly.io, etc. Give it
-   at least 1 GB RAM and a few GB of disk for merge jobs.
+   at least 1 GB RAM and a few GB of disk for merge jobs. The server listens on `$PORT`
+   when the host sets it, otherwise on 8000.
 2. Point the `dl.itzigroup.com` DNS record at it and serve it over HTTPS. Most hosts do
    this for you. On a VPS, [Caddy](https://caddyserver.com) does it with one line:
-   `dl.itzigroup.com { reverse_proxy localhost:8000 }`. Behind a proxy, set `TRUST_PROXY=1`.
-3. Open `https://dl.itzigroup.com/api/health`. It should say `"status": "ok"`.
+   `dl.itzigroup.com { reverse_proxy localhost:8000 }`. Behind Caddy or Nginx, set
+   `TRUST_PROXY=1`.
+3. Open `https://dl.itzigroup.com/api/health`. It should say `"status": "ok"`,
+   `"ffmpeg": true` and `"js_runtimes": ["deno"]`.
+
+**On Render:** create a Web Service from this repo with Language **Docker**, Root Directory
+**empty**, Dockerfile Path `downloader-api/Dockerfile`, Docker build context `.`, Docker
+Command **empty** and Health Check Path `/api/health`. No `PORT` or `TRUST_PROXY` is
+needed: the server follows Render's `PORT`, and when it sees Render's `RENDER` variable it
+reads the visitor IP from the `CF-Connecting-IP` header set by Render's edge. On 512 MB
+instances (Free and Starter), set `MAX_JOBS=1` and `MAX_EXTRACTIONS=2`. Every downloaded
+file passes through the server, so check your plan's monthly bandwidth: Render's free
+workspace includes very little. In Cloudflare, point a `dl` CNAME at the service's
+`onrender.com` address with the proxy set to **DNS only** (grey cloud).
 
 To use a different address, change it in `downloader/config.js` and in the
 `connect-src` and `img-src` lists of `downloader/index.html`'s Content-Security-Policy,
@@ -83,6 +96,8 @@ fix this, give the server a cookies file:
 2. Export the cookies in Netscape `cookies.txt` format, for example with the
    "Get cookies.txt LOCALLY" extension. You can put several sites in one file.
 3. Mount the file into the container and set `COOKIES_FILE` (see `docker-compose.yml`).
+   The container runs as user `app` (uid 10001), so the file must be readable by that
+   user. `/api/health` reports `"cookies": true` only when it is.
 
 Treat this file like a password. It is ignored by git (`cookies.txt`) and never sent to
 visitors. If the server IP itself is blocked, set `OUTBOUND_PROXY` to route platform
@@ -95,7 +110,9 @@ traffic through a residential proxy.
 | `ALLOWED_ORIGINS` | itzigroup.com + localhost | Sites whose pages may call the API (comma-separated, `*` for any) |
 | `COOKIES_FILE` | — | Netscape cookies.txt for logged-in content |
 | `OUTBOUND_PROXY` | — | Proxy for all platform traffic, e.g. `http://user:pass@host:port` |
-| `TRUST_PROXY` | `0` | How many reverse proxies sit in front of the API: `1` behind Caddy, Nginx, Render or Railway; `2` with Cloudflare in front of one of those. Used to find the visitor's real IP for rate limits |
+| `PORT` | `8000` | Port to listen on (hosts such as Render set this) |
+| `CLIENT_IP_HEADER` | `cf-connecting-ip` on Render, else none | Header from your hosting edge that holds the visitor's real IP. Only set it if that edge always overwrites the header, otherwise visitors can forge it |
+| `TRUST_PROXY` | `0` | When no `CLIENT_IP_HEADER` applies: how many reverse proxies sit in front of the API (`1` behind Caddy or Nginx). The visitor IP is read that many entries from the end of `X-Forwarded-For`, for rate limits |
 | `AUTO_UPDATE` | `1` (Docker) | Upgrade yt-dlp and gallery-dl on start |
 | `MAX_FILESIZE_MB` | `2048` | Largest file the server will handle |
 | `MAX_DURATION_MIN` | `240` | Longest media it will merge or convert |
