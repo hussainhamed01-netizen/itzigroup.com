@@ -97,7 +97,7 @@
     <section class="privacy-hero">
         <div class="container">
             <h1 class="header-title">ItziPDF Privacy Policy</h1>
-            <p style="color: var(--grey-light);">Effective date: August 21, 2026</p>
+            <p style="color: var(--grey-light);">Effective date: October 22, 2026 · Applies to ItziPDF 2.0</p>
             <div class="policy-language-nav" aria-label="Policy languages">
                 <a href="#english">English</a>
                 <a href="#arabic" lang="ar" dir="rtl">العربية</a>
@@ -107,109 +107,144 @@
 
     <!-- Content -->
     <section class="content-section" id="english">
-        <h2>Developer and contact</h2>
-        <p>ItziPDF is provided by Itzi Group. For privacy or support questions:</p>
-        <ul>
-            <li>Email: <a href="mailto:itzigroup_support@itzigroup.com">itzigroup_support@itzigroup.com</a></li>
-            <li>Website: <a href="https://itzigroup.com">https://itzigroup.com</a></li>
-            <li>Instagram: <a href="https://www.instagram.com/itzigroup/">https://www.instagram.com/itzigroup/</a></li>
-            <li>Facebook: <a href="https://www.facebook.com/profile.php?id=61591652615538">ItziGroup</a></li>
-            <li>X: <a href="https://x.com/ItziGroup">https://x.com/ItziGroup</a></li>
-        </ul>
 
-        <h2>Short summary</h2>
-        <p>ItziPDF is a local-first PDF toolkit. This release does not require an account, and we do not sell your personal data or document contents.</p>
+        <h2>Developer and contact</h2>
+        <p>ItziPDF is provided by Itzi Group. For privacy questions, support, or requests about information you sent to us:</p>
+        <p><a href="mailto:itzigroup_support@itzigroup.com">itzigroup_support@itzigroup.com</a> · <a href="https://itzigroup.com">https://itzigroup.com</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/itzigroup/">https://www.instagram.com/itzigroup/</a> · Facebook: <a href="https://www.facebook.com/profile.php?id=61591652615538">https://www.facebook.com/profile.php?id=61591652615538</a> · X: <a href="https://x.com/ItziGroup">https://x.com/ItziGroup</a></p>
+
+        <h2>Summary</h2>
+        <p>ItziPDF is a free, local-first PDF toolkit. It does not require an account. Every document tool in this release — including Word to PDF conversion, scanning, signing, redaction and compression — runs on your device. Itzi Group does not receive your documents, their text, your passwords, signatures, images, file names, Library catalog or reading history, and does not sell or share them. Advertising is supported only in builds where it is enabled (see "Advertising and privacy choices").</p>
 
         <h2>Files you choose</h2>
-        <p>When you select PDFs, images, text, or camera scans, the app uses that data only to perform the tool you selected. Local tools process files on your device. Completed PDFs are automatically kept in the private ItziPDF Library with basic local catalog details such as filename, tool, page count, size, and creation time. You can choose to place an additional copy in a selected folder or share it with another app. If you open a PDF from another app using &ldquo;Open with,&rdquo; the chosen file is copied into app cache so it can be reviewed or processed.</p>
+        <p>ItziPDF uses only the files you pick or send to it: PDFs, Word documents (.docx, .docm, .dotx, .doc), images, text and Markdown files, and camera scans. You can choose them with Android's pickers, open them from another app ("Open with"), share them to ItziPDF, or start from a home-screen shortcut. A file received from another app may be copied into ItziPDF's private cache so it can be read or processed.</p>
+        <p>Results are saved in the app's private Library with local details such as file name, tool used, page count, size and creation time. You can save another copy to a folder you choose, to your gallery (for exported images), or share it with another app. A chosen folder may be on the device, an SD card or a cloud storage provider; that provider controls what happens to the copy you deliberately save there.</p>
 
-        <h2>Reader state and preferences</h2>
-        <p>The app locally remembers the last page you read, bookmarks, view mode, page rotation, and reading appearance for up to 200 recent documents. To recognize a reselected or renamed document, it stores a compact local fingerprint derived from file size and small beginning/end samples; the samples and PDF contents are not stored in the reader-state record. It also stores settings such as language, theme, and your selected output folder. Reader state, Library catalog details, and preferences are not uploaded to Itzi Group in this release.</p>
+        <h2>Information stored on your device</h2>
+        <p>To make the app work and remember your choices, ItziPDF keeps these records in its private storage. None of them is uploaded to Itzi Group:</p>
+        <ul>
+            <li>Preferences: language, appearance and theme, number style, tool organization, quick actions, output folder and naming pattern, reader defaults.</li>
+            <li>Usage helpers: favorite tools, recently used tools and how often you use them, used only to order tools for you.</li>
+            <li>Reading state: for up to 200 recent documents, the last page, named bookmarks, view mode, rotation and reading appearance. A compact local fingerprint (from the file size and small samples of its beginning and end) recognizes a file you open again; the records contain neither those samples nor the document content. A list of up to 30 recently opened documents (name, location, page count, last page) powers "Continue reading".</li>
+            <li>Tool settings: your last-used options per tool and any Batch recipes you save. Passwords are never saved.</li>
+            <li>Saved signatures and initials: the images you draw, type or import in Sign PDF stay in private app storage until you delete them.</li>
+            <li>Thumbnails: small page previews in the app cache to make browsing fast. You can clear them in Settings → Storage; Android may also clear the cache.</li>
+            <li>Error log: if the app hits an unexpected error, a short technical note (time and error details, no document content) is kept in a small local file. It is never sent automatically; you may choose to include it when you contact support.</li>
+        </ul>
+
+        <h2>Device services used by some features</h2>
+        <ul>
+            <li><strong>Document scanner:</strong> Scan to PDF uses Google's ML Kit document scanner, provided through Google Play services when your device supports it. Pages are captured and processed on your device and returned to ItziPDF; the images are not sent to Itzi Group. Google states that ML Kit may send Google limited diagnostic and usage information — for example device model and Android version, app package name and version, performance metrics and error codes — encrypted in transit, to operate and improve the service. On devices without it, ItziPDF uses your camera with on-device cropping and filters instead. You can also create PDFs from your own photos with Images to PDF.</li>
+            <li><strong>Read aloud:</strong> the reader can speak a page using the text-to-speech engine installed on your device. The page text is passed to that engine. Most engines work offline; if you selected an engine that uses an online service, its provider's terms and privacy policy apply.</li>
+            <li><strong>Printing:</strong> when you print, Android's print system sends the document to the printer or print service you choose.</li>
+            <li><strong>Google Play in-app review:</strong> if you choose to rate the app, Google Play shows the review prompt. ItziPDF does not receive your review text, rating or Google account details; Itzi Group may see published reviews in Google Play Console.</li>
+        </ul>
 
         <h2>Permissions</h2>
-        <p>Camera permission is used only when you start Scan to PDF. File access is handled through Android&rsquo;s file picker or share/open flow, which gives ItziPDF access only to the items you select. If you select a custom output folder, Android&rsquo;s folder picker grants ongoing access to that folder so the app can create future copies there. When you switch back to the automatic Library or choose another folder, the app stops using the previous folder and asks Android to release its ongoing access; storage-provider behavior may prevent immediate revocation. Access may also end if the folder is moved or deleted or the app&rsquo;s permission is removed. ItziPDF does not request contacts, SMS, call log, microphone, location, or All files access permissions.</p>
+        <ul>
+            <li><strong>Camera:</strong> requested only when you use the in-app camera for Scan to PDF on devices without the Google document scanner. The Google scanner itself does not need ItziPDF to hold the camera permission.</li>
+            <li><strong>Files and folders:</strong> Android's pickers give access only to the items you select. Choosing an output folder grants ongoing access so future copies can be saved there; when you change the folder or return to automatic Library storage, the app stops using the previous folder and asks Android to release the old grant (a storage provider may not revoke access immediately).</li>
+            <li><strong>Internet and network state:</strong> used only for advertising and privacy messages in builds where ads are enabled, and by Google Play services (for example to install the scanner module). Document processing never needs the internet.</li>
+        </ul>
+        <p>ItziPDF does not request contacts, SMS, call logs, microphone, location, or broad "All files access".</p>
 
-        <h2>Cloud/API tools</h2>
-        <p>In this pre-backend release, tools marked as requiring backend or cloud support do not upload your files. If cloud tools are enabled later, such as Office conversion, OCR, AI features, or advanced repair, only files you deliberately choose will be uploaded over a secure connection such as HTTPS to Itzi Group or a disclosed service provider. Files will be retained only as long as needed to complete the job or meet limited legal requirements.</p>
+        <h2>Advertising and privacy choices</h2>
+        <p>Builds with advertising enabled use Google Mobile Ads and Google's User Messaging Platform (UMP). Banners are limited to the Home and Files screens and are never shown inside tools or the reader. Enabled builds request non-personalized ads, and reading, editing and processing never require watching an ad. In builds where advertising is disabled, the advertising SDK is not initialized and no ad requests are made.</p>
+        <p>When ads are enabled, Google and its advertising partners may collect and share IP addresses and approximate location inferred from them; advertising, app-set or other device identifiers where applicable; device and app information; app and ad interactions; and diagnostic or performance information, for advertising, measurement, analytics, security and fraud prevention. UMP requests privacy information and manages consent or opt-out choices using device and app information, regional signals and your selections; ad requests are made only when UMP reports that they may be. Where available, use Settings → Privacy → Ad privacy choices to review or change your choices, and Android's ad settings to reset or delete your advertising ID. Local tools keep working if ads cannot load.</p>
+        <p>Google's Privacy Policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a> · How Google uses information from partner apps: <a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a></p>
+        <p>We do not run a separate analytics or crash-reporting service.</p>
 
-        <h2>Google Play ratings</h2>
-        <p>If you choose &ldquo;Rate ItziPDF,&rdquo; the app requests Google Play&rsquo;s official in-app review experience. ItziPDF does not receive your review text, star rating, or Google account information from that experience. Google Play processes the review and related data under Google&rsquo;s Privacy Policy and Google Play terms. If the review experience is unavailable, the app may open ItziPDF&rsquo;s Google Play listing instead.</p>
+        <h2>Sharing</h2>
+        <p>We do not sell documents or any personal information, and we do not use document content for advertising. Ad-related information may be shared with Google and eligible ad partners as described above when ads are enabled; some privacy laws describe certain advertising disclosures as a "sale" or "sharing" of personal information — use the ad privacy choices to exercise available opt-outs.</p>
+        <p>Files leave the app's private storage only when you save or share them through another app, folder or provider, whose privacy rules then apply. Google Play handles downloads, any payments and reviews under its own terms; ItziPDF has no subscriptions or in-app purchases in this release.</p>
 
-        <h2>Ads and identifiers</h2>
-        <p>Google Mobile Ads is not enabled in this release. If it is enabled in a future release, the Google Mobile Ads SDK may collect or share the advertising ID, device and app information, ad interactions, diagnostics, and approximate information needed for advertising, fraud prevention, security, and measurement. You can reset or delete your advertising ID in Android settings.</p>
+        <h2>Support and external links</h2>
+        <p>If you contact support, we use your email address, message and any attachments you choose to send to answer your request. Please do not send confidential documents unless they are needed for your request; feedback never attaches a document automatically. We keep support correspondence only as long as needed for the request and legitimate record-keeping or legal obligations. Opening our website or social links takes you to services with their own privacy practices.</p>
 
-        <h2>Support and diagnostics</h2>
-        <p>If you contact support or use our social links, we process the email address and information you send so we can respond. If crash reporting is added later, it will be used to improve stability and we will not intentionally log document contents.</p>
+        <h2>Security and retention</h2>
+        <p>ItziPDF uses app-private storage, Android's selected-file access, and on-device processing. Password-protected PDFs you create use strong encryption (AES-256 by default); keep your passwords safe, because they cannot be recovered. No storage or network system can guarantee absolute security.</p>
+        <p>Library files, saved signatures, recipes and other local records remain until you delete them, clear the app's data or uninstall the app. Clearing data or uninstalling removes them; Android may remove cache files at any time. Copies saved outside the private Library are independent and are not deleted with it. Google and other external providers apply their own retention and deletion policies to data they process.</p>
 
-        <h2>Sharing with others</h2>
-        <p>We share files or data only when you choose to save/share through another app or service, when a disclosed provider is needed for a future cloud tool, when an ads SDK is enabled, or when required by law. We do not sell personal or sensitive data.</p>
-
-        <h2>Security</h2>
-        <p>We use appropriate practices such as encrypted transfer for network communication. Local files also depend on your device and app-storage protections. No system is 100% secure, so avoid processing highly sensitive documents on an untrusted device.</p>
-
-        <h2>Retention and deletion</h2>
-        <p>ItziPDF Library outputs remain until you delete each file, clear app data, or uninstall the app. Reader state is kept locally for up to 200 recent documents and older records may be replaced; reader state and other preferences otherwise remain until you clear app data or uninstall. Uninstalling removes files in the app&rsquo;s private storage. Deleting a Library file does not delete copies you saved to a custom folder or shared elsewhere; those copies remain until you delete them through your file manager or storage provider and may survive uninstall. Android may automatically remove temporary input files. For support-data deletion requests, or future cloud-processed files, contact itzigroup_support@itzigroup.com.</p>
+        <h2>Your choices and rights</h2>
+        <p>You decide which files to open, can delete Library files and saved signatures, manage folder access, clear the thumbnail cache, change advertising choices where available, clear the app's data or uninstall it. Contact <a href="mailto:itzigroup_support@itzigroup.com">itzigroup_support@itzigroup.com</a> to request access to, correction of, or deletion of support information held by Itzi Group. Depending on where you live, you may also have rights to object, restrict processing, data portability, or to complain to your local privacy authority. We may need to verify a request and may keep information where the law requires. Requests about Google's information can be made through Google's privacy controls.</p>
 
         <h2>Children</h2>
-        <p>ItziPDF is not directed to children under 13. Use the app only for documents you own or have the legal right to process.</p>
+        <p>ItziPDF is not directed to children under 13, and we do not knowingly collect personal information from children. If you believe a child has sent us information, contact us so we can review and take appropriate action.</p>
 
         <h2>Changes</h2>
-        <p>We may update this policy when features, SDKs, or backend services are added. We will keep the in-app text and public policy aligned with the app&rsquo;s actual behavior.</p>
+        <p>We may update this policy as the app changes; the effective date identifies the version. We keep the policy in the app and on our website aligned with the released app.</p>
 
         <hr class="policy-divider">
 
         <div class="arabic-policy" id="arabic" lang="ar" dir="rtl">
             <h1 class="language-title">سياسة خصوصية ItziPDF</h1>
-            <p style="text-align: center;">تاريخ السريان: 21 أغسطس 2026</p>
+            <p style="text-align: center;">تاريخ السريان: 22 أكتوبر 2026 · ينطبق على ItziPDF 2.0</p>
 
-            <h2>المطور وبيانات التواصل</h2>
-            <p>ItziPDF مقدم من Itzi Group. للتواصل حول الخصوصية أو الدعم:</p>
-            <ul>
-                <li>البريد الإلكتروني: <a href="mailto:itzigroup_support@itzigroup.com">itzigroup_support@itzigroup.com</a></li>
-                <li>الموقع: <a href="https://itzigroup.com">https://itzigroup.com</a></li>
-                <li>Instagram: <a href="https://www.instagram.com/itzigroup/">https://www.instagram.com/itzigroup/</a></li>
-                <li>Facebook: <a href="https://www.facebook.com/profile.php?id=61591652615538">ItziGroup</a></li>
-                <li>X: <a href="https://x.com/ItziGroup">https://x.com/ItziGroup</a></li>
-            </ul>
+            <h2>المطوّر والتواصل</h2>
+            <p>يُقدَّم تطبيق ItziPDF من Itzi Group. لأسئلة الخصوصية أو الدعم أو الطلبات المتعلقة بالمعلومات التي أرسلتها إلينا:</p>
+            <p><a href="mailto:itzigroup_support@itzigroup.com">itzigroup_support@itzigroup.com</a> · <a href="https://itzigroup.com">https://itzigroup.com</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/itzigroup/">https://www.instagram.com/itzigroup/</a> · Facebook: <a href="https://www.facebook.com/profile.php?id=61591652615538">https://www.facebook.com/profile.php?id=61591652615538</a> · X: <a href="https://x.com/ItziGroup">https://x.com/ItziGroup</a></p>
 
-            <h2>ملخص سريع</h2>
-            <p>ItziPDF تطبيق أدوات PDF يعمل محليا أولا. لا يتطلب هذا الإصدار إنشاء حساب، ولا نبيع بياناتك الشخصية أو محتوى مستنداتك.</p>
+            <h2>الملخص</h2>
+            <p>ItziPDF مجموعة أدوات PDF مجانية تعمل محليًا أولًا ولا تتطلب إنشاء حساب. تعمل جميع أدوات المستندات في هذا الإصدار على جهازك، بما فيها تحويل Word إلى PDF والمسح الضوئي والتوقيع والإخفاء النهائي والضغط. لا تتلقى Itzi Group مستنداتك ولا نصوصها ولا كلمات مرورك ولا توقيعاتك ولا صورك ولا أسماء ملفاتك ولا فهرس المكتبة ولا سجل القراءة، ولا تبيعها أو تشاركها. لا تُدعم الإعلانات إلا في الإصدارات التي تُفعَّل فيها (راجع قسم «الإعلانات وخيارات الخصوصية»).</p>
 
             <h2>الملفات التي تختارها</h2>
-            <p>عند اختيار ملفات PDF أو صور أو نصوص أو استخدام الكاميرا، يستخدم التطبيق هذه البيانات فقط لتنفيذ الأداة التي اخترتها. تتم معالجة الأدوات المحلية على جهازك. تُحفظ ملفات PDF المكتملة تلقائيا داخل مكتبة ItziPDF الخاصة بالتطبيق، مع تفاصيل فهرس محلية أساسية مثل اسم الملف والأداة وعدد الصفحات والحجم ووقت الإنشاء، ويمكنك اختيار حفظ نسخة إضافية في مجلد تختاره أو مشاركتها مع تطبيق آخر. عند فتح PDF من تطبيق آخر باستخدام «فتح بواسطة»، يتم نسخ الملف الذي اخترته إلى ذاكرة التطبيق المؤقتة حتى يمكن مراجعته أو معالجته.</p>
+            <p>لا يستخدم ItziPDF إلا الملفات التي تختارها أو ترسلها إليه: ملفات PDF ومستندات Word ‏(.docx و.docm و.dotx و.doc) والصور والملفات النصية وملفات Markdown وصور المسح بالكاميرا. يمكنك اختيارها عبر منتقي الملفات في أندرويد، أو فتحها من تطبيق آخر («فتح باستخدام»)، أو مشاركتها مع ItziPDF، أو البدء من اختصار على الشاشة الرئيسية. قد يُنسخ الملف الوارد من تطبيق آخر إلى الذاكرة المؤقتة الخاصة بالتطبيق لقراءته أو معالجته.</p>
+            <p>تُحفظ النتائج في مكتبة التطبيق الخاصة مع تفاصيل محلية مثل اسم الملف والأداة المستخدمة وعدد الصفحات والحجم ووقت الإنشاء. يمكنك حفظ نسخة أخرى في مجلد تختاره أو في معرض الصور (للصور المُصدَّرة) أو مشاركتها مع تطبيق آخر. قد يكون المجلد المختار على الجهاز أو على بطاقة ذاكرة أو لدى مزوّد تخزين سحابي، ويتحكم ذلك المزوّد في النسخة التي تختار حفظها لديه.</p>
 
-            <h2>حالة القارئ والتفضيلات</h2>
-            <p>يتذكر التطبيق محليا آخر صفحة قرأتها، والإشارات المرجعية، وطريقة العرض، ودوران الصفحة، ومظهر القراءة لما يصل إلى 200 مستند حديث. وللتعرف على مستند أُعيد اختياره أو تغيير اسمه، يحفظ التطبيق بصمة محلية مختصرة مشتقة من حجم الملف وعينات صغيرة من بدايته ونهايته؛ ولا يحفظ سجل حالة القارئ تلك العينات أو محتوى PDF. كما يحفظ إعدادات اللغة والمظهر والمجلد الذي اخترته. لا يتم رفع حالة القارئ أو تفاصيل فهرس المكتبة أو التفضيلات إلى Itzi Group في هذا الإصدار.</p>
+            <h2>المعلومات المحفوظة على جهازك</h2>
+            <p>ليعمل التطبيق ويتذكّر اختياراتك، يحتفظ ItziPDF بالسجلات التالية في مساحته الخاصة، ولا يُرفع أيٌّ منها إلى Itzi Group:</p>
+            <ul>
+                <li>التفضيلات: اللغة والمظهر والسمة ونمط الأرقام وتنظيم الأدوات والإجراءات السريعة ومجلد الإخراج ونمط التسمية وإعدادات القارئ الافتراضية.</li>
+                <li>مساعدات الاستخدام: الأدوات المفضلة والأدوات المستخدمة مؤخرًا وعدد مرات استخدامها، وتُستعمل فقط لترتيب الأدوات لك.</li>
+                <li>حالة القراءة: لما يصل إلى 200 مستند حديث، تُحفظ آخر صفحة والإشارات المرجعية المسمّاة وطريقة العرض والدوران ومظهر القراءة. تتعرّف بصمة محلية مختصرة (مشتقة من حجم الملف وعينات صغيرة من بدايته ونهايته) على الملف عند فتحه مرة أخرى، ولا تتضمن السجلات تلك العينات ولا محتوى المستند. وتتيح قائمة تضم حتى 30 مستندًا فُتحت مؤخرًا (الاسم والموقع وعدد الصفحات وآخر صفحة) ميزة «متابعة القراءة».</li>
+                <li>إعدادات الأدوات: آخر خيارات استخدمتها في كل أداة وأي وصفات معالجة جماعية تحفظها. لا تُحفظ كلمات المرور أبدًا.</li>
+                <li>التوقيعات والأحرف الأولى المحفوظة: تبقى الصور التي ترسمها أو تكتبها أو تستوردها في أداة التوقيع داخل مساحة التطبيق الخاصة حتى تحذفها.</li>
+                <li>الصور المصغّرة: معاينات صغيرة للصفحات في الذاكرة المؤقتة لتسريع التصفح. يمكنك مسحها من الإعدادات ← التخزين، وقد يمسحها أندرويد أيضًا.</li>
+                <li>سجل الأخطاء: إذا واجه التطبيق خطأ غير متوقع، تُحفظ ملاحظة تقنية قصيرة (الوقت وتفاصيل الخطأ دون أي محتوى من المستندات) في ملف محلي صغير. لا يُرسَل تلقائيًا أبدًا، ويمكنك اختيار إرفاقه عند التواصل مع الدعم.</li>
+            </ul>
+
+            <h2>خدمات الجهاز التي تستخدمها بعض الميزات</h2>
+            <ul>
+                <li><strong>الماسح الضوئي للمستندات:</strong> تستخدم أداة المسح إلى PDF ماسح المستندات ML Kit من Google، الذي توفّره خدمات Google Play عندما يدعمه جهازك. تُلتقط الصفحات وتُعالَج على جهازك ثم تعود إلى ItziPDF، ولا تُرسَل الصور إلى Itzi Group. تذكر Google أن ML Kit قد يرسل إليها معلومات محدودة عن التشخيص والاستخدام، مثل طراز الجهاز وإصدار أندرويد واسم حزمة التطبيق وإصداره ومقاييس الأداء ورموز الأخطاء، مشفّرة أثناء النقل، لتشغيل الخدمة وتحسينها. على الأجهزة التي لا تتوفر فيها هذه الخدمة، يستخدم ItziPDF الكاميرا مع القص والمرشحات على الجهاز بدلًا منها. ويمكنك أيضًا إنشاء ملفات PDF من صورك الخاصة عبر أداة الصور إلى PDF.</li>
+                <li><strong>القراءة بصوت مسموع:</strong> يمكن للقارئ نطق الصفحة باستخدام محرك تحويل النص إلى كلام المثبّت على جهازك، ويُمرَّر نص الصفحة إلى ذلك المحرك. تعمل معظم المحركات دون اتصال، أما إذا اخترت محركًا يعتمد على خدمة عبر الإنترنت فتنطبق عليه شروط مزوّده وسياسة خصوصيته.</li>
+                <li><strong>الطباعة:</strong> عند الطباعة، يرسل نظام الطباعة في أندرويد المستند إلى الطابعة أو خدمة الطباعة التي تختارها.</li>
+                <li><strong>التقييم داخل التطبيق عبر Google Play:</strong> إذا اخترت تقييم التطبيق، يعرض Google Play نافذة التقييم. لا يتلقى ItziPDF نص تقييمك أو عدد النجوم أو بيانات حسابك في Google، وقد تتمكن Itzi Group من رؤية التقييمات المنشورة في Google Play Console.</li>
+            </ul>
 
             <h2>الأذونات</h2>
-            <p>يستخدم إذن الكاميرا فقط عندما تبدأ أداة المسح إلى PDF. اختيار الملفات يتم عبر منتقي ملفات أندرويد أو المشاركة من تطبيق آخر، وهذا يمنح التطبيق وصولا للملفات التي تختارها فقط. إذا اخترت مجلد إخراج مخصصا، يمنح منتقي مجلدات أندرويد التطبيق وصولا مستمرا إلى ذلك المجلد حتى يستطيع إنشاء نسخ جديدة فيه. عند الرجوع إلى المكتبة التلقائية أو اختيار مجلد آخر، يتوقف التطبيق عن استخدام المجلد السابق ويطلب من أندرويد تحرير الوصول المستمر إليه؛ وقد يمنع سلوك مزود التخزين إلغاء المنحة فورا. قد ينتهي الوصول أيضا إذا تم نقل المجلد أو حذفه أو إزالة إذن التطبيق. لا يطلب ItziPDF أذونات جهات الاتصال أو الرسائل أو سجل المكالمات أو الميكروفون أو الموقع أو إذن الوصول الكامل إلى كل الملفات.</p>
+            <ul>
+                <li><strong>الكاميرا:</strong> لا يُطلب هذا الإذن إلا عند استخدام كاميرا التطبيق في أداة المسح إلى PDF على الأجهزة التي لا يتوفر فيها ماسح Google. لا يحتاج ماسح Google نفسه إلى منح ItziPDF إذن الكاميرا.</li>
+                <li><strong>الملفات والمجلدات:</strong> لا يمنح منتقي الملفات في أندرويد الوصول إلا إلى العناصر التي تختارها. يمنح اختيار مجلد إخراج وصولًا مستمرًا لحفظ النسخ المستقبلية فيه، وعند تغيير المجلد أو العودة إلى الحفظ التلقائي في المكتبة يتوقف التطبيق عن استخدام المجلد السابق ويطلب من أندرويد إلغاء الإذن القديم (وقد لا يلغي مزوّد التخزين الوصول فورًا).</li>
+                <li><strong>الإنترنت وحالة الشبكة:</strong> تُستخدم فقط للإعلانات ورسائل الخصوصية في الإصدارات المفعّلة فيها الإعلانات، ومن قِبل خدمات Google Play (مثلًا لتثبيت وحدة الماسح). لا تحتاج معالجة المستندات إلى الإنترنت أبدًا.</li>
+            </ul>
+            <p>لا يطلب ItziPDF الوصول إلى جهات الاتصال أو الرسائل أو سجل المكالمات أو الميكروفون أو الموقع، ولا إذن «الوصول إلى جميع الملفات».</p>
 
-            <h2>الأدوات السحابية وواجهات API</h2>
-            <p>في هذا الإصدار السابق للخادم، الأدوات الموسومة بأنها تحتاج إلى خادم أو سحابة لا ترفع ملفاتك. إذا تم تفعيل أدوات سحابية لاحقا مثل تحويل Office أو OCR أو الذكاء الاصطناعي أو الإصلاح المتقدم، فلن يتم رفع إلا الملف الذي تختاره صراحة، وسيتم النقل عبر اتصال آمن مثل HTTPS إلى Itzi Group أو مزود خدمة معلن، وسيتم الاحتفاظ بالملف فقط للمدة اللازمة لتنفيذ المهمة أو تلبية متطلبات قانونية محدودة.</p>
+            <h2>الإعلانات وخيارات الخصوصية</h2>
+            <p>تستخدم الإصدارات المفعّلة فيها الإعلانات حزمة Google Mobile Ads ومنصة Google User Messaging Platform ‏(UMP). تقتصر إعلانات البانر على شاشتي الرئيسية والملفات، ولا تظهر أبدًا داخل الأدوات أو القارئ. تطلب هذه الإصدارات إعلانات غير مخصّصة، ولا تتطلب القراءة أو التعديل أو المعالجة مشاهدة أي إعلان. وفي الإصدارات التي تُعطَّل فيها الإعلانات لا تُهيَّأ حزمة الإعلانات ولا تُرسَل أي طلبات إعلانية.</p>
+            <p>عند تفعيل الإعلانات، قد تجمع Google وشركاؤها الإعلانيون عناوين IP والموقع التقريبي المستنتج منها، ومعرّف الإعلانات أو معرّف مجموعة التطبيقات أو غيرها من معرّفات الجهاز حيث ينطبق ذلك، ومعلومات الجهاز والتطبيق، والتفاعل مع التطبيق والإعلانات، وبيانات التشخيص والأداء، وقد يشاركونها لأغراض الإعلان والقياس والتحليلات والأمان ومنع الاحتيال. تطلب UMP معلومات الخصوصية وتدير خيارات الموافقة أو الانسحاب باستخدام معلومات الجهاز والتطبيق والإشارات الإقليمية واختياراتك، ولا تُطلب الإعلانات إلا عندما تفيد UMP بإمكانية ذلك. عند توفّر الخيار، استخدم الإعدادات ← الخصوصية ← خيارات خصوصية الإعلانات لمراجعة اختياراتك أو تغييرها، وإعدادات الإعلانات في أندرويد لإعادة ضبط معرّف الإعلانات أو حذفه. تبقى الأدوات المحلية قابلة للاستخدام إذا تعذّر تحميل الإعلانات.</p>
+            <p>سياسة خصوصية Google: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a> · كيف تستخدم Google المعلومات من التطبيقات الشريكة: <a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a></p>
+            <p>لا نشغّل خدمة مستقلة للتحليلات أو تقارير الأعطال.</p>
 
-            <h2>التقييم على Google Play</h2>
-            <p>إذا اخترت «قيّم ItziPDF»، يطلب التطبيق تجربة التقييم الرسمية من Google Play. لا يستلم ItziPDF نص تقييمك أو تقييم النجوم أو معلومات حسابك من هذه التجربة. يعالج Google Play التقييم وبياناته وفقا لسياسة خصوصية Google وشروط Google Play. وإذا لم تكن تجربة التقييم متاحة، قد يفتح التطبيق صفحة ItziPDF على Google Play بدلا منها.</p>
+            <h2>المشاركة</h2>
+            <p>لا نبيع المستندات ولا أي معلومات شخصية، ولا نستخدم محتوى المستندات لأغراض الإعلان. عند تفعيل الإعلانات قد تُشارَك المعلومات المرتبطة بالإعلانات مع Google والشركاء المؤهلين كما هو موضّح أعلاه، وتصف بعض قوانين الخصوصية أنواعًا من الإفصاح الإعلاني بأنها «بيع» أو «مشاركة» للمعلومات الشخصية؛ استخدم خيارات خصوصية الإعلانات لممارسة حقوق الانسحاب المتاحة.</p>
+            <p>لا تغادر الملفات مساحة التطبيق الخاصة إلا عندما تحفظها أو تشاركها عبر تطبيق أو مجلد أو مزوّد آخر، فتنطبق عندها قواعد الخصوصية لتلك الجهة. يتولى Google Play التنزيلات وأي مدفوعات والتقييمات وفق شروطه، ولا يتضمن ItziPDF اشتراكات أو مشتريات داخل التطبيق في هذا الإصدار.</p>
 
-            <h2>الإعلانات والمعرفات</h2>
-            <p>إعلانات Google Mobile Ads غير مفعلة في هذا الإصدار. إذا تم تفعيلها في إصدار لاحق، فقد يجمع أو يشارك Google Mobile Ads SDK معرف الإعلانات، معلومات الجهاز والتطبيق، التفاعل مع الإعلانات، بيانات تشخيصية، ومعلومات تقريبية لازمة للإعلان أو منع الاحتيال أو الأمان أو القياس. يمكنك إعادة ضبط أو حذف معرف الإعلانات من إعدادات أندرويد.</p>
+            <h2>الدعم والروابط الخارجية</h2>
+            <p>إذا تواصلت مع الدعم، نستخدم بريدك الإلكتروني ورسالتك وأي مرفقات تختار إرسالها للرد على طلبك. نرجو ألا ترسل مستندات سرية إلا إذا كانت لازمة لطلبك، ولا تُرفق رسائل الملاحظات أي مستند تلقائيًا. نحتفظ بمراسلات الدعم فقط بالقدر اللازم لمعالجة الطلب ولحفظ السجلات المشروعة أو الالتزامات القانونية. يؤدي فتح موقعنا أو روابطنا الاجتماعية إلى خدمات لها ممارسات خصوصية مستقلة.</p>
 
-            <h2>الدعم والتشخيص</h2>
-            <p>إذا راسلت الدعم أو تواصلت عبر الروابط الاجتماعية، فسنعالج البريد الإلكتروني والمعلومات التي ترسلها للرد على طلبك. إذا أضفنا تقارير أعطال لاحقا، فستستخدم لتحسين الاستقرار ولن نقوم بتسجيل محتوى مستنداتك عمدا.</p>
+            <h2>الأمان والاحتفاظ بالبيانات</h2>
+            <p>يستخدم ItziPDF التخزين الخاص بالتطبيق وآليات أندرويد للوصول إلى الملفات المختارة والمعالجة على الجهاز. تستخدم ملفات PDF المحمية بكلمة مرور التي تنشئها تشفيرًا قويًا (AES-256 افتراضيًا)، فاحتفظ بكلمات مرورك في مكان آمن لأنه لا يمكن استعادتها. لا يمكن لأي نظام تخزين أو شبكة ضمان أمان مطلق.</p>
+            <p>تبقى ملفات المكتبة والتوقيعات المحفوظة والوصفات وغيرها من السجلات المحلية حتى تحذفها أو تمسح بيانات التطبيق أو تزيله، ويؤدي مسح البيانات أو إزالة التطبيق إلى حذفها، وقد يحذف أندرويد ملفات الذاكرة المؤقتة في أي وقت. النسخ المحفوظة خارج المكتبة الخاصة مستقلة ولا تُحذف معها. تطبّق Google والمزوّدون الخارجيون سياساتهم الخاصة للاحتفاظ بالبيانات التي يعالجونها وحذفها.</p>
 
-            <h2>المشاركة مع أطراف أخرى</h2>
-            <p>لا نشارك ملفاتك إلا عندما تختار أنت المشاركة أو الحفظ عبر تطبيق أو خدمة أخرى، أو عند استخدام مزود خدمة معلن لأداة سحابية مستقبلية، أو عند تفعيل SDK إعلاني، أو عندما يفرض القانون ذلك. لا نبيع البيانات الشخصية أو الحساسة.</p>
-
-            <h2>الأمان</h2>
-            <p>نستخدم ممارسات مناسبة مثل النقل المشفر للبيانات عند وجود اتصال شبكي. الملفات المحلية تعتمد أيضا على حماية جهازك ومساحة التطبيق. لا يوجد نظام آمن بنسبة 100%، لذلك تجنب معالجة مستندات شديدة الحساسية على جهاز غير موثوق.</p>
-
-            <h2>الاحتفاظ والحذف</h2>
-            <p>تبقى نتائج مكتبة ItziPDF حتى تحذف كل ملف على حدة أو تمسح بيانات التطبيق أو تزيل التطبيق. تُحفظ حالة القارئ محليا لما يصل إلى 200 مستند حديث وقد تُستبدل السجلات الأقدم؛ وتبقى حالة القارئ والتفضيلات الأخرى إلى أن تمسح بيانات التطبيق أو تزيله. إزالة التطبيق تحذف الملفات الموجودة في مساحة التطبيق الخاصة. حذف ملف من مكتبة ItziPDF لا يحذف النسخ التي حفظتها في مجلد مخصص أو شاركتها خارجه؛ تبقى تلك النسخ حتى تحذفها من مدير الملفات أو الخدمة التي حفظتها فيها، وقد تبقى بعد إزالة التطبيق. قد يحذف أندرويد ملفات الإدخال المؤقتة تلقائيا. لطلبات حذف بيانات الدعم أو أي ملفات تمت معالجتها سحابيا مستقبلا، راسلنا على itzigroup_support@itzigroup.com.</p>
+            <h2>اختياراتك وحقوقك</h2>
+            <p>أنت من يقرر الملفات التي تفتحها، ويمكنك حذف ملفات المكتبة والتوقيعات المحفوظة، وإدارة الوصول إلى المجلدات، ومسح الصور المصغّرة، وتغيير خيارات الإعلانات عند توفّرها، ومسح بيانات التطبيق أو إزالته. تواصل عبر <a href="mailto:itzigroup_support@itzigroup.com">itzigroup_support@itzigroup.com</a> لطلب الوصول إلى معلومات الدعم التي تحتفظ بها Itzi Group أو تصحيحها أو حذفها. وبحسب مكان إقامتك، قد تكون لك أيضًا حقوق في الاعتراض أو تقييد المعالجة أو نقل البيانات أو تقديم شكوى إلى جهة حماية البيانات المحلية. قد نحتاج إلى التحقق من الطلب، وقد نحتفظ بمعلومات يوجب القانون حفظها. ويمكن تقديم الطلبات المتعلقة بمعلومات Google عبر أدوات الخصوصية التابعة لها.</p>
 
             <h2>الأطفال</h2>
-            <p>ItziPDF غير موجه للأطفال دون 13 سنة. يجب استخدام التطبيق فقط للملفات التي تملكها أو لديك صلاحية قانونية لمعالجتها.</p>
+            <p>ItziPDF غير موجّه للأطفال دون سن 13 عامًا، ولا نجمع عن علم معلومات شخصية من الأطفال. إذا اعتقدت أن طفلًا أرسل إلينا معلومات، فتواصل معنا لنراجع الأمر ونتخذ الإجراء المناسب.</p>
 
             <h2>التغييرات</h2>
-            <p>قد نحدث هذه السياسة عند إضافة ميزات أو SDKs أو خادم. سنبقي النص داخل التطبيق والسياسة العامة متوافقين مع ممارسات التطبيق الفعلية.</p>
+            <p>قد نحدّث هذه السياسة مع تغيّر التطبيق، ويحدد تاريخ السريان نسخة السياسة. نحرص على أن تتوافق السياسة داخل التطبيق وعلى موقعنا مع سلوك الإصدار المنشور.</p>
         </div>
     </section>
 
@@ -224,7 +259,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 ItziGroup. All rights reserved.</p>
-                <p class="footer-domain"><a href="/privacy">Website Privacy</a> · <a href="/terms">Terms of Use</a></p>
+                <p class="footer-domain"><a href="/itzipdf/privacy">ItziPDF Privacy</a> · <a href="/itzipdf/terms">ItziPDF Terms</a> · <a href="/privacy">Website Privacy</a> · <a href="/terms">Website Terms</a></p>
             </div>
         </div>
     </footer>
