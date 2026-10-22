@@ -134,7 +134,7 @@
 
         <h2>Device services used by some features</h2>
         <ul>
-            <li><strong>Document scanner:</strong> Scan to PDF uses Google's ML Kit document scanner, provided through Google Play services when your device supports it. Pages are captured and processed on your device and returned to ItziPDF; the images are not sent to Itzi Group. Google states that ML Kit may send Google limited diagnostic and usage information — for example device model and Android version, app package name and version, performance metrics and error codes — encrypted in transit, to operate and improve the service. On devices without it, ItziPDF uses your camera with on-device cropping and filters instead. You can also create PDFs from your own photos with Images to PDF.</li>
+            <li><strong>Document scanner:</strong> Scan to PDF uses Google's ML Kit document scanner, provided through Google Play services when your device supports it. Pages are captured and processed on your device and returned to ItziPDF; the images are not sent to Itzi Group. Google states that ML Kit may send Google limited diagnostic and usage information — for example device model and Android version, app package name and version, performance metrics and error codes — encrypted in transit, to operate and improve the service. On devices without it, ItziPDF opens your device's camera app to take each photo and then crops and filters it on your device. You can also create PDFs from your own photos with Images to PDF.</li>
             <li><strong>Read aloud:</strong> the reader can speak a page using the text-to-speech engine installed on your device. The page text is passed to that engine. Most engines work offline; if you selected an engine that uses an online service, its provider's terms and privacy policy apply.</li>
             <li><strong>Printing:</strong> when you print, Android's print system sends the document to the printer or print service you choose.</li>
             <li><strong>Google Play in-app review:</strong> if you choose to rate the app, Google Play shows the review prompt. ItziPDF does not receive your review text, rating or Google account details; Itzi Group may see published reviews in Google Play Console.</li>
@@ -142,7 +142,7 @@
 
         <h2>Permissions</h2>
         <ul>
-            <li><strong>Camera:</strong> requested only when you use the in-app camera for Scan to PDF on devices without the Google document scanner. The Google scanner itself does not need ItziPDF to hold the camera permission.</li>
+            <li><strong>Camera:</strong> ItziPDF does not hold the camera permission. Scanning uses Google's document scanner or your device's own camera app, which take the photo and hand it back to ItziPDF.</li>
             <li><strong>Files and folders:</strong> Android's pickers give access only to the items you select. Choosing an output folder grants ongoing access so future copies can be saved there; when you change the folder or return to automatic Library storage, the app stops using the previous folder and asks Android to release the old grant (a storage provider may not revoke access immediately).</li>
             <li><strong>Internet and network state:</strong> used only for advertising and privacy messages in builds where ads are enabled, and by Google Play services (for example to install the scanner module). Document processing never needs the internet.</li>
         </ul>
@@ -206,7 +206,7 @@
 
             <h2>خدمات الجهاز التي تستخدمها بعض الميزات</h2>
             <ul>
-                <li><strong>الماسح الضوئي للمستندات:</strong> تستخدم أداة المسح إلى PDF ماسح المستندات ML Kit من Google، الذي توفّره خدمات Google Play عندما يدعمه جهازك. تُلتقط الصفحات وتُعالَج على جهازك ثم تعود إلى ItziPDF، ولا تُرسَل الصور إلى Itzi Group. تذكر Google أن ML Kit قد يرسل إليها معلومات محدودة عن التشخيص والاستخدام، مثل طراز الجهاز وإصدار أندرويد واسم حزمة التطبيق وإصداره ومقاييس الأداء ورموز الأخطاء، مشفّرة أثناء النقل، لتشغيل الخدمة وتحسينها. على الأجهزة التي لا تتوفر فيها هذه الخدمة، يستخدم ItziPDF الكاميرا مع القص والمرشحات على الجهاز بدلًا منها. ويمكنك أيضًا إنشاء ملفات PDF من صورك الخاصة عبر أداة الصور إلى PDF.</li>
+                <li><strong>الماسح الضوئي للمستندات:</strong> تستخدم أداة المسح إلى PDF ماسح المستندات ML Kit من Google، الذي توفّره خدمات Google Play عندما يدعمه جهازك. تُلتقط الصفحات وتُعالَج على جهازك ثم تعود إلى ItziPDF، ولا تُرسَل الصور إلى Itzi Group. تذكر Google أن ML Kit قد يرسل إليها معلومات محدودة عن التشخيص والاستخدام، مثل طراز الجهاز وإصدار أندرويد واسم حزمة التطبيق وإصداره ومقاييس الأداء ورموز الأخطاء، مشفّرة أثناء النقل، لتشغيل الخدمة وتحسينها. على الأجهزة التي لا تتوفر فيها هذه الخدمة، يفتح ItziPDF تطبيق الكاميرا في جهازك لالتقاط كل صورة، ثم يقصّها ويطبّق المرشحات عليها على جهازك. ويمكنك أيضًا إنشاء ملفات PDF من صورك الخاصة عبر أداة الصور إلى PDF.</li>
                 <li><strong>القراءة بصوت مسموع:</strong> يمكن للقارئ نطق الصفحة باستخدام محرك تحويل النص إلى كلام المثبّت على جهازك، ويُمرَّر نص الصفحة إلى ذلك المحرك. تعمل معظم المحركات دون اتصال، أما إذا اخترت محركًا يعتمد على خدمة عبر الإنترنت فتنطبق عليه شروط مزوّده وسياسة خصوصيته.</li>
                 <li><strong>الطباعة:</strong> عند الطباعة، يرسل نظام الطباعة في أندرويد المستند إلى الطابعة أو خدمة الطباعة التي تختارها.</li>
                 <li><strong>التقييم داخل التطبيق عبر Google Play:</strong> إذا اخترت تقييم التطبيق، يعرض Google Play نافذة التقييم. لا يتلقى ItziPDF نص تقييمك أو عدد النجوم أو بيانات حسابك في Google، وقد تتمكن Itzi Group من رؤية التقييمات المنشورة في Google Play Console.</li>
@@ -214,7 +214,7 @@
 
             <h2>الأذونات</h2>
             <ul>
-                <li><strong>الكاميرا:</strong> لا يُطلب هذا الإذن إلا عند استخدام كاميرا التطبيق في أداة المسح إلى PDF على الأجهزة التي لا يتوفر فيها ماسح Google. لا يحتاج ماسح Google نفسه إلى منح ItziPDF إذن الكاميرا.</li>
+                <li><strong>الكاميرا:</strong> لا يملك ItziPDF إذن الكاميرا. يعتمد المسح على ماسح المستندات من Google أو على تطبيق الكاميرا في جهازك، إذ يلتقطان الصورة ثم يعيدانها إلى ItziPDF.</li>
                 <li><strong>الملفات والمجلدات:</strong> لا يمنح منتقي الملفات في أندرويد الوصول إلا إلى العناصر التي تختارها. يمنح اختيار مجلد إخراج وصولًا مستمرًا لحفظ النسخ المستقبلية فيه، وعند تغيير المجلد أو العودة إلى الحفظ التلقائي في المكتبة يتوقف التطبيق عن استخدام المجلد السابق ويطلب من أندرويد إلغاء الإذن القديم (وقد لا يلغي مزوّد التخزين الوصول فورًا).</li>
                 <li><strong>الإنترنت وحالة الشبكة:</strong> تُستخدم فقط للإعلانات ورسائل الخصوصية في الإصدارات المفعّلة فيها الإعلانات، ومن قِبل خدمات Google Play (مثلًا لتثبيت وحدة الماسح). لا تحتاج معالجة المستندات إلى الإنترنت أبدًا.</li>
             </ul>
