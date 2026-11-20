@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ItziGroup — Tech For Future | AI, Apps & Innovation</title>
-    <meta name="description" content="ItziGroup — Tech For Future. We build cutting-edge AI-powered apps, tools, and digital experiences. Explore our projects, apps, and connect with us.">
-    <meta name="keywords" content="ItziGroup, itzigroup, tech, AI, apps, innovation, future technology">
+    <title>ItziGroup — Tech For Future | Private, Local-First Apps</title>
+    <meta name="description" content="ItziGroup — Tech For Future. We build fast, local-first, bilingual apps and practical digital tools that respect your privacy. Explore ItziPDF 2.0 for Android.">
+    <meta name="keywords" content="ItziGroup, itzigroup, ItziPDF, Android PDF editor, local-first apps, privacy-first software, bilingual Arabic English apps">
     <meta name="author" content="ItziGroup">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0a0a0a">
+    <meta name="color-scheme" content="dark">
 
     <!-- Security Headers -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -17,47 +18,90 @@
 
     <!-- Open Graph / Social -->
     <meta property="og:title" content="ItziGroup — Tech For Future">
-    <meta property="og:description" content="We build cutting-edge AI-powered apps, tools, and digital experiences.">
+    <meta property="og:description" content="Fast, local-first, bilingual apps built for everyday use. Explore ItziPDF 2.0 for Android — 34 on-device PDF tools, free and private.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://itzigroup.com">
-    <meta property="og:image" content="https://itzigroup.com/assets/logo.png">
+    <meta property="og:url" content="https://itzigroup.com/">
+    <meta property="og:image" content="https://itzigroup.com/assets/og-home.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ItziGroup — Tech For Future. Featuring ItziPDF 2.0 on Google Play.">
     <meta property="og:site_name" content="ItziGroup">
+    <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ItziGroup">
     <meta name="twitter:title" content="ItziGroup — Tech For Future">
-    <meta name="twitter:description" content="We build cutting-edge AI-powered apps, tools, and digital experiences.">
-    <meta name="twitter:image" content="https://itzigroup.com/assets/logo.png">
-    <link rel="canonical" href="https://itzigroup.com">
+    <meta name="twitter:description" content="Fast, local-first, bilingual apps built for everyday use. Explore ItziPDF 2.0 for Android — 34 on-device PDF tools, free and private.">
+    <meta name="twitter:image" content="https://itzigroup.com/assets/og-home.png">
+    <meta name="twitter:image:alt" content="ItziGroup — Tech For Future. Featuring ItziPDF 2.0 on Google Play.">
+    <link rel="canonical" href="https://itzigroup.com/">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
-    <!-- Google Fonts -->
+    <!-- Fonts are self-hosted (see styles.css) -->
+    <link rel="stylesheet" href="styles.css?v=20261120">
+    <!-- Without JavaScript, show scroll-reveal content immediately -->
+    <noscript><style>[data-aos] { opacity: 1 !important; transform: none !important; }</style></noscript>
 
-    <link rel="stylesheet" href="styles.css?v=20260827">
+    <!-- Structured data (JSON data block, not executable script) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "name": "ItziGroup",
+                "slogan": "Tech For Future",
+                "url": "https://itzigroup.com/",
+                "logo": "https://itzigroup.com/assets/logo-sm.png",
+                "email": "itzigroup_support@itzigroup.com",
+                "sameAs": [
+                    "https://x.com/ItziGroup",
+                    "https://www.instagram.com/itzigroup/",
+                    "https://www.facebook.com/profile.php?id=61591652615538"
+                ],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "customer support",
+                    "email": "itzigroup_support@itzigroup.com",
+                    "url": "https://support.itzigroup.com/",
+                    "availableLanguage": ["English", "Arabic"]
+                }
+            },
+            {
+                "@type": "WebSite",
+                "name": "ItziGroup",
+                "url": "https://itzigroup.com/"
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <!-- Cursor glow effect -->
-    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
     <!-- Particle canvas -->
-    <canvas id="particleCanvas"></canvas>
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
 
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" aria-label="Main">
         <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <img src="assets/logo.png" alt="ItziGroup Logo" class="logo-img">
+            <a href="#hero" class="nav-logo" aria-label="ItziGroup home">
+                <img src="assets/logo-sm.png" alt="ItziGroup Logo" class="logo-img" width="108" height="36">
             </a>
             <div class="nav-links" id="navLinks">
                 <a href="#hero" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#projects" class="nav-link">Projects</a>
                 <a href="#apps" class="nav-link">Apps</a>
+                <a href="#about" class="nav-link">About</a>
                 <a href="#connect" class="nav-link">Connect</a>
+                <a href="https://support.itzigroup.com" class="nav-link" target="_blank" rel="noopener noreferrer">Support</a>
                 <a href="#contact" class="nav-link nav-cta">Get In Touch</a>
             </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks" data-label-open="Open menu" data-label-close="Close menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -65,316 +109,258 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-bg-grid"></div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                <span>Tech For Future</span>
-            </div>
-            <h1 class="hero-title">
-                <span class="title-line">We Build The</span>
-                <span class="title-line title-gradient">Future of Tech</span>
-            </h1>
-            <p class="hero-subtitle">
-                ItziGroup is where innovation meets execution. We craft AI-powered apps, 
-                digital experiences, and next-generation tools that push boundaries.
-            </p>
-            <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">
-                    <span>Explore Our Work</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
-                <a href="#about" class="btn btn-secondary">
-                    <span>Learn More</span>
-                </a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number" data-target="1">0</span><span class="stat-suffix">+</span>
-                    <span class="stat-label">Projects Built</span>
+    <main id="main" tabindex="-1">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-bg-grid" aria-hidden="true"></div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot" aria-hidden="true"></span>
+                    <span>Tech For Future</span>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="1">0</span><span class="stat-suffix">+</span>
-                    <span class="stat-label">Apps Launched</span>
+                <h1 class="hero-title">
+                    <span class="title-line">We Build The</span>
+                    <span class="title-line title-gradient">Future of Tech</span>
+                </h1>
+                <p class="hero-subtitle">
+                    ItziGroup crafts fast, local-first apps and practical digital tools that run right on your device—no accounts, no cloud uploads, and native support for English and Arabic.
+                </p>
+                <div class="hero-actions">
+                    <a href="#apps" class="btn btn-primary">
+                        <span>Explore ItziPDF 2.0</span>
+                        <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        <span>How We Build</span>
+                    </a>
                 </div>
-                <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-number">Counting</span>
-                    <span class="stat-label">Users</span>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="34">34</span>
+                        <span class="stat-label">On-Device PDF Tools</span>
+                    </div>
+                    <div class="stat-divider" aria-hidden="true"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="100">100</span><span class="stat-suffix">%</span>
+                        <span class="stat-label">Local &amp; Private</span>
+                    </div>
+                    <div class="stat-divider" aria-hidden="true"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">EN · AR</span>
+                        <span class="stat-label">Native Bilingual RTL</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="hero-scroll-indicator">
-            <span>Scroll to explore</span>
-            <div class="scroll-line"></div>
-        </div>
-    </section>
+            <div class="hero-scroll-indicator" aria-hidden="true">
+                <span>Scroll to explore</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
 
-    <!-- About Section -->
-    <section class="section about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">About Us</span>
-                <h2 class="section-title">Driven by <span class="text-gradient">Innovation</span></h2>
-                <p class="section-subtitle">We're a tech collective passionate about building the tools and experiences of tomorrow.</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-card" data-aos="fade-up">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                    </div>
-                    <h3>AI & Machine Learning</h3>
-                    <p>Leveraging cutting-edge AI to create intelligent solutions that learn, adapt, and evolve with your needs.</p>
+        <!-- Apps Section -->
+        <section class="section apps" id="apps">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Our Apps</span>
+                    <h2 class="section-title">Apps from <span class="text-gradient">ItziGroup</span></h2>
+                    <p class="section-subtitle">Practical everyday software designed around speed, privacy, and bilingual craftsmanship.</p>
                 </div>
-                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-                    </div>
-                    <h3>App Development</h3>
-                    <p>Building beautiful, performant mobile and web applications that users love and businesses rely on.</p>
-                </div>
-                <div class="about-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <h3>Digital Innovation</h3>
-                    <p>Pushing the boundaries of what's possible in tech, from concept to reality, with a relentless drive to innovate.</p>
-                </div>
-                <div class="about-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                    </div>
-                    <h3>Global Reach</h3>
-                    <p>Our solutions are designed for a global audience, breaking barriers and connecting people across the world.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="apps-grid">
+                    <!-- App Card 1 — ItziPDF 2.0 (Flagship) -->
+                    <article class="app-card app-card-featured" data-aos="fade-up">
+                        <div class="app-card-head">
+                            <div class="app-icon-wrapper">
+                                <img src="assets/itzipdf-icon-192.png" alt="ItziPDF app icon" class="app-icon-img" width="64" height="64" loading="lazy" decoding="async">
+                            </div>
+                            <span class="status-live-pill">Live on Google Play</span>
+                        </div>
+                        <h3>ItziPDF 2.0</h3>
+                        <p class="app-description">A complete, local-first PDF studio for Android. Read 1,000+ page documents smoothly, convert Word (.docx &amp; .doc) to PDF offline, and organize, compress, sign, redact, and protect files across 34 on-device tools—free, with no account and no uploads.</p>
+                        <ul class="app-highlights" aria-label="ItziPDF 2.0 highlights">
+                            <li>34 On-Device Tools</li>
+                            <li>Offline Word to PDF</li>
+                            <li>1,000+ Page Reader</li>
+                            <li>English &amp; Arabic RTL</li>
+                            <li>Free · No Account</li>
+                        </ul>
+                        <div class="app-meta">
+                            <span class="app-platform">Android 7.0+ · v2.0.0 (build 6)</span>
+                            <span class="app-status status-live">Updated for 2.0</span>
+                        </div>
+                        <div class="app-actions">
+                            <a href="/itzipdf" class="btn btn-small btn-primary">Explore ItziPDF</a>
+                            <a href="https://play.google.com/store/apps/details?id=com.itzigroup.itzipdf&amp;pcampaignid=web_share" class="btn btn-small btn-outline" target="_blank" rel="noopener noreferrer" aria-label="Get ItziPDF on Google Play">Google Play</a>
+                            <a href="/itzipdf/ar" class="btn btn-small btn-ghost" hreflang="ar" lang="ar">النسخة العربية</a>
+                        </div>
+                    </article>
 
-    <!-- Projects Section -->
-    <section class="section projects" id="projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Our Work</span>
-                <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
-                <p class="section-subtitle">A showcase of our latest innovations and builds. Each project represents our commitment to excellence.</p>
-            </div>
-            <div class="projects-grid">
-                <!-- Project Card 1 -->
-                <div class="project-card project-card-featured" data-aos="fade-up">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    <!-- App Card 2 — What's Next -->
+                    <article class="app-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="app-icon-wrapper">
+                            <div class="app-icon app-icon-coming">
+                                <svg aria-hidden="true" focusable="false" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </div>
                         </div>
-                        <div class="project-overlay">
-                            <span class="project-view">View Project →</span>
+                        <h3>More Coming Soon</h3>
+                        <p class="app-description">We keep expanding ItziPDF and exploring new privacy-first, offline-capable tools for everyday mobile workflows. Have a feature idea or collaboration in mind? We'd love to hear from you.</p>
+                        <div class="app-meta">
+                            <span class="app-platform">Future releases</span>
+                            <span class="app-status status-dev">In development</span>
                         </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="tag">AI</span>
-                            <span class="tag">Web App</span>
+                        <div class="app-actions">
+                            <a href="https://support.itzigroup.com/?product=general&amp;topic=feature#contact" class="btn btn-small btn-outline" target="_blank" rel="noopener noreferrer">Share an Idea</a>
                         </div>
-                        <h3>Next-Gen AI</h3>
-                        <p>We are currently building our next generation of AI tools. Full details will be revealed soon.</p>
-                        <a class="project-link" style="color: var(--grey); cursor: default;">Coming Soon</a>
-                    </div>
-                </div>
-                <!-- Project Card 2 -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
-                        </div>
-                        <div class="project-overlay">
-                            <span class="project-view">View Project →</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="tag">Mobile</span>
-                            <span class="tag">iOS</span>
-                        </div>
-                        <h3>Mobile Experiences</h3>
-                        <p>Our upcoming mobile applications will redefine how you interact with digital services on the go.</p>
-                        <a class="project-link" style="color: var(--grey); cursor: default;">Coming Soon</a>
-                    </div>
-                </div>
-                <!-- Project Card 3 -->
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-                        </div>
-                        <div class="project-overlay">
-                            <span class="project-view">View Project →</span>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span class="tag">Tool</span>
-                            <span class="tag">Automation</span>
-                        </div>
-                        <h3>Workflow Automation</h3>
-                        <p>Smart automation tools that simplify complex workflows. More info coming soon.</p>
-                        <a class="project-link" style="color: var(--grey); cursor: default;">Coming Soon</a>
-                    </div>
+                    </article>
                 </div>
             </div>
-            <div class="projects-cta">
-                <p>More projects are being built every day.</p>
-                <a href="#contact" class="btn btn-outline">Have an idea? Let's talk →</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Apps Section -->
-    <section class="section apps" id="apps">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Our Apps</span>
-                <h2 class="section-title">Apps from <span class="text-gradient">ItziGroup</span></h2>
-                <p class="section-subtitle">Explore our released apps and what we're building next, with privacy, performance, and practical everyday use in mind.</p>
-            </div>
-            <div class="apps-grid">
-                <!-- App Card 1 — ItziPDF -->
-                <article class="app-card" data-aos="fade-up">
-                    <div class="app-icon-wrapper">
-                        <img src="assets/itzipdf-icon.png" alt="ItziPDF Icon" style="width: 48px; height: 48px; border-radius: 12px; object-fit: cover;">
-                    </div>
-                    <h3>ItziPDF</h3>
-                    <p class="app-description">A local-first Android PDF workspace with bilingual English and Arabic support, a private document Library, reader tools, and everyday PDF processing in one app.</p>
-                    <div class="app-meta">
-                        <span class="app-platform">Android · v2.0.0 (build 6)</span>
-                        <span class="app-status status-live">Live on Google Play</span>
-                    </div>
-                    <div class="app-actions">
-                        <a href="/itzipdf" class="btn btn-small btn-outline">Learn More</a>
-                        <a href="https://play.google.com/store/apps/details?id=com.itzigroup.itzipdf&amp;pcampaignid=web_share" class="btn btn-small btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Get ItziPDF on Google Play">Google Play</a>
-                    </div>
-                </article>
-                <!-- App Card 2 — Coming Soon -->
-                <div class="app-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="app-icon-wrapper">
-                        <div class="app-icon app-icon-coming">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <!-- About Section -->
+        <section class="section about" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">How We Build</span>
+                    <h2 class="section-title">Crafted Around <span class="text-gradient">Real Needs</span></h2>
+                    <p class="section-subtitle">Every release starts with practical problems—and respects your device, your time, and your privacy.</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card" data-aos="fade-up">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
                         </div>
+                        <h3>Local-First &amp; Private</h3>
+                        <p>Your documents and files stay on your phone. We design tools that work offline without accounts, cloud uploads, or tracking SDKs.</p>
                     </div>
-                    <h3>More Coming Soon</h3>
-                    <p class="app-description">Something exciting is in the works. Stay tuned for our next big releases from ItziGroup.</p>
-                    <div class="app-meta">
-                        <span class="app-platform">Future release</span>
-                        <span class="app-status status-dev">In development</span>
+                    <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        </div>
+                        <h3>Built for Performance</h3>
+                        <p>Engineered to handle heavy real-world files smoothly—from thousand-page PDFs to offline Word conversion—with progress and cancellation.</p>
                     </div>
-                    <div class="app-actions">
-                        <a href="#contact" class="btn btn-small btn-outline">Get Notified</a>
+                    <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                        <h3>Bilingual by Design</h3>
+                        <p>Native English and Arabic interfaces with proper right-to-left layouts, shaped Arabic typography, Arabic-Indic digits, and Hijri dates.</p>
+                    </div>
+                    <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                        </div>
+                        <h3>Everyday Utility</h3>
+                        <p>Clean, modern mobile tools that solve real work for students, professionals, and everyday users—without paywalls or bloat.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Connect / Social Section -->
-    <section class="section connect" id="connect">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Stay Connected</span>
-                <h2 class="section-title">Find Us <span class="text-gradient">Everywhere</span></h2>
-                <p class="section-subtitle">Follow our journey across platforms. We share updates, behind-the-scenes, and more.</p>
-            </div>
-            <div class="social-grid">
-                <!-- Twitter/X -->
-                <a href="https://x.com/ItziGroup" class="social-card" data-aos="fade-up" target="_blank" rel="noopener noreferrer">
-                    <div class="social-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                    </div>
-                    <div class="social-info">
-                        <h3>X (Twitter)</h3>
-                        <p>@ItziGroup</p>
-                    </div>
-                    <span class="social-arrow">→</span>
-                </a>
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/itzigroup/" class="social-card" data-aos="fade-up" data-aos-delay="50" target="_blank" rel="noopener noreferrer">
-                    <div class="social-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
-                    </div>
-                    <div class="social-info">
-                        <h3>Instagram</h3>
-                        <p>@itzigroup</p>
-                    </div>
-                    <span class="social-arrow">→</span>
-                </a>
-                <!-- Removed LinkedIn, YouTube, GitHub per request -->
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/profile.php?id=61591652615538" class="social-card" data-aos="fade-up" data-aos-delay="250" target="_blank" rel="noopener noreferrer">
-                    <div class="social-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                    </div>
-                    <div class="social-info">
-                        <h3>Facebook</h3>
-                        <p>ItziGroup</p>
-                    </div>
-                    <span class="social-arrow">→</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section contact" id="contact">
-        <div class="container">
-            <div class="contact-wrapper">
-                <div class="contact-info" style="width: 100%; max-width: 800px; margin: 0 auto; text-align: center;">
-                    <span class="section-tag" style="justify-content: center;">Get In Touch</span>
-                    <h2 class="section-title" style="margin-top: 16px;">We're Here <span class="text-gradient">To Help</span></h2>
-                    <p style="margin: 24px auto;">Need assistance, have a question, or want to collaborate? Visit our dedicated Support Center to find answers or contact our team.</p>
-                    <div class="contact-details" style="justify-content: center; margin-bottom: 32px;">
-                        <div class="contact-item">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                            <span>itzigroup_support@itzigroup.com</span>
+        <!-- Connect / Social Section -->
+        <section class="section connect" id="connect">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Stay Connected</span>
+                    <h2 class="section-title">Find Us <span class="text-gradient">Everywhere</span></h2>
+                    <p class="section-subtitle">Follow our updates, releases, and announcements across our official channels.</p>
+                </div>
+                <div class="social-grid">
+                    <!-- Twitter/X -->
+                    <a href="https://x.com/ItziGroup" class="social-card" data-aos="fade-up" target="_blank" rel="noopener noreferrer">
+                        <div class="social-icon">
+                            <svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                         </div>
-                    </div>
-                    <a href="https://support.itzigroup.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 16px 40px; font-size: 18px;">
-                        <span>Go To Support Center</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        <div class="social-info">
+                            <h3>X (Twitter)</h3>
+                            <p>@ItziGroup</p>
+                        </div>
+                        <span class="social-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/itzigroup/" class="social-card" data-aos="fade-up" data-aos-delay="50" target="_blank" rel="noopener noreferrer">
+                        <div class="social-icon">
+                            <svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                        </div>
+                        <div class="social-info">
+                            <h3>Instagram</h3>
+                            <p>@itzigroup</p>
+                        </div>
+                        <span class="social-arrow" aria-hidden="true">→</span>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/profile.php?id=61591652615538" class="social-card" data-aos="fade-up" data-aos-delay="100" target="_blank" rel="noopener noreferrer">
+                        <div class="social-icon">
+                            <svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </div>
+                        <div class="social-info">
+                            <h3>Facebook</h3>
+                            <p>ItziGroup</p>
+                        </div>
+                        <span class="social-arrow" aria-hidden="true">→</span>
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <span class="section-tag">Get In Touch</span>
+                        <h2 class="section-title">We're Here <span class="text-gradient">To Help</span></h2>
+                        <p>Need assistance with ItziPDF, have a question, or want to share feedback? Visit our bilingual Support Center for answers or send us a message.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                <a href="mailto:itzigroup_support@itzigroup.com">itzigroup_support@itzigroup.com</a>
+                            </div>
+                        </div>
+                        <a href="https://support.itzigroup.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary contact-cta">
+                            <span>Go To Support Center</span>
+                            <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="assets/logo.png" alt="ItziGroup Logo" class="footer-logo">
-                    <p>Tech For Future — Building tomorrow's technology, today.</p>
+                    <img src="assets/logo-sm.png" alt="ItziGroup Logo" class="footer-logo" width="96" height="32" loading="lazy" decoding="async">
+                    <p>Tech For Future — Practical, local-first software built for everyday use.</p>
                 </div>
-                <div class="footer-links">
-                    <div class="footer-col">
+                <div class="footer-links footer-links-4">
+                    <nav class="footer-col" aria-label="Navigation">
                         <h4>Navigation</h4>
                         <a href="#hero">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#projects">Projects</a>
                         <a href="#apps">Apps</a>
-                    </div>
-                    <div class="footer-col">
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact</a>
+                    </nav>
+                    <nav class="footer-col" aria-label="ItziPDF">
+                        <h4>ItziPDF</h4>
+                        <a href="/itzipdf">Overview</a>
+                        <a href="/itzipdf/ar" hreflang="ar" lang="ar">العربية</a>
+                        <a href="/itzipdf/privacy">App Privacy</a>
+                        <a href="/itzipdf/terms">App Terms</a>
+                    </nav>
+                    <nav class="footer-col" aria-label="Connect">
                         <h4>Connect</h4>
                         <a href="https://www.instagram.com/itzigroup/" target="_blank" rel="noopener noreferrer">Instagram</a>
                         <a href="https://www.facebook.com/profile.php?id=61591652615538" target="_blank" rel="noopener noreferrer">Facebook</a>
                         <a href="https://x.com/ItziGroup" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
-                    </div>
-                    <div class="footer-col">
+                    </nav>
+                    <nav class="footer-col" aria-label="More">
                         <h4>More</h4>
-                        <a href="#contact">Contact</a>
+                        <a href="https://support.itzigroup.com" target="_blank" rel="noopener noreferrer">Support Center</a>
                         <a href="/privacy">Website Privacy</a>
-                        <a href="/terms">Terms of Use</a>
-                    </div>
+                        <a href="/terms">Website Terms</a>
+                    </nav>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -384,6 +370,6 @@
         </div>
     </footer>
 
-    <script src="script.js?v=20260814"></script>
+    <script src="script.js?v=20261120"></script>
 </body>
 </html>

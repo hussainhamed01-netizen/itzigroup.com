@@ -1,439 +1,642 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ItziPDF — Android PDF Editor | ItziGroup</title>
-    <meta name="description" content="ItziPDF 2.0 for Android: offline Word to PDF, a reader for huge PDFs, merge, split, compress, sign, redact and 30+ tools, private on your phone, in English and Arabic.">
+    <title>ItziPDF 2.0 — Private Android PDF Studio | ItziGroup</title>
+    <meta name="description" content="ItziPDF 2.0 for Android: 34 on-device PDF tools, offline Word to PDF, a reader built for 1,000+ pages, merge, split, compress, sign, redact and protect—free and private in English and Arabic.">
     <meta name="robots" content="index, follow">
+    <meta name="author" content="ItziGroup">
     <meta name="theme-color" content="#0a0a0a">
+    <meta name="color-scheme" content="dark">
 
     <!-- Security Headers -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';">
 
     <!-- Open Graph / Social -->
-    <meta property="og:title" content="ItziPDF — Available on Google Play">
-    <meta property="og:description" content="Free, private Android PDF studio with offline Word to PDF and 30+ tools, fully in English and Arabic.">
+    <meta property="og:title" content="ItziPDF 2.0 — Your Private Android PDF Studio">
+    <meta property="og:description" content="Free, local-first Android PDF studio with 34 tools, offline Word to PDF, and a 1,000+ page reader—fully in English and Arabic.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://itzigroup.com/itzipdf">
-    <meta property="og:image" content="https://itzigroup.com/assets/itzipdf-icon.png">
+    <meta property="og:image" content="https://itzigroup.com/assets/itzipdf-og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ItziPDF 2.0: Your Private Android PDF Studio — 34 on-device tools, offline Word to PDF, English and Arabic.">
     <meta property="og:site_name" content="ItziGroup">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ar_AR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ItziGroup">
+    <meta name="twitter:title" content="ItziPDF 2.0 — Your Private Android PDF Studio">
+    <meta name="twitter:description" content="34 on-device PDF tools, offline Word to PDF, and a 1,000+ page reader for Android. Free, no account, no uploads.">
+    <meta name="twitter:image" content="https://itzigroup.com/assets/itzipdf-og.png">
+    <meta name="twitter:image:alt" content="ItziPDF 2.0: Your Private Android PDF Studio.">
 
     <link rel="canonical" href="https://itzigroup.com/itzipdf">
+    <link rel="alternate" hreflang="en" href="https://itzigroup.com/itzipdf">
+    <link rel="alternate" hreflang="ar" href="https://itzigroup.com/itzipdf/ar">
+    <link rel="alternate" hreflang="x-default" href="https://itzigroup.com/itzipdf">
     <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 
+    <!-- Structured data (JSON data block, not executable script) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "MobileApplication",
         "name": "ItziPDF",
-        "operatingSystem": "Android",
+        "operatingSystem": "Android 7.0 or later",
         "applicationCategory": "ProductivityApplication",
         "softwareVersion": "2.0.0",
+        "inLanguage": ["en", "ar"],
+        "isAccessibleForFree": true,
         "url": "https://itzigroup.com/itzipdf",
+        "image": "https://itzigroup.com/assets/itzipdf-icon.png",
+        "screenshot": "https://itzigroup.com/assets/itzipdf-og.png",
         "downloadUrl": "https://play.google.com/store/apps/details?id=com.itzigroup.itzipdf&pcampaignid=web_share",
-        "description": "A free, private Android PDF studio: offline Word to PDF, large-PDF reader, organize, merge, split, compress, edit, sign, protect and redact, in English and Arabic.",
+        "description": "A free, local-first Android PDF studio with 34 on-device tools: offline Word to PDF, 1,000+ page reader, Page Studio, merge, split, compress, edit, sign, protect and permanent redaction, in English and Arabic.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
         "author": {
             "@type": "Organization",
             "name": "ItziGroup",
-            "url": "https://itzigroup.com"
+            "url": "https://itzigroup.com/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "ItziGroup",
+            "url": "https://itzigroup.com/"
         }
     }
     </script>
 
-    <!-- Google Fonts -->
-
-    <link rel="stylesheet" href="../styles.css?v=20260827">
-    <style>
-        .app-hero {
-            padding: 140px 0 64px;
-            text-align: center;
-        }
-        .app-hero-icon {
-            width: 120px;
-            height: 120px;
-            border-radius: 24px;
-            margin: 0 auto 32px;
-            box-shadow: 0 20px 40px rgba(232, 122, 46, 0.2);
-        }
-        .content-section {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 24px;
-        }
-        .content-section h2 {
-            font-size: 32px;
-            margin-bottom: 24px;
-            color: var(--orange);
-        }
-        .content-section h3 {
-            font-size: 24px;
-            margin: 32px 0 16px;
-        }
-        .content-section p, .content-section ul {
-            font-size: 16px;
-            color: var(--grey-light);
-            margin-bottom: 20px;
-        }
-        .content-section ul {
-            padding-left: 24px;
-        }
-        .content-section li {
-            margin-bottom: 10px;
-        }
-        .app-links {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-        .release-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 20px;
-            padding: 7px 15px;
-            border: 1px solid rgba(76, 175, 80, 0.35);
-            border-radius: 999px;
-            background: rgba(76, 175, 80, 0.08);
-            color: #7ed983;
-            font-family: var(--font-mono);
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-        .release-pill::before {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #4caf50;
-            content: '';
-            box-shadow: 0 0 12px rgba(76, 175, 80, 0.65);
-        }
-        .app-hero-copy {
-            max-width: 760px;
-            margin: 0 auto;
-            color: var(--grey-light);
-        }
-        .store-meta {
-            margin-top: 18px;
-            color: var(--grey);
-            font-family: var(--font-mono);
-            font-size: 12px;
-        }
-        .play-store-button {
-            gap: 10px;
-        }
-        .play-store-button svg {
-            width: 18px;
-            height: 18px;
-            flex: 0 0 auto;
-        }
-        .app-showcase {
-            padding: 64px 0 88px;
-            overflow: hidden;
-            border-top: 1px solid var(--grey-border);
-            border-bottom: 1px solid var(--grey-border);
-            background: var(--black-soft);
-        }
-        .showcase-heading {
-            max-width: 700px;
-            margin: 0 auto 32px;
-            text-align: center;
-        }
-        .showcase-heading h2 {
-            margin-bottom: 12px;
-            font-size: clamp(30px, 5vw, 44px);
-        }
-        .showcase-heading p {
-            color: var(--grey-light);
-        }
-        .gallery-switcher {
-            text-align: center;
-        }
-        .gallery-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-        }
-        .gallery-language-tab {
-            display: inline-flex;
-            min-width: 104px;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 20px;
-            border: 1px solid var(--grey-border);
-            border-radius: 999px;
-            background: transparent;
-            color: var(--grey-light);
-            font: inherit;
-            cursor: pointer;
-            transition: all var(--transition-fast);
-        }
-        .gallery-language-tab:hover {
-            border-color: rgba(232, 122, 46, 0.45);
-            color: var(--white);
-        }
-        .gallery-language-tab:focus-visible {
-            outline: 2px solid var(--orange-light);
-            outline-offset: 3px;
-        }
-        .gallery-language-tab[aria-selected="true"] {
-            border-color: var(--orange);
-            background: var(--orange);
-            color: var(--black);
-            font-weight: 700;
-        }
-        .gallery-panels {
-            margin-top: 32px;
-        }
-        .gallery-panel[hidden] {
-            display: none;
-        }
-        .screenshot-rail {
-            display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            padding: 4px 4px 22px;
-            scroll-padding-inline: 4px;
-            scroll-snap-type: x mandatory;
-            scrollbar-color: var(--orange) var(--grey-border);
-            scrollbar-width: thin;
-            overscroll-behavior-inline: contain;
-        }
-        .screenshot-rail:focus-visible {
-            outline: 2px solid var(--orange-light);
-            outline-offset: 6px;
-        }
-        .screenshot-card {
-            flex: 0 0 clamp(230px, 24vw, 280px);
-            overflow: hidden;
-            margin: 0;
-            border: 1px solid var(--grey-border);
-            border-radius: 22px;
-            background: var(--black-card);
-            scroll-snap-align: start;
-            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
-        }
-        .screenshot-card img {
-            width: 100%;
-            aspect-ratio: 9 / 16;
-            object-fit: contain;
-            background: #f4f4f4;
-        }
-        .screenshot-card figcaption {
-            padding: 14px 16px 16px;
-            color: var(--grey-light);
-            font-size: 14px;
-            text-align: left;
-        }
-        .gallery-panel-ar .screenshot-card figcaption {
-            text-align: right;
-        }
-        .gallery-hint {
-            margin-top: 14px;
-            color: var(--grey);
-            font-size: 13px;
-        }
-        @media (max-width: 640px) {
-            .app-showcase {
-                padding: 52px 0 68px;
-            }
-            .screenshot-card {
-                flex-basis: min(82vw, 320px);
-            }
-            .screenshot-rail {
-                gap: 14px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../styles.css?v=20261120">
+    <noscript><style>[data-aos] { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar" id="navbar">
+<body class="ip-page">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar ip-nav" id="navbar" aria-label="Main">
         <div class="nav-container">
-            <a href="/" class="nav-logo">
-                <img src="../assets/logo.png" alt="ItziGroup Logo" class="logo-img">
+            <a href="/" class="nav-logo" aria-label="ItziGroup home">
+                <img src="../assets/logo-sm.png" alt="ItziGroup Logo" class="logo-img" width="108" height="36">
             </a>
-            <div class="subpage-nav-links">
-                <a href="/" class="nav-link">Home</a>
-                <a href="https://support.itzigroup.com" class="nav-link" target="_blank" rel="noopener noreferrer">Support</a>
-                <a href="mailto:itzigroup_support@itzigroup.com" class="nav-link nav-cta subpage-hide-mobile">Get In Touch</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#screenshots" class="nav-link">Screenshots</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#tools" class="nav-link">34 Tools</a>
+                <a href="#privacy" class="nav-link">Privacy</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="https://play.google.com/store/apps/details?id=com.itzigroup.itzipdf&amp;pcampaignid=web_share" class="nav-link nav-cta" target="_blank" rel="noopener noreferrer">Google Play<span class="visually-hidden"> (opens in a new tab)</span></a>
+            </div>
+            <div class="ip-nav-actions">
+                <a href="/itzipdf/ar" class="lang-switch" hreflang="ar" lang="ar" aria-label="اقرأ هذه الصفحة بالعربية (Arabic)">
+                    <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span>العربية</span>
+                </a>
+                <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks" data-label-open="Open menu" data-label-close="Close menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- App Hero -->
-    <section class="app-hero">
-        <div class="container">
-            <img src="../assets/itzipdf-icon.png" alt="ItziPDF Icon" class="app-hero-icon">
-            <div class="release-pill">Available on Google Play</div>
-            <h1 class="header-title">ItziPDF</h1>
-            <p style="font-size: 24px; color: var(--grey-light); margin-bottom: 16px;">Your Private PDF Workspace</p>
-            <p class="app-hero-copy">Read, convert, organize, edit, sign and protect PDFs directly on your Android device. ItziPDF 2.0 brings more than 30 tools, offline Word to PDF, a reader built for huge files and complete English and Arabic interfaces, with everything processed privately on your phone.</p>
-            
-            <div class="app-links">
-                <a href="https://play.google.com/store/apps/details?id=com.itzigroup.itzipdf&amp;pcampaignid=web_share" class="btn btn-primary play-store-button" target="_blank" rel="noopener noreferrer" aria-label="Get ItziPDF on Google Play">
-                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 3.3a1 1 0 0 1 1.53-.84l12.1 8.7a1 1 0 0 1 0 1.68l-12.1 8.7A1 1 0 0 1 5 20.7V3.3Z"/></svg>
-                    Get it on Google Play
-                </a>
-                <a href="/itzipdf/privacy" class="btn btn-outline" style="border: 1px solid var(--grey-border); padding: 12px 28px; border-radius: 100px; color: var(--white); text-decoration: none;">App Privacy Policy</a>
+    <main id="main" tabindex="-1">
+        <!-- Hero -->
+        <section class="ip-hero" id="top" aria-labelledby="ip-title">
+            <div class="hero-bg-grid" aria-hidden="true"></div>
+            <div class="container">
+                <img src="../assets/itzipdf-icon-192.png" alt="ItziPDF app icon" class="ip-hero-icon" width="124" height="124" fetchpriority="high">
+                <p class="ip-release-pill">Available on Google Play · v2.0.0</p>
+                <h1 class="ip-title" id="ip-title"><span class="text-gradient">Itzi</span>PDF</h1>
+                <p class="ip-tagline">Your Private Android PDF Studio</p>
+                <p class="ip-lead">Read, convert, organize, edit, sign, redact and protect PDFs directly on your phone. ItziPDF 2.0 packs 34 on-device tools, our own offline Word to PDF engine, a smooth reader built for 1,000+ pages, and complete English and Arabic interfaces.</p>
+                <div class="ip-actions">
+                    <a href="https://play.google.com/store/apps/details?id=com.itzigroup.itzipdf&amp;pcampaignid=web_share" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3.3a1 1 0 0 1 1.53-.84l12.1 8.7a1 1 0 0 1 0 1.68l-12.1 8.7A1 1 0 0 1 5 20.7V3.3Z"/></svg>
+                        <span>Get it on Google Play</span><span class="visually-hidden"> (opens in a new tab)</span>
+                    </a>
+                    <a href="#tools" class="btn btn-secondary">
+                        <span>Explore All 34 Tools</span>
+                    </a>
+                </div>
+                <p class="ip-hero-meta">Version 2.0.0 (build 6) · Android 7.0+ · English &amp; Arabic · Free</p>
+                <ul class="ip-trust" aria-label="Key highlights">
+                    <li><svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>34 on-device tools</li>
+                    <li><svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Offline Word to PDF</li>
+                    <li><svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>No account · No uploads</li>
+                    <li><svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>No paywalls or watermarks</li>
+                </ul>
             </div>
-            <p class="store-meta">Version 2.0 · Android · English &amp; Arabic · Free, no account</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- App Screenshots -->
-    <section class="app-showcase" aria-labelledby="app-screenshots-title">
-        <div class="container">
-            <div class="showcase-heading">
-                <span class="section-tag">Inside the app</span>
-                <h2 id="app-screenshots-title">A closer look at ItziPDF 2.0</h2>
-                <p>Explore the new design, the reader built for huge files and the 30+ on-device tools in English or Arabic.</p>
-            </div>
-
-            <div class="gallery-switcher">
-                <div class="gallery-tabs" role="tablist" aria-label="Screenshot language">
-                    <button class="gallery-language-tab" id="screenshots-en" type="button" role="tab" aria-selected="true" aria-controls="gallery-panel-en" data-gallery-panel="gallery-panel-en">English</button>
-                    <button class="gallery-language-tab" id="screenshots-ar" type="button" role="tab" aria-selected="false" aria-controls="gallery-panel-ar" data-gallery-panel="gallery-panel-ar" tabindex="-1" lang="ar" dir="rtl">العربية</button>
+        <!-- App Screenshots -->
+        <section class="section ip-bg-soft ip-showcase" id="screenshots" aria-labelledby="screenshots-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Inside the App</span>
+                    <h2 class="section-title" id="screenshots-title">A closer look at <span class="text-gradient">ItziPDF 2.0</span></h2>
+                    <p class="section-subtitle">Explore the redesigned workspace, 1,000+ page reader, and on-device tools in English or Arabic.</p>
                 </div>
 
-                <div class="gallery-panels">
-                    <div class="gallery-panel gallery-panel-en" id="gallery-panel-en" role="tabpanel" aria-labelledby="screenshots-en" lang="en">
-                        <div class="screenshot-rail" tabindex="0" aria-label="English ItziPDF 2.0 screenshots">
-                            <figure class="screenshot-card">
-                                <img src="../assets/itzipdf/v2/en-US/01-home.png" width="1080" height="1920" alt="ItziPDF 2.0 home screen with Open PDF, quick actions and Continue reading" decoding="async">
-                                <figcaption>A fresh home for your PDFs</figcaption>
-                            </figure>
-                            <figure class="screenshot-card">
-                                <img src="../assets/itzipdf/v2/en-US/02-reader-1000-pages.png" width="1080" height="1920" alt="ItziPDF reader showing a 1,000-page PDF with page slider" loading="lazy" decoding="async">
-                                <figcaption>Smooth with 1,000+ pages</figcaption>
-                            </figure>
-                            <figure class="screenshot-card">
-                                <img src="../assets/itzipdf/v2/en-US/03-all-tools.png" width="1080" height="1920" alt="ItziPDF tools grid with categories and search" loading="lazy" decoding="async">
-                                <figcaption>30+ tools, all on your device</figcaption>
-                            </figure>
-                            <figure class="screenshot-card">
-                                <img src="../assets/itzipdf/v2/en-US/04-compress.png" width="1080" height="1920" alt="ItziPDF Compress tool with Light, Recommended and Strong presets" loading="lazy" decoding="async">
-                                <figcaption>Clear options for every tool</figcaption>
-                            </figure>
-                            <figure class="screenshot-card">
-                                <img src="../assets/itzipdf/v2/en-US/05-settings.png" width="1080" height="1920" alt="ItziPDF settings with appearance, language, files and reader options" loading="lazy" decoding="async">
-                                <figcaption>Make it yours</figcaption>
-                            </figure>
+                <div class="gallery-switcher">
+                    <div class="gallery-toolbar">
+                        <div class="gallery-tabs" role="tablist" aria-label="Screenshot language">
+                            <button class="gallery-language-tab" id="screenshots-en" type="button" role="tab" aria-selected="true" aria-controls="gallery-panel-en" data-gallery-panel="gallery-panel-en" data-gallery-lang="en">English</button>
+                            <button class="gallery-language-tab" id="screenshots-ar" type="button" role="tab" aria-selected="false" aria-controls="gallery-panel-ar" data-gallery-panel="gallery-panel-ar" data-gallery-lang="ar" tabindex="-1" lang="ar" dir="rtl">العربية</button>
+                        </div>
+                        <div class="gallery-nav-controls" aria-label="Gallery navigation">
+                            <button type="button" class="gallery-nav-btn" data-gallery-scroll="prev" aria-label="Previous screenshots">
+                                <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                            </button>
+                            <button type="button" class="gallery-nav-btn" data-gallery-scroll="next" aria-label="Next screenshots">
+                                <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                            </button>
                         </div>
                     </div>
 
-                    <div class="gallery-panel gallery-panel-ar" id="gallery-panel-ar" role="tabpanel" aria-labelledby="screenshots-ar" lang="ar" dir="rtl" hidden>
-                        <div class="screenshot-rail" tabindex="0" aria-label="لقطات شاشة ItziPDF 2.0 باللغة العربية">
-                            <figure class="screenshot-card">
-                                <img src="../assets/itzipdf/v2/ar/01-home.png" width="1080" height="1920" alt="الشاشة الرئيسية في ItziPDF 2.0 مع فتح الملفات والإجراءات السريعة ومتابعة القراءة" loading="lazy" decoding="async">
-                                <figcaption>بداية جديدة لملفات PDF</figcaption>
-                            </figure>
-                            <figure class="screenshot-card">
-                                <img src="../assets/itzipdf/v2/ar/02-reader-1000-pages.png" width="1080" height="1920" alt="قارئ ItziPDF يعرض ملفًا من ألف صفحة مع شريط التنقل" loading="lazy" decoding="async">
-                                <figcaption>سلاسة مع أكثر من 1000 صفحة</figcaption>
-                            </figure>
-                            <figure class="screenshot-card">
-                                <img src="../assets/itzipdf/v2/ar/03-all-tools.png" width="1080" height="1920" alt="شبكة أدوات ItziPDF مع الفئات والبحث" loading="lazy" decoding="async">
-                                <figcaption>أكثر من 30 أداة على جهازك</figcaption>
-                            </figure>
-                            <figure class="screenshot-card">
-                                <img src="../assets/itzipdf/v2/ar/04-compress.png" width="1080" height="1920" alt="أداة الضغط في ItziPDF بمستويات خفيف وموصى به وقوي" loading="lazy" decoding="async">
-                                <figcaption>خيارات واضحة لكل أداة</figcaption>
-                            </figure>
-                            <figure class="screenshot-card">
-                                <img src="../assets/itzipdf/v2/ar/05-settings.png" width="1080" height="1920" alt="إعدادات ItziPDF: المظهر واللغة والملفات والقارئ" loading="lazy" decoding="async">
-                                <figcaption>خصّصه على طريقتك</figcaption>
-                            </figure>
+                    <div class="gallery-panels">
+                        <div class="gallery-panel gallery-panel-en" id="gallery-panel-en" role="tabpanel" aria-labelledby="screenshots-en" lang="en" dir="ltr">
+                            <div class="screenshot-rail" tabindex="0" aria-label="English ItziPDF 2.0 screenshots">
+                                <figure class="screenshot-card">
+                                    <img src="../assets/itzipdf/v2/en-US/01-home.webp" width="1080" height="1920" alt="ItziPDF 2.0 home screen showing Open a PDF, Scan, quick actions, Favourite tools and 34 tool categories" decoding="async">
+                                    <figcaption>A fresh home for your PDFs</figcaption>
+                                </figure>
+                                <figure class="screenshot-card">
+                                    <img src="../assets/itzipdf/v2/en-US/02-reader-1000-pages.webp" width="1080" height="1920" alt="ItziPDF reader smoothly viewing a 1,000-page PDF with page slider" loading="lazy" decoding="async">
+                                    <figcaption>Smooth with 1,000+ pages</figcaption>
+                                </figure>
+                                <figure class="screenshot-card">
+                                    <img src="../assets/itzipdf/v2/en-US/03-all-tools.webp" width="1080" height="1920" alt="ItziPDF tools directory with categories and instant search" loading="lazy" decoding="async">
+                                    <figcaption>34 tools, all on your device</figcaption>
+                                </figure>
+                                <figure class="screenshot-card">
+                                    <img src="../assets/itzipdf/v2/en-US/04-compress.webp" width="1080" height="1920" alt="ItziPDF Compress PDF tool showing Light, Recommended and Strong presets" loading="lazy" decoding="async">
+                                    <figcaption>Clear options for every tool</figcaption>
+                                </figure>
+                                <figure class="screenshot-card">
+                                    <img src="../assets/itzipdf/v2/en-US/05-settings.webp" width="1080" height="1920" alt="ItziPDF Settings showing appearance, language, files, processing defaults and reader options" loading="lazy" decoding="async">
+                                    <figcaption>Make it yours</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="gallery-panel gallery-panel-ar" id="gallery-panel-ar" role="tabpanel" aria-labelledby="screenshots-ar" lang="ar" dir="rtl" hidden>
+                            <div class="screenshot-rail" tabindex="0" aria-label="لقطات شاشة ItziPDF 2.0 باللغة العربية">
+                                <figure class="screenshot-card">
+                                    <img src="../assets/itzipdf/v2/ar/01-home.webp" width="1080" height="1920" alt="الشاشة الرئيسية في ItziPDF 2.0 مع فتح ملف PDF والمسح والإجراءات السريعة وفئات الأدوات" loading="lazy" decoding="async">
+                                    <figcaption>بداية جديدة لملفات PDF</figcaption>
+                                </figure>
+                                <figure class="screenshot-card">
+                                    <img src="../assets/itzipdf/v2/ar/02-reader-1000-pages.webp" width="1080" height="1920" alt="قارئ ItziPDF يعرض ملفًا من ألف صفحة بسلاسة مع شريط التنقل" loading="lazy" decoding="async">
+                                    <figcaption>سلاسة مع أكثر من 1000 صفحة</figcaption>
+                                </figure>
+                                <figure class="screenshot-card">
+                                    <img src="../assets/itzipdf/v2/ar/03-all-tools.webp" width="1080" height="1920" alt="دليل أدوات ItziPDF مع الفئات والبحث الفوري" loading="lazy" decoding="async">
+                                    <figcaption>34 أداة بالكامل على جهازك</figcaption>
+                                </figure>
+                                <figure class="screenshot-card">
+                                    <img src="../assets/itzipdf/v2/ar/04-compress.webp" width="1080" height="1920" alt="أداة ضغط PDF في ItziPDF بمستويات خفيف وموصى به وقوي" loading="lazy" decoding="async">
+                                    <figcaption>خيارات واضحة لكل أداة</figcaption>
+                                </figure>
+                                <figure class="screenshot-card">
+                                    <img src="../assets/itzipdf/v2/ar/05-settings.webp" width="1080" height="1920" alt="إعدادات ItziPDF للمظهر واللغة والملفات وإعدادات المعالجة والقارئ" loading="lazy" decoding="async">
+                                    <figcaption>خصّصه على طريقتك</figcaption>
+                                </figure>
+                            </div>
                         </div>
                     </div>
+                    <p class="gallery-hint" data-english="Swipe or scroll horizontally to explore all 5 screenshots." data-arabic="اسحب أو مرّر أفقيًا لاستعراض جميع لقطات الشاشة.">Swipe or scroll horizontally to explore all 5 screenshots.</p>
                 </div>
-                <p class="gallery-hint" data-english="Swipe or scroll horizontally to explore all screenshots." data-arabic="اسحب أو مرّر أفقيا لاستعراض جميع لقطات الشاشة.">Swipe or scroll horizontally to explore all screenshots.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Content -->
-    <section class="content-section">
-        <h2>What Is ItziPDF?</h2>
-        <p>ItziPDF is a complete PDF studio for Android created by ItziGroup. It helps students, professionals, businesses and everyday users read, convert, organize, edit, sign and protect documents without complicated desktop software, without accounts and without uploading anything.</p>
-        <p>Every tool runs on your device. Version 2.0 is our biggest update yet: a new design, a reader built for very large files, a local Word to PDF engine and more than 30 tools.</p>
+        <!-- Features -->
+        <section class="section ip-bg-rich" id="features" aria-labelledby="features-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">What's New in 2.0</span>
+                    <h2 class="section-title" id="features-title">Everything your PDFs need, <span class="text-gradient">on one phone</span></h2>
+                    <p class="section-subtitle">A ground-up 2.0 redesign built for large documents, rich editing, and true offline privacy.</p>
+                </div>
+                <div class="ip-grid">
+                    <article class="about-card" data-aos="fade-up">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>
+                        </div>
+                        <h3>Word to PDF, Offline</h3>
+                        <p>Convert Word files directly on your device with our own local conversion engine—no servers, no queues, and no internet needed.</p>
+                        <ul class="ip-list">
+                            <li>Supports <code>.docx</code>, <code>.docm</code>, <code>.dotx</code> and legacy <code>.doc</code> files</li>
+                            <li>Preserves headings, lists, tables, images, headers, footers, page numbers and footnotes</li>
+                            <li>Shapes Arabic and mixed Arabic–English text cleanly, one file or in batch</li>
+                        </ul>
+                    </article>
 
-        <h3>Word to PDF, Offline</h3>
-        <p>Convert Word documents (.docx and .doc) to PDF directly on your phone with our own conversion engine. Headings, lists, tables, images, headers, footers, page numbers and footnotes are kept, and Arabic and mixed Arabic-English text is shaped and ordered correctly. Convert one file or many at once.</p>
+                    <article class="about-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        </div>
+                        <h3>Reader Built for 1,000+ Pages</h3>
+                        <p>Open massive books and manuals without stalls or grey pages, and pick up right where you left off across recent documents.</p>
+                        <ul class="ip-list">
+                            <li>Continuous or single-page layout with sharp zoom, page slider and thumbnails</li>
+                            <li>Fast Arabic-aware search, named bookmarks and table of contents</li>
+                            <li>Night and sepia themes, right-to-left book progression and Read aloud</li>
+                        </ul>
+                    </article>
 
-        <h3>What You Can Do</h3>
-        <ul>
-            <li><strong>Read:</strong> open PDFs with 1,000+ pages smoothly, zoom sharply, search, use bookmarks and the table of contents, night and sepia modes, right-to-left page progression and Read aloud</li>
-            <li><strong>Organize:</strong> Page Studio to drag, rotate, duplicate, delete and insert pages; extract or remove pages, remove blank pages, crop margins and add blank pages</li>
-            <li><strong>Merge and split:</strong> merge any number of PDFs and images with page selection or duplex interleaving; split by ranges, every N pages, single pages, size, bookmarks or by tapping between pages</li>
-            <li><strong>Compress:</strong> Light, Recommended, Strong and Extreme presets with before-and-after sizes</li>
-            <li><strong>Create and convert:</strong> Word to PDF, scanner with edge detection, images to PDF, text to PDF, notebook and planner paper; export pages as images, extract text or embedded images</li>
-            <li><strong>Edit and sign:</strong> watermarks, page numbers, headers and footers with Hijri dates and Bates numbering, bilingual stamps, saved signatures and annotations, all with live previews</li>
-            <li><strong>Protect and clean:</strong> AES-256 passwords with permissions, unlock, metadata editing and cleanup, flatten, repair, PDF/A, grayscale, permanent redaction and side-by-side comparison</li>
-            <li><strong>Batch and recipes:</strong> run a tool on many files or save chains such as Word to PDF → Compress → Page numbers → Protect</li>
-            <li>Open, rename, share, save or send every result straight into another tool</li>
-        </ul>
+                    <article class="about-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+                        </div>
+                        <h3>Page Studio, Merge &amp; Split</h3>
+                        <p>Rearrange and restructure documents visually with full thumbnail previews and undo/redo support.</p>
+                        <ul class="ip-list">
+                            <li>Drag pages to reorder, rotate, duplicate, delete or insert blank pages, PDFs and images</li>
+                            <li>Merge any number of PDFs and images with page selection or duplex interleaving</li>
+                            <li>Split by ranges, every N pages, single pages, max size, bookmarks or visual cuts</li>
+                        </ul>
+                    </article>
 
-        <h3>Designed for Privacy</h3>
-        <p>Your documents are processed on your device and are never uploaded to ItziGroup. ItziPDF has no account and runs no analytics. Some features use services on your phone, such as Google's on-device document scanner, your text-to-speech voice or Android's print system; the <a href="/itzipdf/privacy">ItziPDF Privacy Policy</a> explains exactly what they involve.</p>
-        <p>Completed files are kept in the app's private Library until you delete them, clear the app's data or uninstall the app. Reading positions, saved signatures and tool settings stay on your device.</p>
+                    <article class="about-card" data-aos="fade-up">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                        </div>
+                        <h3>Sign, Annotate, Stamp &amp; Redact</h3>
+                        <p>Mark up, sign, number and permanently sanitize sensitive files—all with live visual previews before you save.</p>
+                        <ul class="ip-list">
+                            <li>Draw, type or import signatures and keep them in private app storage</li>
+                            <li>Headers &amp; footers with Hijri dates and Bates numbering, plus bilingual stamps</li>
+                            <li>Permanent redaction removes selected text and covers sensitive areas for good</li>
+                        </ul>
+                    </article>
 
-        <h3>Made for English and Arabic</h3>
-        <p>ItziPDF is fully bilingual with native right-to-left layouts, Arabic-Indic digits, Hijri dates, Arabic-friendly file names, correct Arabic in generated PDFs and Arabic search that understands different letter forms.</p>
+                    <article class="about-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                        </div>
+                        <h3>Compress, Optimize &amp; Lock</h3>
+                        <p>Shrink files honestly while preserving crisp text, repair broken PDFs, and lock documents with strong encryption.</p>
+                        <ul class="ip-list">
+                            <li>Light, Recommended, Strong and Extreme compression with live size estimates</li>
+                            <li>AES-256 passwords with print, copy and edit permissions—plus Unlock &amp; Metadata scrub</li>
+                            <li>PDF/A archiving, Flatten forms, Grayscale, Repair and side-by-side Compare</li>
+                        </ul>
+                    </article>
 
-        <h3>Make It Yours</h3>
-        <p>Choose the Itzi orange theme or another palette, light, dark or pure-black mode, Material You colors, text size, reduced motion, quick actions and tool layout.</p>
+                    <article class="about-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                        <h3>Bilingual &amp; Made for You</h3>
+                        <p>Native English and Arabic interfaces with genuine RTL craftsmanship and deep personalization.</p>
+                        <ul class="ip-list">
+                            <li>Arabic-Indic digits, Hijri dates, Arabic-safe filenames and Arabic search normalization</li>
+                            <li>Itzi Orange plus 7 extra palettes, Material You, light/dark and pure-black AMOLED</li>
+                            <li>Custom quick actions, naming patterns, text size, reduced motion and Batch recipes</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-        <h3>Why We Created ItziPDF</h3>
-        <p>PDF tools are often scattered across websites and apps, many of them paywalled or requiring uploads to unknown servers. We created ItziPDF to give everyone a fast, private and genuinely free PDF workspace on their phone, in English and Arabic.</p>
+        <!-- Workflow -->
+        <section class="section ip-bg-soft" id="workflow" aria-labelledby="workflow-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">How It Works</span>
+                    <h2 class="section-title" id="workflow-title">Pick, process, and <span class="text-gradient">chain tools effortlessly</span></h2>
+                    <p class="section-subtitle">Never lose your originals—every tool creates a clean output ready to share, save, or send straight into the next step.</p>
+                </div>
+                <ol class="ip-steps">
+                    <li class="ip-step" data-aos="fade-up">
+                        <span class="ip-step-number" aria-hidden="true">1</span>
+                        <h3>Open, share, or scan</h3>
+                        <p>Choose files from your device or ItziPDF Files, open PDFs and Word documents directly from other apps, scan paper pages, or start from launcher shortcuts.</p>
+                    </li>
+                    <li class="ip-step" data-aos="fade-up" data-aos-delay="100">
+                        <span class="ip-step-number" aria-hidden="true">2</span>
+                        <h3>Process privately on-device</h3>
+                        <p>Pick your preset or customize options with live previews. Every operation runs locally with real progress reporting and instant cancel support.</p>
+                    </li>
+                    <li class="ip-step" data-aos="fade-up" data-aos-delay="200">
+                        <span class="ip-step-number" aria-hidden="true">3</span>
+                        <h3>Save, share, or chain</h3>
+                        <p>Open in the reader, rename, share, copy to your chosen folder, or tap Continue With to chain tools—or save reusable Batch recipes like Word → Compress → Page Numbers → Protect.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
 
-        <h3>Current Version</h3>
-        <ul>
-            <li><strong>Version:</strong> 2.0.0 (build 6)</li>
-            <li><strong>Status:</strong> Available on Google Play</li>
-            <li><strong>Platform:</strong> Android 7.0 or later</li>
-            <li><strong>Languages:</strong> English and Arabic</li>
-            <li><strong>Processing model:</strong> On-device, no account</li>
-            <li><strong>Developer:</strong> ItziGroup</li>
-        </ul>
+        <!-- Complete 34-Tool Directory -->
+        <section class="section ip-bg-rich" id="tools" aria-labelledby="tools-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Complete Toolkit</span>
+                    <h2 class="section-title" id="tools-title">All <span class="text-gradient">34 tools</span>, zero paywalls</h2>
+                    <p class="section-subtitle">Every single tool below is built into ItziPDF 2.0 and runs directly on your Android device.</p>
+                </div>
 
-        <h3>Good to Know</h3>
-        <p>Large documents are limited only by your phone's storage, memory and speed; every tool shows progress and can be cancelled. A few options, such as Extreme compression and Grayscale, save pages as images and say so before you run them. Word conversion covers most documents faithfully; content like charts, SmartArt or text wrapped around floating pictures may look different, and the app tells you when it finds it. Always review important documents before you share or submit them. See the <a href="/itzipdf/terms">ItziPDF Terms of Use</a>.</p>
+                <div class="ip-tools-grid">
+                    <article class="ip-tool-card" data-aos="fade-up">
+                        <div class="ip-tool-card-head">
+                            <div class="card-icon">
+                                <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+                            </div>
+                            <span class="ip-tool-count">8 tools</span>
+                        </div>
+                        <h3>Organize</h3>
+                        <ul class="ip-chips">
+                            <li>Merge PDF</li>
+                            <li>Split PDF</li>
+                            <li>Organize pages (Page Studio)</li>
+                            <li>Extract pages</li>
+                            <li>Remove pages &amp; blanks</li>
+                            <li>Rotate pages</li>
+                            <li>Crop pages</li>
+                            <li>Add blank pages</li>
+                        </ul>
+                    </article>
 
-    </section>
+                    <article class="ip-tool-card" data-aos="fade-up" data-aos-delay="50">
+                        <div class="ip-tool-card-head">
+                            <div class="card-icon">
+                                <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                            </div>
+                            <span class="ip-tool-count">5 tools</span>
+                        </div>
+                        <h3>Convert to PDF</h3>
+                        <ul class="ip-chips">
+                            <li>Word to PDF (.docx &amp; .doc)</li>
+                            <li>Scan to PDF</li>
+                            <li>Images to PDF</li>
+                            <li>Text &amp; Markdown to PDF</li>
+                            <li>Create PDF paper</li>
+                        </ul>
+                    </article>
+
+                    <article class="ip-tool-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="ip-tool-card-head">
+                            <div class="card-icon">
+                                <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                            </div>
+                            <span class="ip-tool-count">3 tools</span>
+                        </div>
+                        <h3>Convert from PDF</h3>
+                        <ul class="ip-chips">
+                            <li>PDF to images (JPG / PNG)</li>
+                            <li>PDF to text</li>
+                            <li>Extract embedded images</li>
+                        </ul>
+                    </article>
+
+                    <article class="ip-tool-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="ip-tool-card-head">
+                            <div class="card-icon">
+                                <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                            </div>
+                            <span class="ip-tool-count">6 tools</span>
+                        </div>
+                        <h3>Edit &amp; Sign</h3>
+                        <ul class="ip-chips">
+                            <li>Sign PDF</li>
+                            <li>Annotate</li>
+                            <li>Watermark</li>
+                            <li>Page numbers</li>
+                            <li>Header &amp; footer (Hijri &amp; Bates)</li>
+                            <li>Bilingual stamps</li>
+                        </ul>
+                    </article>
+
+                    <article class="ip-tool-card" data-aos="fade-up">
+                        <div class="ip-tool-card-head">
+                            <div class="card-icon">
+                                <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+                            </div>
+                            <span class="ip-tool-count">6 tools</span>
+                        </div>
+                        <h3>Optimize</h3>
+                        <ul class="ip-chips">
+                            <li>Compress PDF</li>
+                            <li>Flatten PDF</li>
+                            <li>Metadata &amp; privacy scrub</li>
+                            <li>Repair PDF</li>
+                            <li>PDF/A archive</li>
+                            <li>Grayscale</li>
+                        </ul>
+                    </article>
+
+                    <article class="ip-tool-card" data-aos="fade-up" data-aos-delay="50">
+                        <div class="ip-tool-card-head">
+                            <div class="card-icon">
+                                <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            </div>
+                            <span class="ip-tool-count">3 tools</span>
+                        </div>
+                        <h3>Security</h3>
+                        <ul class="ip-chips">
+                            <li>Protect PDF (AES-256)</li>
+                            <li>Unlock PDF</li>
+                            <li>Redact PDF (permanent)</li>
+                        </ul>
+                    </article>
+
+                    <article class="ip-tool-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="ip-tool-card-head">
+                            <div class="card-icon">
+                                <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                            </div>
+                            <span class="ip-tool-count">2 tools</span>
+                        </div>
+                        <h3>Read &amp; Compare</h3>
+                        <ul class="ip-chips">
+                            <li>PDF reader (1,000+ pages)</li>
+                            <li>Compare PDFs side by side</li>
+                        </ul>
+                    </article>
+
+                    <article class="ip-tool-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="ip-tool-card-head">
+                            <div class="card-icon">
+                                <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                            </div>
+                            <span class="ip-tool-count">1 tool</span>
+                        </div>
+                        <h3>Smart Automation</h3>
+                        <ul class="ip-chips">
+                            <li>Batch &amp; saved recipes</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <p class="ip-tools-note">Create PDF paper includes printable lined, grid, dotted, isometric, Cornell notes, weekly planner, checklist, music staff and Arabic calligraphy practice templates.</p>
+            </div>
+        </section>
+
+        <!-- Privacy Callout -->
+        <section class="section ip-bg-soft" id="privacy" aria-labelledby="privacy-title">
+            <div class="container">
+                <div class="ip-callout" data-aos="fade-up">
+                    <div class="card-icon">
+                        <svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                    </div>
+                    <h2 id="privacy-title">Designed for privacy—and transparent about every detail</h2>
+                    <p>Your documents are processed directly on your phone and are never uploaded to ItziGroup. ItziPDF requires no account and runs no analytics or crash-reporting service.</p>
+                    <ul class="ip-list">
+                        <li>Completed outputs stay in ItziPDF's private Library until you delete them, clear app data or uninstall the app. You can also copy outputs to any folder you choose or share them.</li>
+                        <li>Reading positions, bookmarks, saved signatures and Batch recipes stay on your device; PDF passwords are never saved.</li>
+                        <li>No camera permission and no broad "All files access": scanning uses Google's on-device ML Kit scanner (via Google Play services) or your phone's own camera app.</li>
+                        <li>Optional features like Read aloud and Printing use your device's installed text-to-speech engine and Android's print system.</li>
+                    </ul>
+                    <div class="ip-callout-links">
+                        <a href="/itzipdf/privacy" class="btn btn-small btn-outline">ItziPDF Privacy Policy</a>
+                        <a href="/itzipdf/terms" class="btn btn-small btn-outline">ItziPDF Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section ip-bg-rich" id="faq" aria-labelledby="faq-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">FAQ</span>
+                    <h2 class="section-title" id="faq-title">Common <span class="text-gradient">questions</span></h2>
+                </div>
+                <div class="ip-faq">
+                    <details>
+                        <summary>Does ItziPDF upload my PDFs or Word documents?</summary>
+                        <div class="ip-faq-answer">
+                            <p>No. Every document tool in ItziPDF 2.0—including offline Word to PDF, compression, signing, redaction, and encryption—runs locally on your Android device. ItziGroup never receives your files, file names, passwords, signatures, or reading history.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Is ItziPDF really free, with no account required?</summary>
+                        <div class="ip-faq-answer">
+                            <p>Yes. ItziPDF 2.0 has no accounts, no subscriptions, no in-app purchases, and no watermarks added to your files. All 34 tools are unlocked right after you install the app.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Are there strict page or file size limits in 2.0?</summary>
+                        <div class="ip-faq-answer">
+                            <p>Version 2.0 removed the old 500-page, 250 MB, and batch count caps. You can read PDFs with 1,000+ pages smoothly, merge any number of PDFs and images, and process large files limited only by your phone's storage, memory and speed. Text to PDF accepts up to 2,000,000 characters (or imported text files up to 8 MB), and every tool shows progress and can be cancelled.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>How well does offline Word to PDF work with Arabic documents?</summary>
+                        <div class="ip-faq-answer">
+                            <p>Our built-in engine converts <code>.docx</code>, <code>.docm</code>, <code>.dotx</code> and <code>.doc</code> files locally with bundled Arabic and metric-compatible Latin fonts. Headings, lists, tables, images, headers, footers, footnotes, and mixed Arabic–English bidirectional text are shaped and ordered cleanly. If a file contains elements that may look different—such as charts, SmartArt, or text wrapped around floating pictures—the app notifies you.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Where are my created PDFs saved?</summary>
+                        <div class="ip-faq-answer">
+                            <p>Every output is saved in ItziPDF's private Library (visible under the Files tab) without ever overwriting your original file. You can also save an independent copy to any folder, configure automatic copying to a custom folder in Settings → Files &amp; export, or share directly to another app. Remember to back up or export important Library files before uninstalling the app.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Does Compress PDF keep my text selectable?</summary>
+                        <div class="ip-faq-answer">
+                            <p>Yes for Light, Recommended, and Strong presets—text stays selectable and searchable, and links, bookmarks, and form fields are kept. Extreme compression (and Grayscale) save pages as images for maximum reduction or monochrome output, and the app warns you clearly before running them.</p>
+                        </div>
+                    </details>
+                </div>
+                <p class="ip-faq-more">Have more questions? Visit <a href="https://support.itzigroup.com/#itzipdf" class="ip-inline-link" target="_blank" rel="noopener noreferrer">ItziPDF Support<span class="visually-hidden"> (opens in a new tab)</span></a>.</p>
+            </div>
+        </section>
+
+        <!-- Download & Version Info -->
+        <section class="section ip-bg-soft" id="download" aria-labelledby="download-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Download</span>
+                    <h2 class="section-title" id="download-title">Get <span class="text-gradient">ItziPDF 2.0</span> on Android</h2>
+                </div>
+                <div class="ip-download">
+                    <p class="ip-release-pill">Live on Google Play</p>
+                    <h3>ItziPDF 2.0.0 (build 6)</h3>
+                    <p>Install directly from Google Play. Free to use with all 34 on-device tools ready immediately—no sign-up needed.</p>
+                    <dl class="ip-facts">
+                        <div class="ip-fact">
+                            <dt>Version</dt>
+                            <dd>2.0.0 (build 6)</dd>
+                        </div>
+                        <div class="ip-fact">
+                            <dt>Requires</dt>
+                            <dd>Android 7.0 or later</dd>
+                        </div>
+                        <div class="ip-fact">
+                            <dt>Languages</dt>
+                            <dd>English &amp; Arabic (full RTL)</dd>
+                        </div>
+                        <div class="ip-fact">
+                            <dt>Model</dt>
+                            <dd>On-device · Free · No account</dd>
+                        </div>
+                    </dl>
+                    <div class="ip-good-to-know">
+                        <h4>Good to know</h4>
+                        <p>Large documents are limited only by your phone's storage, memory, and speed; every tool shows progress and can be cancelled. Extreme compression and Grayscale save pages as images and clearly warn you before running. Always review converted, signed, or redacted documents before official submission. See the <a href="/itzipdf/terms" class="ip-inline-link">ItziPDF Terms of Use</a>.</p>
+                    </div>
+                    <div class="ip-download-actions">
+                        <a href="https://play.google.com/store/apps/details?id=com.itzigroup.itzipdf&amp;pcampaignid=web_share" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                            <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3.3a1 1 0 0 1 1.53-.84l12.1 8.7a1 1 0 0 1 0 1.68l-12.1 8.7A1 1 0 0 1 5 20.7V3.3Z"/></svg>
+                            <span>Get it on Google Play</span><span class="visually-hidden"> (opens in a new tab)</span>
+                        </a>
+                        <a href="https://support.itzigroup.com/?product=itzipdf#contact" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                            <span>Contact Support</span><span class="visually-hidden"> (opens in a new tab)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="../assets/logo.png" alt="ItziGroup Logo" class="footer-logo">
-                    <p>Tech For Future — Building tomorrow's technology, today.</p>
+                    <img src="../assets/logo-sm.png" alt="ItziGroup Logo" class="footer-logo" width="96" height="32" loading="lazy" decoding="async">
+                    <p>Tech For Future — Practical, local-first software built for everyday use.</p>
                 </div>
-                <div class="footer-links">
-                    <div class="footer-col">
-                        <h4>Navigation</h4>
+                <div class="footer-links footer-links-4">
+                    <nav class="footer-col" aria-label="ItziPDF">
+                        <h4>ItziPDF</h4>
+                        <a href="#top">Overview</a>
+                        <a href="#screenshots">Screenshots</a>
+                        <a href="#tools">34 Tools</a>
+                        <a href="#faq">FAQ</a>
+                        <a href="/itzipdf/ar" hreflang="ar" lang="ar">العربية</a>
+                    </nav>
+                    <nav class="footer-col" aria-label="Legal">
+                        <h4>Legal</h4>
+                        <a href="/itzipdf/privacy">App Privacy Policy</a>
+                        <a href="/itzipdf/terms">App Terms of Use</a>
+                        <a href="/privacy">Website Privacy</a>
+                        <a href="/terms">Website Terms</a>
+                    </nav>
+                    <nav class="footer-col" aria-label="ItziGroup">
+                        <h4>ItziGroup</h4>
                         <a href="/">Home</a>
-                        <a href="/itzipdf">ItziPDF</a>
-                    </div>
-                    <div class="footer-col">
+                        <a href="/#apps">Our Apps</a>
+                        <a href="https://support.itzigroup.com/#itzipdf" target="_blank" rel="noopener noreferrer">Support Center</a>
+                    </nav>
+                    <nav class="footer-col" aria-label="Social media">
                         <h4>Connect</h4>
                         <a href="https://www.instagram.com/itzigroup/" target="_blank" rel="noopener noreferrer">Instagram</a>
                         <a href="https://www.facebook.com/profile.php?id=61591652615538" target="_blank" rel="noopener noreferrer">Facebook</a>
                         <a href="https://x.com/ItziGroup" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
-                    </div>
-                    <div class="footer-col">
-                        <h4>More</h4>
-                        <a href="https://support.itzigroup.com" target="_blank" rel="noopener noreferrer">Support</a>
-                        <a href="/itzipdf/privacy">App Privacy</a>
-                        <a href="/privacy">Website Privacy</a>
-                        <a href="/terms">Terms of Use</a>
-                    </div>
+                    </nav>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -442,48 +645,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        (() => {
-            const galleryTabs = Array.from(document.querySelectorAll('.gallery-language-tab'));
-            const galleryPanels = Array.from(document.querySelectorAll('.gallery-panel'));
-            const galleryHint = document.querySelector('.gallery-hint');
 
-            const activateGalleryTab = (activeTab) => {
-                galleryTabs.forEach((tab) => {
-                    const isActive = tab === activeTab;
-                    tab.setAttribute('aria-selected', String(isActive));
-                    tab.tabIndex = isActive ? 0 : -1;
-                });
-
-                galleryPanels.forEach((panel) => {
-                    panel.hidden = panel.id !== activeTab.dataset.galleryPanel;
-                });
-
-                const isArabic = activeTab.id === 'screenshots-ar';
-                galleryHint.textContent = isArabic ? galleryHint.dataset.arabic : galleryHint.dataset.english;
-                galleryHint.lang = isArabic ? 'ar' : 'en';
-                galleryHint.dir = isArabic ? 'rtl' : 'ltr';
-            };
-
-            galleryTabs.forEach((tab, index) => {
-                tab.addEventListener('click', () => activateGalleryTab(tab));
-                tab.addEventListener('keydown', (event) => {
-                    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
-                    event.preventDefault();
-                    let nextTab;
-                    if (event.key === 'Home') {
-                        nextTab = galleryTabs[0];
-                    } else if (event.key === 'End') {
-                        nextTab = galleryTabs[galleryTabs.length - 1];
-                    } else {
-                        const direction = event.key === 'ArrowRight' ? 1 : -1;
-                        nextTab = galleryTabs[(index + direction + galleryTabs.length) % galleryTabs.length];
-                    }
-                    activateGalleryTab(nextTab);
-                    nextTab.focus();
-                });
-            });
-        })();
-    </script>
+    <script src="../script.js?v=20261120"></script>
 </body>
 </html>

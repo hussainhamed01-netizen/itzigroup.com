@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 — Page Not Found | ItziGroup</title>
     <meta name="robots" content="noindex">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="color-scheme" content="dark">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';">
+    <!-- GitHub Pages serves this page for any missing path, so every URL here is root-relative -->
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <style>
         @font-face {
             font-family: 'Outfit';
@@ -24,8 +31,9 @@
             unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { color-scheme: dark; }
         body {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             background: #0a0a0a;
             color: #fff;
             min-height: 100vh;
@@ -35,22 +43,23 @@
             text-align: center;
             padding: 24px;
         }
-        .container { max-width: 500px; }
+        .container { max-width: 540px; }
         .error-code {
-            font-size: 120px;
+            font-size: clamp(88px, 28vw, 120px);
             font-weight: 800;
             background: linear-gradient(135deg, #E87A2E, #FF9B50, #FFD4A8);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             line-height: 1;
             margin-bottom: 16px;
         }
         h1 { font-size: 28px; font-weight: 600; margin-bottom: 12px; }
-        p { color: #888; font-size: 16px; line-height: 1.6; margin-bottom: 32px; }
+        p { color: #9a9a9a; font-size: 16px; line-height: 1.6; margin-bottom: 32px; }
         .btn {
             display: inline-flex; align-items: center; gap: 8px;
             padding: 14px 32px; border-radius: 100px;
-            font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 600;
+            font-family: inherit; font-size: 15px; font-weight: 600;
             background: linear-gradient(135deg, #E87A2E, #FF9B50);
             color: #000; text-decoration: none;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -59,17 +68,69 @@
             transform: translateY(-3px);
             box-shadow: 0 8px 40px rgba(232, 122, 46, 0.4);
         }
+        .quick-links {
+            margin-top: 40px;
+            padding-top: 28px;
+            border-top: 1px solid #222;
+        }
+        .quick-links h2 {
+            margin-bottom: 16px;
+            color: #b0b0b0;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .quick-links ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            list-style: none;
+        }
+        .quick-links a {
+            display: inline-block;
+            padding: 9px 18px;
+            border: 1px solid #2a2a2a;
+            border-radius: 100px;
+            color: #e0e0e0;
+            font-size: 14px;
+            text-decoration: none;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .quick-links a:hover {
+            border-color: #E87A2E;
+            color: #FF9B50;
+        }
+        a:focus-visible {
+            outline: 2px solid #FF9B50;
+            outline-offset: 3px;
+        }
+        .btn:focus-visible { outline-color: #fff; }
+        @media (prefers-reduced-motion: reduce) {
+            .btn, .quick-links a { transition: none; }
+            .btn:hover { transform: none; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="error-code">404</div>
+    <main class="container">
+        <div class="error-code" aria-hidden="true">404</div>
         <h1>Page Not Found</h1>
         <p>The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
         <a href="/" class="btn">
             <span>Back to Home</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-    </div>
+        <nav class="quick-links" aria-labelledby="quick-links-title">
+            <h2 id="quick-links-title">Quick links</h2>
+            <ul>
+                <li><a href="/itzipdf">ItziPDF 2.0</a></li>
+                <li><a href="/itzipdf/ar" hreflang="ar" lang="ar">ItziPDF بالعربية</a></li>
+                <li><a href="/#apps">Our Apps</a></li>
+                <li><a href="https://support.itzigroup.com">Support Center</a></li>
+            </ul>
+        </nav>
+    </main>
 </body>
 </html>

@@ -3,88 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Use | ItziGroup</title>
+    <title>Website Terms of Use | ItziGroup</title>
     <meta name="description" content="Terms governing access to and use of the ItziGroup main website and support website.">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0a0a0a">
+    <meta name="color-scheme" content="dark">
+
+    <!-- Security Headers -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';">
 
-    <meta property="og:title" content="Terms of Use | ItziGroup">
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Website Terms of Use | ItziGroup">
     <meta property="og:description" content="Terms governing the ItziGroup main and support websites.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://itzigroup.com/terms">
-    <meta property="og:image" content="https://itzigroup.com/assets/logo.png">
+    <meta property="og:image" content="https://itzigroup.com/assets/og-home.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="ItziGroup">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ItziGroup">
+    <meta name="twitter:title" content="Website Terms of Use | ItziGroup">
+    <meta name="twitter:description" content="Terms governing the ItziGroup main and support websites.">
+    <meta name="twitter:image" content="https://itzigroup.com/assets/og-home.png">
 
     <link rel="canonical" href="https://itzigroup.com/terms">
     <link rel="icon" type="image/png" href="../assets/favicon.png">
-    <link rel="stylesheet" href="../styles.css?v=20260827">
-
-    <style>
-        .legal-hero {
-            padding: 140px 24px 56px;
-            text-align: center;
-        }
-
-        .legal-hero p {
-            color: var(--grey-light);
-            margin-top: 14px;
-        }
-
-        .legal-content {
-            max-width: 820px;
-            margin: 0 auto;
-            padding: 32px 24px 96px;
-        }
-
-        .legal-content h2 {
-            color: var(--orange);
-            font-size: 24px;
-            margin: 36px 0 14px;
-        }
-
-        .legal-content p,
-        .legal-content li {
-            color: var(--grey-light);
-            font-size: 16px;
-            line-height: 1.8;
-        }
-
-        .legal-content p,
-        .legal-content ul {
-            margin-bottom: 18px;
-        }
-
-        .legal-content ul {
-            padding-left: 24px;
-        }
-
-        .legal-content a {
-            color: var(--orange-light);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-        }
-
-        .scope-note {
-            padding: 20px 22px;
-            border: 1px solid rgba(232, 122, 46, 0.25);
-            border-radius: 14px;
-            background: var(--orange-subtle);
-        }
-    </style>
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="../styles.css?v=20261120">
 </head>
 <body>
-    <nav class="navbar" id="navbar" style="background: rgba(10, 10, 10, 0.95);">
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <nav class="navbar legal-navbar" id="navbar" aria-label="Primary">
         <div class="nav-container">
-            <a href="/" class="nav-logo">
-                <img src="../assets/logo.png" alt="ItziGroup Logo" class="logo-img">
+            <a href="/" class="nav-logo" aria-label="ItziGroup home">
+                <img src="../assets/logo-sm.png" alt="ItziGroup Logo" class="logo-img" width="108" height="36">
             </a>
             <div class="subpage-nav-links">
                 <a href="/" class="nav-link">Home</a>
+                <a href="/itzipdf" class="nav-link">ItziPDF</a>
                 <a href="https://support.itzigroup.com" class="nav-link" target="_blank" rel="noopener noreferrer">Support</a>
-                <a href="/privacy" class="nav-link">Privacy</a>
+                <a href="/privacy" class="nav-link subpage-hide-mobile">Privacy</a>
             </div>
         </div>
     </nav>
@@ -92,22 +54,22 @@
     <header class="legal-hero">
         <div class="container">
             <span class="section-tag">Legal</span>
-            <h1 class="header-title">Terms of Use</h1>
-            <p>Effective date: August 27, 2026</p>
+            <h1 class="header-title">Website Terms of Use</h1>
+            <p>Effective date: November 20, 2026</p>
         </div>
     </header>
 
-    <main class="legal-content">
-        <p class="scope-note"><strong>These Terms govern the ItziGroup main website and support website.</strong> ItziPDF is available through <a href="https://play.google.com/store/apps/details?id=com.itzigroup.itzipdf&amp;pcampaignid=web_share" target="_blank" rel="noopener noreferrer">Google Play</a>. Downloading or using the app is also subject to applicable Google Play terms, the <a href="/itzipdf/privacy">ItziPDF Privacy Policy</a>, and any app-specific terms or notices presented with the app.</p>
+    <main class="legal-content" id="main" tabindex="-1">
+        <p class="scope-note"><strong>These Terms govern the ItziGroup main website and support website.</strong> ItziPDF is available through <a href="https://play.google.com/store/apps/details?id=com.itzigroup.itzipdf&amp;pcampaignid=web_share" target="_blank" rel="noopener noreferrer">Google Play</a>. Downloading or using the app is subject to Google Play terms, the <a href="/itzipdf/terms">ItziPDF Terms of Use</a>, and the <a href="/itzipdf/privacy">ItziPDF Privacy Policy</a>.</p>
 
         <h2>Acceptance of these Terms</h2>
         <p>By accessing or using <a href="https://itzigroup.com">itzigroup.com</a> or <a href="https://support.itzigroup.com">support.itzigroup.com</a>, you agree to these Terms of Use. If you do not agree, do not use the websites. If you use the websites on behalf of an organization, you confirm that you have authority to bind that organization to these Terms.</p>
 
         <h2>Website purpose</h2>
-        <p>The websites provide information about ItziGroup, its projects, released and planned products, support resources, and ways to contact us. Website content is provided for general informational purposes. It is not legal, financial, medical, or other professional advice.</p>
+        <p>The websites provide information about ItziGroup, its released and planned products, support resources, and ways to contact us. Website content is provided for general informational purposes. It is not legal, financial, medical, or other professional advice.</p>
 
         <h2>Product information</h2>
-        <p>ItziPDF is a released product available through Google Play. Information about released products may change as versions are updated, including features, limits, compatibility, availability, and technical behavior. Other products described as coming soon, in development, beta, preview, or pre-release may change before release. We may modify, postpone, or discontinue planned features or products.</p>
+        <p>ItziPDF is a released product available through Google Play. Information about released products may change as versions are updated, including features, limits, compatibility, availability, and technical behavior. Planned products or features described as coming soon or in development may change, be postponed, or be discontinued before release.</p>
 
         <h2>Permitted use</h2>
         <p>You may browse the websites, use their public support resources, and contact us for lawful personal or business purposes. You must comply with applicable law and respect the rights of ItziGroup and others.</p>
@@ -148,7 +110,7 @@
         <p>To the extent permitted by law, you are responsible for losses or claims caused by your unlawful use of the websites, your violation of these Terms, or your infringement of another person's rights.</p>
 
         <h2>Privacy</h2>
-        <p>Our <a href="/privacy">Website Privacy Policy</a> explains how information is handled across the main and support websites. The Android application has a separate <a href="/itzipdf/privacy">ItziPDF Privacy Policy</a>.</p>
+        <p>Our <a href="/privacy">Website Privacy Policy</a> explains how information is handled across the main and support websites. The Android application has a separate <a href="/itzipdf/privacy">ItziPDF Privacy Policy</a> and <a href="/itzipdf/terms">ItziPDF Terms of Use</a>.</p>
 
         <h2>Governing rules</h2>
         <p>These Terms are governed by the laws applicable to ItziGroup's operation and your use of the websites, without overriding any mandatory consumer protections that apply to you. Courts with lawful jurisdiction may hear disputes that cannot be resolved informally.</p>
@@ -167,13 +129,40 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="../assets/logo.png" alt="ItziGroup Logo" class="footer-logo">
-                    <p>Tech For Future — Building tomorrow's technology, today.</p>
+                    <img src="../assets/logo-sm.png" alt="ItziGroup Logo" class="footer-logo" width="96" height="32" loading="lazy" decoding="async">
+                    <p>Tech For Future — Practical, local-first software built for everyday use.</p>
+                </div>
+                <div class="footer-links footer-links-4">
+                    <nav class="footer-col" aria-label="Navigation">
+                        <h4>Navigation</h4>
+                        <a href="/">Home</a>
+                        <a href="/#apps">Apps</a>
+                        <a href="/#about">About</a>
+                    </nav>
+                    <nav class="footer-col" aria-label="ItziPDF">
+                        <h4>ItziPDF</h4>
+                        <a href="/itzipdf">Overview</a>
+                        <a href="/itzipdf/ar" hreflang="ar" lang="ar">العربية</a>
+                        <a href="/itzipdf/privacy">App Privacy</a>
+                        <a href="/itzipdf/terms">App Terms</a>
+                    </nav>
+                    <nav class="footer-col" aria-label="Connect">
+                        <h4>Connect</h4>
+                        <a href="https://www.instagram.com/itzigroup/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://www.facebook.com/profile.php?id=61591652615538" target="_blank" rel="noopener noreferrer">Facebook</a>
+                        <a href="https://x.com/ItziGroup" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+                    </nav>
+                    <nav class="footer-col" aria-label="More">
+                        <h4>More</h4>
+                        <a href="https://support.itzigroup.com" target="_blank" rel="noopener noreferrer">Support Center</a>
+                        <a href="/privacy">Website Privacy</a>
+                        <a href="/terms">Website Terms</a>
+                    </nav>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 ItziGroup. All rights reserved.</p>
-                <p class="footer-domain"><a href="/privacy">Website Privacy Policy</a></p>
+                <p class="footer-domain">itzigroup.com</p>
             </div>
         </div>
     </footer>

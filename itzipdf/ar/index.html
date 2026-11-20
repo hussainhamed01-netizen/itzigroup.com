@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ItziPDF 2.0 — استوديو PDF خاص لأندرويد | ItziGroup</title>
+    <meta name="description" content="ItziPDF 2.0 لأندرويد: 34 أداة PDF تعمل على جهازك، وتحويل Word إلى PDF دون إنترنت، وقارئ سلس لأكثر من 1000 صفحة، والدمج والتقسيم والضغط والتوقيع والإخفاء النهائي مجانًا وبخصوصية بالعربية والإنجليزية.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="ItziGroup">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="color-scheme" content="dark">
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="ItziPDF 2.0 — استوديو PDF الخاص بك على أندرويد">
+    <meta property="og:description" content="34 أداة PDF مجانية تعمل على جهازك، وتحويل Word إلى PDF دون إنترنت، وقارئ لأكثر من 1000 صفحة بواجهة عربية وإنجليزية كاملة.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://itzigroup.com/itzipdf/ar">
+    <meta property="og:image" content="https://itzigroup.com/assets/itzipdf-og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ItziPDF 2.0: استوديو PDF خاص لأندرويد بـ 34 أداة تعمل على الجهاز بالعربية والإنجليزية.">
+    <meta property="og:site_name" content="ItziGroup">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ItziGroup">
+    <meta name="twitter:title" content="ItziPDF 2.0 — استوديو PDF الخاص بك على أندرويد">
+    <meta name="twitter:description" content="34 أداة PDF تعمل محليًا على هاتفك، وتحويل Word إلى PDF دون إنترنت، وقارئ للملفات الضخمة. مجاني وبلا حساب وبلا رفع للملفات.">
+    <meta name="twitter:image" content="https://itzigroup.com/assets/itzipdf-og.png">
+    <meta name="twitter:image:alt" content="ItziPDF 2.0: استوديو PDF خاص لأندرويد.">
+
+    <link rel="canonical" href="https://itzigroup.com/itzipdf/ar">
+    <link rel="alternate" hreflang="en" href="https://itzigroup.com/itzipdf">
+    <link rel="alternate" hreflang="ar" href="https://itzigroup.com/itzipdf/ar">
+    <link rel="alternate" hreflang="x-default" href="https://itzigroup.com/itzipdf">
+    <link rel="icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+
+    <!-- Structured data (JSON data block, not executable script) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "ItziPDF",
+        "operatingSystem": "Android 7.0 or later",
+        "applicationCategory": "ProductivityApplication",
+        "softwareVersion": "2.0.0",
+        "inLanguage": ["ar", "en"],
+        "isAccessibleForFree": true,
+        "url": "https://itzigroup.com/itzipdf/ar",
+        "image": "https://itzigroup.com/assets/itzipdf-icon.png",
+        "screenshot": "https://itzigroup.com/assets/itzipdf-og.png",
+        "downloadUrl": "https://play.google.com/store/apps/details?id=com.itzigroup.itzipdf&pcampaignid=web_share",
+        "description": "استوديو PDF مجاني وخاص لأندرويد يضم 34 أداة تعمل على الجهاز: تحويل Word إلى PDF دون إنترنت، قارئ لأكثر من 1000 صفحة، استوديو الصفحات، الدمج والتقسيم والضغط والتوقيع والحماية والإخفاء النهائي بالعربية والإنجليزية.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "ItziGroup",
+            "url": "https://itzigroup.com/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "ItziGroup",
+            "url": "https://itzigroup.com/"
+        }
+    }
+    </script>
+
+    <link rel="stylesheet" href="../../styles.css?v=20261120">
+    <noscript><style>[data-aos] { opacity: 1 !important; transform: none !important; }</style></noscript>
+</head>
+<body class="ip-page">
+    <a class="skip-link" href="#main">الانتقال إلى المحتوى الرئيسي</a>
+
+    <!-- Navigation -->
+    <nav class="navbar ip-nav" id="navbar" aria-label="التنقل الرئيسي">
+        <div class="nav-container">
+            <a href="/" class="nav-logo" aria-label="الصفحة الرئيسية لـ ItziGroup">
+                <img src="../../assets/logo-sm.png" alt="شعار ItziGroup" class="logo-img" width="108" height="36">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#screenshots" class="nav-link">لقطات الشاشة</a>
+                <a href="#features" class="nav-link">الميزات</a>
+                <a href="#tools" class="nav-link">34 أداة</a>
+                <a href="#privacy" class="nav-link">الخصوصية</a>
+                <a href="#faq" class="nav-link">الأسئلة الشائعة</a>
+                <a href="https://play.google.com/store/apps/details?id=com.itzigroup.itzipdf&amp;pcampaignid=web_share" class="nav-link nav-cta" target="_blank" rel="noopener noreferrer">Google Play<span class="visually-hidden"> (يفتح في علامة تبويب جديدة)</span></a>
+            </div>
+            <div class="ip-nav-actions">
+                <a href="/itzipdf" class="lang-switch" hreflang="en" lang="en" aria-label="Read this page in English">
+                    <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span>English</span>
+                </a>
+                <button class="nav-toggle" id="navToggle" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="navLinks" data-label-open="فتح القائمة" data-label-close="إغلاق القائمة">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main" tabindex="-1">
+        <!-- Hero -->
+        <section class="ip-hero" id="top" aria-labelledby="ip-title">
+            <div class="hero-bg-grid" aria-hidden="true"></div>
+            <div class="container">
+                <img src="../../assets/itzipdf-icon-192.png" alt="أيقونة تطبيق ItziPDF" class="ip-hero-icon" width="124" height="124" fetchpriority="high">
+                <p class="ip-release-pill">متوفر على Google Play · الإصدار 2.0.0</p>
+                <h1 class="ip-title" id="ip-title" dir="ltr"><span class="text-gradient">Itzi</span>PDF</h1>
+                <p class="ip-tagline">استوديو PDF الخاص بك على أندرويد</p>
+                <p class="ip-lead">اقرأ ملفات PDF وحوّلها ونظّمها وعدّلها ووقّعها وأخفِ بياناتها الحساسة واحمِها مباشرة على هاتفك. يجمع ItziPDF 2.0 بين 34 أداة تعمل على الجهاز، ومحركنا المحلي لتحويل Word إلى PDF دون إنترنت، وقارئ سلس مصمم للملفات التي تتجاوز 1000 صفحة، بواجهة عربية وإنجليزية متكاملة.</p>
+                <div class="ip-actions">
+                    <a href="https://play.google.com/store/apps/details?id=com.itzigroup.itzipdf&amp;pcampaignid=web_share" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3.3a1 1 0 0 1 1.53-.84l12.1 8.7a1 1 0 0 1 0 1.68l-12.1 8.7A1 1 0 0 1 5 20.7V3.3Z"/></svg>
+                        <span>حمّله من Google Play</span><span class="visually-hidden"> (يفتح في علامة تبويب جديدة)</span>
+                    </a>
+                    <a href="#tools" class="btn btn-secondary">
+                        <span>استكشف جميع الأدوات الـ 34</span>
+                    </a>
+                </div>
+                <p class="ip-hero-meta">الإصدار 2.0.0 (البناء 6) · أندرويد 7.0 فأحدث · العربية والإنجليزية · مجاني</p>
+                <ul class="ip-trust" aria-label="أبرز المزايا">
+                    <li><svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>34 أداة على جهازك</li>
+                    <li><svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>تحويل Word إلى PDF دون إنترنت</li>
+                    <li><svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>بلا حساب وبلا رفع للملفات</li>
+                    <li><svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>بلا اشتراكات أو علامات مائية</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- App Screenshots -->
+        <section class="section ip-bg-soft ip-showcase" id="screenshots" aria-labelledby="screenshots-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">من داخل التطبيق</span>
+                    <h2 class="section-title" id="screenshots-title">نظرة أقرب على <span class="text-gradient">ItziPDF 2.0</span></h2>
+                    <p class="section-subtitle">استكشف التصميم الجديد، والقارئ المصمم للملفات الضخمة، والأدوات الـ 34 باللغة العربية أو الإنجليزية.</p>
+                </div>
+
+                <div class="gallery-switcher">
+                    <div class="gallery-toolbar">
+                        <div class="gallery-tabs" role="tablist" aria-label="لغة لقطات الشاشة">
+                            <button class="gallery-language-tab" id="screenshots-ar" type="button" role="tab" aria-selected="true" aria-controls="gallery-panel-ar" data-gallery-panel="gallery-panel-ar" data-gallery-lang="ar">العربية</button>
+                            <button class="gallery-language-tab" id="screenshots-en" type="button" role="tab" aria-selected="false" aria-controls="gallery-panel-en" data-gallery-panel="gallery-panel-en" data-gallery-lang="en" tabindex="-1" lang="en" dir="ltr">English</button>
+                        </div>
+                        <div class="gallery-nav-controls" aria-label="التنقل بين اللقطات">
+                            <button type="button" class="gallery-nav-btn" data-gallery-scroll="prev" aria-label="اللقطات السابقة">
+                                <svg class="icon-flip-rtl" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+                            </button>
+                            <button type="button" class="gallery-nav-btn" data-gallery-scroll="next" aria-label="اللقطات التالية">
+                                <svg class="icon-flip-rtl" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="gallery-panels">
+                        <div class="gallery-panel gallery-panel-ar" id="gallery-panel-ar" role="tabpanel" aria-labelledby="screenshots-ar" lang="ar" dir="rtl">
+                            <div class="screenshot-rail" tabindex="0" aria-label="لقطات شاشة ItziPDF 2.0 باللغة العربية">
+                                <figure class="screenshot-card">
+                                    <img src="../../assets/itzipdf/v2/ar/01-home.webp" width="1080" height="1920" alt="الشاشة الرئيسية في ItziPDF 2.0 مع فتح ملف PDF والمسح والإجراءات السريعة وفئات الأدوات" decoding="async">
+                                    <figcaption>بداية جديدة لملفات PDF</figcaption>
+                                </figure>
+                                <figure class="screenshot-card">
+                                    <img src="../../assets/itzipdf/v2/ar/02-reader-1000-pages.webp" width="1080" height="1920" alt="قارئ ItziPDF يعرض ملفًا من ألف صفحة بسلاسة مع شريط التنقل" loading="lazy" decoding="async">
+                                    <figcaption>سلاسة مع أكثر من 1000 صفحة</figcaption>
+                                </figure>
+                                <figure class="screenshot-card">
+                                    <img src="../../assets/itzipdf/v2/ar/03-all-tools.webp" width="1080" height="1920" alt="دليل أدوات ItziPDF مع الفئات والبحث الفوري" loading="lazy" decoding="async">
+                                    <figcaption>34 أداة بالكامل على جهازك</figcaption>
+                                </figure>
+                                <figure class="screenshot-card">
+                                    <img src="../../assets/itzipdf/v2/ar/04-compress.webp" width="1080" height="1920" alt="أداة ضغط PDF في ItziPDF بمستويات خفيف وموصى به وقوي" loading="lazy" decoding="async">
+                                    <figcaption>خيارات واضحة لكل أداة</figcaption>
+                                </figure>
+                                <figure class="screenshot-card">
+                                    <img src="../../assets/itzipdf/v2/ar/05-settings.webp" width="1080" height="1920" alt="إعدادات ItziPDF للمظهر واللغة والملفات وإعدادات المعالجة والقارئ" loading="lazy" decoding="async">
+                                    <figcaption>خصّصه على طريقتك</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="gallery-panel gallery-panel-en" id="gallery-panel-en" role="tabpanel" aria-labelledby="screenshots-en" lang="en" dir="ltr" hidden>
+                            <div class="screenshot-rail" tabindex="0" aria-label="English ItziPDF 2.0 screenshots">
+                                <figure class="screenshot-card">
+                                    <img src="../../assets/itzipdf/v2/en-US/01-home.webp" width="1080" height="1920" alt="ItziPDF 2.0 home screen showing Open a PDF, Scan, quick actions, Favourite tools and 34 tool categories" loading="lazy" decoding="async">
+                                    <figcaption>A fresh home for your PDFs</figcaption>
+                                </figure>
+                                <figure class="screenshot-card">
+                                    <img src="../../assets/itzipdf/v2/en-US/02-reader-1000-pages.webp" width="1080" height="1920" alt="ItziPDF reader smoothly viewing a 1,000-page PDF with page slider" loading="lazy" decoding="async">
+                                    <figcaption>Smooth with 1,000+ pages</figcaption>
+                                </figure>
+                                <figure class="screenshot-card">
+                                    <img src="../../assets/itzipdf/v2/en-US/03-all-tools.webp" width="1080" height="1920" alt="ItziPDF tools directory with categories and instant search" loading="lazy" decoding="async">
+                                    <figcaption>34 tools, all on your device</figcaption>
+                                </figure>
+                                <figure class="screenshot-card">
+                                    <img src="../../assets/itzipdf/v2/en-US/04-compress.webp" width="1080" height="1920" alt="ItziPDF Compress PDF tool showing Light, Recommended and Strong presets" loading="lazy" decoding="async">
+                                    <figcaption>Clear options for every tool</figcaption>
+                                </figure>
+                                <figure class="screenshot-card">
+                                    <img src="../../assets/itzipdf/v2/en-US/05-settings.webp" width="1080" height="1920" alt="ItziPDF Settings showing appearance, language, files, processing defaults and reader options" loading="lazy" decoding="async">
+                                    <figcaption>Make it yours</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="gallery-hint" data-arabic="اسحب أو مرّر أفقيًا لاستعراض جميع لقطات الشاشة الخمس." data-english="Swipe or scroll horizontally to explore all 5 screenshots.">اسحب أو مرّر أفقيًا لاستعراض جميع لقطات الشاشة الخمس.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="section ip-bg-rich" id="features" aria-labelledby="features-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">الجديد في الإصدار 2.0</span>
+                    <h2 class="section-title" id="features-title">كل ما تحتاجه لملفات PDF <span class="text-gradient">في هاتف واحد</span></h2>
+                    <p class="section-subtitle">إعادة بناء شاملة لإصدار 2.0 صُممت للملفات الضخمة، والتحرير المتكامل، والخصوصية الحقيقية دون اتصال.</p>
+                </div>
+                <div class="ip-grid">
+                    <article class="about-card" data-aos="fade-up">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>
+                        </div>
+                        <h3>تحويل Word إلى PDF دون إنترنت</h3>
+                        <p>حوّل مستندات Word مباشرة على هاتفك عبر محرك التحويل المحلي الخاص بنا—دون خوادم خارجية ودون انتظار أو اتصال بالإنترنت.</p>
+                        <ul class="ip-list">
+                            <li>يدعم ملفات <code dir="ltr">.docx</code> و<code dir="ltr">.docm</code> و<code dir="ltr">.dotx</code> وملفات <code dir="ltr">.doc</code> القديمة</li>
+                            <li>يحافظ على العناوين والقوائم والجداول والصور والرؤوس والتذييلات وأرقام الصفحات والحواشي</li>
+                            <li>يعرض النص العربي والنص المختلط بالعربية والإنجليزية بتشكيل واتجاه صحيحين، لملف واحد أو عدة ملفات معًا</li>
+                        </ul>
+                    </article>
+
+                    <article class="about-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        </div>
+                        <h3>قارئ مصمم لأكثر من 1000 صفحة</h3>
+                        <p>افتح الكتب والملفات الضخمة دون تعليق أو صفحات رمادية، وتابع القراءة فورًا من آخر صفحة وصلت إليها.</p>
+                        <ul class="ip-list">
+                            <li>عرض متواصل أو صفحة بصفحة مع تكبير واضح وشريط صفحات وصور مصغّرة</li>
+                            <li>بحث سريع يفهم اختلاف أشكال الحروف العربية، مع الإشارات المرجعية وجدول المحتويات</li>
+                            <li>وضع ليلي ووضع بني دافئ (Sepia)، وتقليب كتب من اليمين إلى اليسار، والقراءة الصوتية</li>
+                        </ul>
+                    </article>
+
+                    <article class="about-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+                        </div>
+                        <h3>استوديو الصفحات والدمج والتقسيم</h3>
+                        <p>نظّم المستندات بصريًا عبر شبكة مصغّرات واضحة مع التراجع والإعادة.</p>
+                        <ul class="ip-list">
+                            <li>اسحب الصفحات لترتيبها، أو دوّرها وكرّرها واحذفها وأدرج صفحات فارغة أو ملفات PDF أو صورًا</li>
+                            <li>ادمج أي عدد من ملفات PDF والصور مع اختيار صفحات كل ملف أو الدمج المتناوب لوجهين</li>
+                            <li>قسّم حسب النطاقات أو كل عدد صفحات أو كل صفحة أو أقصى حجم أو الإشارات المرجعية أو بالنقر بين الصفحات</li>
+                        </ul>
+                    </article>
+
+                    <article class="about-card" data-aos="fade-up">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                        </div>
+                        <h3>التوقيع والتعليق والأختام والإخفاء النهائي</h3>
+                        <p>وقّع مستنداتك وأضف الملاحظات والأرقام وأخفِ المعلومات الحساسة نهائيًا مع معاينة مباشرة قبل الحفظ.</p>
+                        <ul class="ip-list">
+                            <li>ارسم توقيعك أو اكتبه أو استورده واحفظه بخصوصية داخل التطبيق</li>
+                            <li>رؤوس وتذييلات مع التاريخ الهجري والميلادي وترقيم بيتس، وأختام ثنائية اللغة</li>
+                            <li>أداة الإخفاء النهائي تحذف النص المحدد وتغطي المنطقة بشكل دائم مع التحقق من النتيجة</li>
+                        </ul>
+                    </article>
+
+                    <article class="about-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                        </div>
+                        <h3>الضغط والتحسين والحماية</h3>
+                        <p>صغّر الملفات بوضوح مع إبقاء النص حادًا، وأصلح الملفات التالفة، واحمِ مستنداتك بتشفير قوي.</p>
+                        <ul class="ip-list">
+                            <li>مستويات ضغط خفيف وموصى به وقوي وأقصى مع تقدير الحجم قبل التنفيذ وبعده</li>
+                            <li>تشفير AES-256 مع صلاحيات الطباعة والنسخ والتعديل، بالإضافة لفك الحماية وتنظيف البيانات المخفية</li>
+                            <li>أرشفة PDF/A، وتثبيت النماذج والطبقات، والتدرج الرمادي، وإصلاح الملفات، والمقارنة جنبًا إلى جنب</li>
+                        </ul>
+                    </article>
+
+                    <article class="about-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-icon">
+                            <svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                        <h3>ثنائي اللغة ومصمم على طريقتك</h3>
+                        <p>تجربة عربية وإنجليزية أصيلة بدعم كامل للاتجاه من اليمين إلى اليسار وخيارات تخصيص واسعة.</p>
+                        <ul class="ip-list">
+                            <li>أرقام عربية هندية، وتواريخ هجرية، وأسماء ملفات تدعم العربية، وبحث عربي ذكي</li>
+                            <li>سمة Itzi البرتقالية مع 7 لوحات ألوان أخرى وMaterial You والوضع الداكن والأسود الخالص AMOLED</li>
+                            <li>تخصيص الإجراءات السريعة وأنماط التسمية وحجم النص وتقليل الحركة ووصفات المعالجة الجماعية</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workflow -->
+        <section class="section ip-bg-soft" id="workflow" aria-labelledby="workflow-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">كيف يعمل</span>
+                    <h2 class="section-title" id="workflow-title">اختر وعالج <span class="text-gradient">وواصل العمل بسلاسة</span></h2>
+                    <p class="section-subtitle">لا يُستبدل ملفك الأصلي أبدًا؛ كل أداة تُنشئ ملفًا جديدًا جاهزًا للفتح أو المشاركة أو الإرسال مباشرة إلى أداة أخرى.</p>
+                </div>
+                <ol class="ip-steps">
+                    <li class="ip-step" data-aos="fade-up">
+                        <span class="ip-step-number" aria-hidden="true">1</span>
+                        <h3>افتح أو شارك أو امسح ضوئيًا</h3>
+                        <p>اختر ملفات من جهازك أو من ملفات ItziPDF، أو افتح ملفات PDF وWord مباشرة من التطبيقات الأخرى، أو امسح الأوراق، أو ابدأ من اختصارات الشاشة الرئيسية.</p>
+                    </li>
+                    <li class="ip-step" data-aos="fade-up" data-aos-delay="100">
+                        <span class="ip-step-number" aria-hidden="true">2</span>
+                        <h3>معالجة خاصة على جهازك</h3>
+                        <p>اختر المستوى المناسب أو خصّص الخيارات مع معاينة مباشرة. تعمل كل عملية محليًا مع شريط تقدم واضح وإمكانية الإلغاء في أي لحظة.</p>
+                    </li>
+                    <li class="ip-step" data-aos="fade-up" data-aos-delay="200">
+                        <span class="ip-step-number" aria-hidden="true">3</span>
+                        <h3>احفظ أو شارك أو واصل بأداة أخرى</h3>
+                        <p>افتح النتيجة في القارئ أو أعد تسميتها أو احفظ نسخة في مجلدك المختار، أو أرسلها فورًا إلى أداة أخرى—أو احفظ وصفة جماعية مثل: Word ← ضغط ← ترقيم ← حماية.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Complete 34-Tool Directory -->
+        <section class="section ip-bg-rich" id="tools" aria-labelledby="tools-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">الدليل الكامل</span>
+                    <h2 class="section-title" id="tools-title">جميع الأدوات <span class="text-gradient">الـ 34</span> دون قيود مدفوعة</h2>
+                    <p class="section-subtitle">كل أداة في القائمة أدناه مدمجة بالكامل داخل ItziPDF 2.0 وتعمل مباشرة على هاتفك الأندرويد.</p>
+                </div>
+
+                <div class="ip-tools-grid">
+                    <article class="ip-tool-card" data-aos="fade-up">
+                        <div class="ip-tool-card-head">
+                            <div class="card-icon">
+                                <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+                            </div>
+                            <span class="ip-tool-count">8 أدوات</span>
+                        </div>
+                        <h3>تنظيم الصفحات</h3>
+                        <ul class="ip-chips">
+                            <li>دمج PDF</li>
+                            <li>تقسيم PDF</li>
+                            <li>تنظيم الصفحات (استوديو الصفحات)</li>
+                            <li>استخراج صفحات</li>
+                            <li>حذف الصفحات والفارغة</li>
+                            <li>تدوير الصفحات</li>
+                            <li>قص الصفحات</li>
+                            <li>إضافة صفحات فارغة</li>
+                        </ul>
+                    </article>
+
+                    <article class="ip-tool-card" data-aos="fade-up" data-aos-delay="50">
+                        <div class="ip-tool-card-head">
+                            <div class="card-icon">
+                                <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+                            </div>
+                            <span class="ip-tool-count">5 أدوات</span>
+                        </div>
+                        <h3>التحويل إلى PDF</h3>
+                        <ul class="ip-chips">
+                            <li>Word إلى PDF ‏(.docx و.doc)</li>
+                            <li>مسح إلى PDF</li>
+                            <li>صور إلى PDF</li>
+                            <li>نص وMarkdown إلى PDF</li>
+                            <li>إنشاء ورق PDF</li>
+                        </ul>
+                    </article>
+
+                    <article class="ip-tool-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="ip-tool-card-head">
+                            <div class="card-icon">
+                                <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+                            </div>
+                            <span class="ip-tool-count">3 أدوات</span>
+                        </div>
+                        <h3>التحويل من PDF</h3>
+                        <ul class="ip-chips">
+                            <li>PDF إلى صور (JPG / PNG)</li>
+                            <li>PDF إلى نص</li>
+                            <li>استخراج الصور المضمّنة</li>
+                        </ul>
+                    </article>
+
+                    <article class="ip-tool-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="ip-tool-card-head">
+                            <div class="card-icon">
+                                <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                            </div>
+                            <span class="ip-tool-count">6 أدوات</span>
+                        </div>
+                        <h3>التعديل والتوقيع</h3>
+                        <ul class="ip-chips">
+                            <li>توقيع PDF</li>
+                            <li>تعليق ورسم</li>
+                            <li>علامة مائية</li>
+                            <li>أرقام الصفحات</li>
+                            <li>الرأس والتذييل (هجري وبيتس)</li>
+                            <li>أختام ثنائية اللغة</li>
+                        </ul>
+                    </article>
+
+                    <article class="ip-tool-card" data-aos="fade-up">
+                        <div class="ip-tool-card-head">
+                            <div class="card-icon">
+                                <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+                            </div>
+                            <span class="ip-tool-count">6 أدوات</span>
+                        </div>
+                        <h3>التحسين</h3>
+                        <ul class="ip-chips">
+                            <li>ضغط PDF</li>
+                            <li>تثبيت الطبقات والنماذج</li>
+                            <li>البيانات الوصفية والخصوصية</li>
+                            <li>إصلاح PDF</li>
+                            <li>أرشفة PDF/A</li>
+                            <li>تدرج رمادي</li>
+                        </ul>
+                    </article>
+
+                    <article class="ip-tool-card" data-aos="fade-up" data-aos-delay="50">
+                        <div class="ip-tool-card-head">
+                            <div class="card-icon">
+                                <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            </div>
+                            <span class="ip-tool-count">3 أدوات</span>
+                        </div>
+                        <h3>الحماية والأمان</h3>
+                        <ul class="ip-chips">
+                            <li>حماية PDF ‏(AES-256)</li>
+                            <li>فتح حماية PDF</li>
+                            <li>إخفاء نهائي للمحتوى</li>
+                        </ul>
+                    </article>
+
+                    <article class="ip-tool-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="ip-tool-card-head">
+                            <div class="card-icon">
+                                <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                            </div>
+                            <span class="ip-tool-count">أداتان</span>
+                        </div>
+                        <h3>القراءة والمقارنة</h3>
+                        <ul class="ip-chips">
+                            <li>قارئ PDF ‏(أكثر من 1000 صفحة)</li>
+                            <li>مقارنة ملفات PDF جنبًا إلى جنب</li>
+                        </ul>
+                    </article>
+
+                    <article class="ip-tool-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="ip-tool-card-head">
+                            <div class="card-icon">
+                                <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                            </div>
+                            <span class="ip-tool-count">أداة واحدة</span>
+                        </div>
+                        <h3>المعالجة الذكية</h3>
+                        <ul class="ip-chips">
+                            <li>المعالجة الجماعية والوصفات</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <p class="ip-tools-note">تشمل أداة «إنشاء ورق PDF» صفحات مسطّرة ومربعات ومنقّطة وهندسية وملاحظات كورنيل ومخططًا أسبوعيًا وقائمة مهام ومدرجات موسيقية وأوراق تدريب على الخط العربي جاهزة للطباعة.</p>
+            </div>
+        </section>
+
+        <!-- Privacy Callout -->
+        <section class="section ip-bg-soft" id="privacy" aria-labelledby="privacy-title">
+            <div class="container">
+                <div class="ip-callout" data-aos="fade-up">
+                    <div class="card-icon">
+                        <svg aria-hidden="true" focusable="false" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                    </div>
+                    <h2 id="privacy-title">مصمم للخصوصية وشفاف في كل تفصيل</h2>
+                    <p>تُعالَج مستنداتك مباشرة على هاتفك ولا تُرفع إلى ItziGroup أبدًا. لا يحتاج ItziPDF إلى إنشاء حساب، ولا يشغّل أي خدمة تحليلات أو تقارير أعطال.</p>
+                    <ul class="ip-list">
+                        <li>تبقى الملفات الناتجة داخل مكتبة ItziPDF الخاصة حتى تحذفها أو تمسح بيانات التطبيق أو تزيله، ويمكنك نسخها إلى أي مجلد تختاره أو مشاركتها.</li>
+                        <li>تُحفظ مواضع القراءة والإشارات المرجعية والتوقيعات والوصفات على جهازك فقط، ولا تُحفظ كلمات مرور ملفات PDF أبدًا.</li>
+                        <li>بلا إذن كاميرا وبلا «الوصول إلى جميع الملفات»: يعتمد المسح الضوئي على ماسح ML Kit على الجهاز عبر خدمات Google Play أو على تطبيق الكاميرا في هاتفك.</li>
+                        <li>تستخدم الميزات الاختيارية مثل القراءة الصوتية والطباعة محرك النطق ونظام الطباعة المثبّتين على جهازك.</li>
+                    </ul>
+                    <div class="ip-callout-links">
+                        <a href="/itzipdf/privacy#arabic" class="btn btn-small btn-outline">سياسة خصوصية ItziPDF</a>
+                        <a href="/itzipdf/terms#arabic" class="btn btn-small btn-outline">شروط استخدام ItziPDF</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section ip-bg-rich" id="faq" aria-labelledby="faq-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">الأسئلة الشائعة</span>
+                    <h2 class="section-title" id="faq-title">إجابات <span class="text-gradient">سريعة</span></h2>
+                </div>
+                <div class="ip-faq">
+                    <details>
+                        <summary>هل يرفع ItziPDF ملفات PDF أو Word الخاصة بي؟</summary>
+                        <div class="ip-faq-answer">
+                            <p>لا. تعمل جميع أدوات المستندات في ItziPDF 2.0—بما فيها تحويل Word إلى PDF والضغط والتوقيع والإخفاء النهائي والتشفير—محليًا بالكامل على هاتفك الأندرويد. لا تتلقى ItziGroup ملفاتك ولا أسماءها ولا كلمات مرورك ولا توقيعاتك ولا سجل قراءتك.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>هل ItziPDF مجاني فعلًا ولا يتطلب حسابًا؟</summary>
+                        <div class="ip-faq-answer">
+                            <p>نعم. لا يتضمن ItziPDF 2.0 حسابات ولا اشتراكات ولا مشتريات داخل التطبيق ولا يضع علامات مائية على ملفاتك. جميع الأدوات الـ 34 متاحة فور التثبيت.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>هل ما زالت هناك حدود صارمة لعدد الصفحات أو حجم الملف في الإصدار 2.0؟</summary>
+                        <div class="ip-faq-answer">
+                            <p>أزال الإصدار 2.0 قيود 500 صفحة و250 ميغابايت وحدود عدد الملفات القديمة. يمكنك قراءة ملفات تتجاوز 1000 صفحة بسلاسة ودمج أي عدد من ملفات PDF والصور، ولا يقيّد العمل سوى سعة التخزين والذاكرة وسرعة جهازك. وتقبل أداة «نص إلى PDF» حتى 2,000,000 حرف (أو ملفات نصية مستوردة حتى 8 ميغابايت)، مع إظهار التقدم وإتاحة الإلغاء.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>كيف يتعامل تحويل Word إلى PDF مع المستندات العربية؟</summary>
+                        <div class="ip-faq-answer">
+                            <p>يحوّل محركنا المدمج ملفات <code dir="ltr">.docx</code> و<code dir="ltr">.docm</code> و<code dir="ltr">.dotx</code> و<code dir="ltr">.doc</code> محليًا باستخدام خطوط عربية ولاتينية مدمجة متوافقة القياسات، مع ضبط التشكيل والاتجاه في النصوص العربية والمختلطة. وإذا احتوى المستند على عناصر قد يختلف مظهرها مثل المخططات أو SmartArt أو النص الملتف حول صور عائمة، فسينبّهك التطبيق إلى ذلك.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>أين تُحفظ ملفات PDF التي أنشئها؟</summary>
+                        <div class="ip-faq-answer">
+                            <p>يُحفظ كل ملف ناتج داخل مكتبة ItziPDF الخاصة (في تبويب «الملفات») دون المساس بملفك الأصلي أبدًا. يمكنك أيضًا حفظ نسخة مستقلة في أي مجلد، أو تفعيل النسخ التلقائي إلى مجلد تختاره من «الإعدادات ← الملفات والتصدير»، أو مشاركته مع أي تطبيق. تذكّر نسخ ملفات المكتبة المهمة خارجها قبل إزالة التطبيق.</p>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>هل يبقى النص قابلًا للتحديد بعد ضغط ملف PDF؟</summary>
+                        <div class="ip-faq-answer">
+                            <p>نعم في مستويات «خفيف» و«موصى به» و«قوي»؛ يبقى النص قابلًا للتحديد والبحث وتُحفظ الروابط والإشارات المرجعية وحقول النماذج. أما «الضغط الأقصى» و«التدرج الرمادي» فيحفظان الصفحات كصور، ويوضح التطبيق ذلك لك قبل التنفيذ.</p>
+                        </div>
+                    </details>
+                </div>
+                <p class="ip-faq-more">هل لديك أسئلة أخرى؟ تفضّل بزيارة <a href="https://support.itzigroup.com/ar/#itzipdf" class="ip-inline-link" target="_blank" rel="noopener noreferrer">مركز دعم ItziPDF<span class="visually-hidden"> (يفتح في علامة تبويب جديدة)</span></a>.</p>
+            </div>
+        </section>
+
+        <!-- Download & Version Info -->
+        <section class="section ip-bg-soft" id="download" aria-labelledby="download-title">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">التحميل</span>
+                    <h2 class="section-title" id="download-title">احصل على <span class="text-gradient">ItziPDF 2.0</span> لأندرويد</h2>
+                </div>
+                <div class="ip-download">
+                    <p class="ip-release-pill">متوفر على Google Play</p>
+                    <h3>ItziPDF 2.0.0 (البناء 6)</h3>
+                    <p>ثبّته مباشرة من Google Play واستمتع بجميع الأدوات الـ 34 على جهازك مجانًا دون تسجيل.</p>
+                    <dl class="ip-facts">
+                        <div class="ip-fact">
+                            <dt>الإصدار</dt>
+                            <dd>2.0.0 (البناء 6)</dd>
+                        </div>
+                        <div class="ip-fact">
+                            <dt>المتطلبات</dt>
+                            <dd>أندرويد 7.0 أو أحدث</dd>
+                        </div>
+                        <div class="ip-fact">
+                            <dt>اللغات</dt>
+                            <dd>العربية والإنجليزية (RTL كامل)</dd>
+                        </div>
+                        <div class="ip-fact">
+                            <dt>نموذج العمل</dt>
+                            <dd>على الجهاز · مجاني · بلا حساب</dd>
+                        </div>
+                    </dl>
+                    <div class="ip-good-to-know">
+                        <h4>من الجيد أن تعرف</h4>
+                        <p>يعتمد حجم الملفات الكبيرة التي يمكنك معالجتها على مساحة التخزين والذاكرة وسرعة جهازك، وتعرض كل أداة شريط تقدم مع خيار الإلغاء. يحفظ «الضغط الأقصى» و«التدرج الرمادي» الصفحات كصور مع تنبيه واضح قبل البدء. راجع دائمًا المستندات المحوّلة أو الموقّعة أو المنقّحة قبل تقديمها رسميًا. اطّلع على <a href="/itzipdf/terms#arabic" class="ip-inline-link">شروط استخدام ItziPDF</a>.</p>
+                    </div>
+                    <div class="ip-download-actions">
+                        <a href="https://play.google.com/store/apps/details?id=com.itzigroup.itzipdf&amp;pcampaignid=web_share" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                            <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5 3.3a1 1 0 0 1 1.53-.84l12.1 8.7a1 1 0 0 1 0 1.68l-12.1 8.7A1 1 0 0 1 5 20.7V3.3Z"/></svg>
+                            <span>حمّله من Google Play</span><span class="visually-hidden"> (يفتح في علامة تبويب جديدة)</span>
+                        </a>
+                        <a href="https://support.itzigroup.com/ar/?product=itzipdf#contact" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                            <span>تواصل مع الدعم</span><span class="visually-hidden"> (يفتح في علامة تبويب جديدة)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="../../assets/logo-sm.png" alt="شعار ItziGroup" class="footer-logo" width="96" height="32" loading="lazy" decoding="async">
+                    <p>تقنية من أجل المستقبل — برمجيات عملية تعمل محليًا للاستخدام اليومي.</p>
+                </div>
+                <div class="footer-links footer-links-4">
+                    <nav class="footer-col" aria-label="ItziPDF">
+                        <h4>ItziPDF</h4>
+                        <a href="#top">نظرة عامة</a>
+                        <a href="#screenshots">لقطات الشاشة</a>
+                        <a href="#tools">34 أداة</a>
+                        <a href="#faq">الأسئلة الشائعة</a>
+                        <a href="/itzipdf" hreflang="en" lang="en">English</a>
+                    </nav>
+                    <nav class="footer-col" aria-label="القانونية">
+                        <h4>القانونية</h4>
+                        <a href="/itzipdf/privacy#arabic">سياسة خصوصية التطبيق</a>
+                        <a href="/itzipdf/terms#arabic">شروط استخدام التطبيق</a>
+                        <a href="/privacy">خصوصية الموقع</a>
+                        <a href="/terms">شروط الموقع</a>
+                    </nav>
+                    <nav class="footer-col" aria-label="ItziGroup">
+                        <h4>ItziGroup</h4>
+                        <a href="/">الصفحة الرئيسية</a>
+                        <a href="/#apps">تطبيقاتنا</a>
+                        <a href="https://support.itzigroup.com/ar/#itzipdf" target="_blank" rel="noopener noreferrer">مركز الدعم</a>
+                    </nav>
+                    <nav class="footer-col" aria-label="التواصل الاجتماعي">
+                        <h4>تواصل معنا</h4>
+                        <a href="https://www.instagram.com/itzigroup/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://www.facebook.com/profile.php?id=61591652615538" target="_blank" rel="noopener noreferrer">Facebook</a>
+                        <a href="https://x.com/ItziGroup" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ItziGroup. جميع الحقوق محفوظة.</p>
+                <p class="footer-domain" dir="ltr">itzigroup.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../script.js?v=20261120"></script>
+</body>
+</html>
