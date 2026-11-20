@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ItziNotes Privacy Policy | ItziGroup</title>
+    <meta name="description" content="How ItziNotes 1.0 handles local notebooks (.itzinote), AES-256-GCM Vault encryption, optional permissions, and ItziPDF Workspace transfers in English and Arabic.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="color-scheme" content="dark">
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="ItziNotes Privacy Policy | ItziGroup">
+    <meta property="og:description" content="How ItziNotes 1.0 protects your notes, vector ink, audio sync recordings, and encrypted Vault completely offline.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://itzigroup.com/itzinotes/privacy">
+    <meta property="og:image" content="https://itzigroup.com/assets/itzinotes-og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="ItziGroup">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ItziGroup">
+    <meta name="twitter:title" content="ItziNotes Privacy Policy | ItziGroup">
+    <meta name="twitter:description" content="100% local-first privacy policy for ItziNotes 1.0 on Android in English and Arabic.">
+    <meta name="twitter:image" content="https://itzigroup.com/assets/itzinotes-og.png">
+
+    <link rel="canonical" href="https://itzigroup.com/itzinotes/privacy">
+    <link rel="icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+    <link rel="stylesheet" href="../../styles.css?v=20261120">
+</head>
+<body>
+    <a class="skip-link" href="#english">Skip to main content</a>
+
+    <nav class="navbar legal-navbar" id="navbar" aria-label="Primary">
+        <div class="nav-container">
+            <a href="/" class="nav-logo" aria-label="ItziGroup home">
+                <img src="../../assets/logo-sm.png" alt="ItziGroup Logo" class="logo-img" width="108" height="36">
+            </a>
+            <div class="subpage-nav-links">
+                <a href="/itzinotes" class="nav-link">← ItziNotes</a>
+                <a href="/itzinotes/terms" class="nav-link">App Terms</a>
+                <a href="https://support.itzigroup.com/#itzinotes" class="nav-link subpage-hide-mobile" target="_blank" rel="noopener noreferrer">Support</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="legal-hero">
+        <div class="container">
+            <span class="section-tag">ItziNotes 1.0 Legal</span>
+            <h1 class="header-title">ItziNotes Privacy Policy</h1>
+            <p>Effective date: November 20, 2026 · Applies to ItziNotes 1.0</p>
+            <div class="policy-language-nav" aria-label="Document languages">
+                <a href="#english">English</a>
+                <a href="#arabic" lang="ar" dir="rtl">العربية</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="legal-content" id="english" tabindex="-1">
+        <h2>Developer and contact</h2>
+        <p>ItziNotes is developed and provided by ItziGroup. For privacy questions or support:</p>
+        <p><a href="mailto:itzigroup_support@itzigroup.com">itzigroup_support@itzigroup.com</a> · <a href="https://itzigroup.com/itzinotes">https://itzigroup.com/itzinotes</a></p>
+
+        <h2>1. 100% Local-First &amp; Offline Privacy</h2>
+        <p>ItziNotes is designed from the ground up to operate completely on your Android device. ItziNotes 1.0 requires no account, runs no analytics or ad tracking SDKs, does not even declare the Android <code>INTERNET</code> permission, and never uploads your notebooks, handwriting, audio recordings, mind maps, tasks, or imported PDFs to any server.</p>
+
+        <h2>2. Data Stored Locally on Your Device</h2>
+        <ul>
+            <li><strong>Notebooks (<code>.itzinote</code>):</strong> Each notebook is saved as a self-contained ZIP package inside private app storage holding your rich text, vector ink strokes (<code>.inkbin</code>), embedded images, audio, videos, custom fonts, and thumbnails.</li>
+            <li><strong>Local Search Index &amp; Productivity Data:</strong> A local SQLite + FTS4 database indexes your unlocked notes, folders, tasks, smart clipboard snippets, and version snapshots for instant search. Locked Vault note bodies are excluded from full-text indexing.</li>
+            <li><strong>Private Vault Encryption:</strong> Notes placed in your Vault are encrypted locally using AES-256-GCM with keys stored in hardware-backed Android Keystore. Your optional Vault PIN is stored only as a salted SHA-256 hash.</li>
+        </ul>
+
+        <h2>3. Optional Permissions</h2>
+        <ul>
+            <li><strong>Microphone (<code>RECORD_AUDIO</code>):</strong> Requested only when you tap Record to capture Lecture Audio synced with your ink strokes.</li>
+            <li><strong>Notifications (<code>POST_NOTIFICATIONS</code>):</strong> Optional local reminders for scheduled tasks and study plans.</li>
+            <li><strong>Biometrics (<code>USE_BIOMETRIC</code>):</strong> Used strictly on-device via Android BiometricPrompt to unlock Vault-protected notebooks.</li>
+        </ul>
+
+        <h2>4. On-Device ItziPDF Workspace Integration</h2>
+        <p>When you send a PDF or <code>.itzinote</code> package from ItziNotes to ItziPDF (or annotate a PDF sent from ItziPDF), files are shared strictly on-device using scoped Android <code>FileProvider</code> URI grants. Zero bytes leave your device.</p>
+
+        <h2>5. Backups, Portability &amp; Deletion</h2>
+        <p>You retain full ownership of your data. Export any note as <code>.itzinote</code>, vector PDF, Markdown, HTML, PNG, or SVG, or export a complete <code>.itzibackup</code> archive at any time. Emptying Trash or uninstalling the app permanently removes local copies from your device.</p>
+
+        <hr class="policy-divider">
+
+        <div class="arabic-policy" id="arabic" lang="ar" dir="rtl">
+            <h1 class="language-title">سياسة خصوصية ItziNotes</h1>
+            <p class="policy-date">تاريخ السريان: 20 نوفمبر 2026 · تنطبق على ItziNotes 1.0</p>
+
+            <h2>المطوّر والتواصل</h2>
+            <p>يُقدَّم تطبيق ItziNotes من تطوير ItziGroup. لأي استفسارات تتعلق بالخصوصية أو الدعم الفني:</p>
+            <p><a href="mailto:itzigroup_support@itzigroup.com">itzigroup_support@itzigroup.com</a> · <a href="https://itzigroup.com/itzinotes/ar">https://itzigroup.com/itzinotes/ar</a></p>
+
+            <h2>١. خصوصية محلية بالكامل بدون إنترنت</h2>
+            <p>صُمِّم تطبيق ItziNotes ليعمل محليًا بنسبة ١٠٠٪ على جهازك. لا يتطلب الإصدار 1.0 إنشاء حساب، ولا يحتوي على حزم تتبّع أو تحليلات أو إعلانات، بل لا يطلب إذن الاتصال بالإنترنت أساسًا، ولا يرفع ملاحظاتك أو رسوماتك أو تسجيلاتك الصوتية أو ملفات PDF إلى أي خادم خارجي.</p>
+
+            <h2>٢. البيانات المحفوظة محليًا على جهازك</h2>
+            <ul>
+                <li><strong>الدفاتر بصيغة <code>.itzinote</code>:</strong> يُحفظ كل دفتر كملف ZIP مستقل داخل مساحة التطبيق الخاصة، شاملاً النصوص والخطوط المتجهية والصور والصوتيات والخطوط المخصصة.</li>
+                <li><strong>فهرس البحث والمهام:</strong> قاعدة بيانات SQLite محلية للبحث الفوري وإدارة المجلدات والمهام والحافظة الذكية وسجل الإصدارات. تُستثنى نصوص الملاحظات المقفلة داخل الخزنة من الفهرسة حمايةً لخصوصيتك.</li>
+                <li><strong>تشفير الخزنة الآمنة (Vault):</strong> تُشفَّر الملاحظات المقفلة محليًا بخوارزمية AES-256-GCM بمفتاح محمي عبر Android Keystore، ويُحفظ رمز الـ PIN كقيمة SHA-256 مملّحة فقط.</li>
+            </ul>
+
+            <h2>٣. الأذونات الاختيارية</h2>
+            <ul>
+                <li><strong>الميكروفون:</strong> يُطلب فقط عند الضغط يدويًا على تسجيل صوت المحاضرة المتزامن مع الحبر.</li>
+                <li><strong>الإشعارات:</strong> اختيارية للتذكيرات المحلية بالمهام ومواعيد الدراسة.</li>
+                <li><strong>البصمة وقفل الجهاز:</strong> تُستخدم محليًا فقط لفتح الخزنة الآمنة دون مغادرة البيانات للجهاز.</li>
+            </ul>
+
+            <h2>٤. التكامل المحلي مع ItziPDF</h2>
+            <p>عند نقل ملف PDF أو حزمة <code>.itzinote</code> بين ItziNotes وItziPDF، يتم النقل مباشرة داخل جهازك عبر <code>FileProvider</code> بصلاحيات مؤقتة للملف المحدد فقط دون أي خوادم وسطية.</p>
+
+            <h2>٥. النسخ الاحتياطي والحذف الكامل</h2>
+            <p>بياناتك ملكك بالكامل؛ يمكنك تصدير أي ملاحظة بصيغ متعددة أو أخذ نسخة احتياطية كاملة بصيغة <code>.itzibackup</code> في أي وقت، كما يؤدي إفراغ سلة المحذوفات أو حذف التطبيق إلى مسح جميع البيانات المحلية نهائيًا.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 ItziGroup. All rights reserved.</p>
+                <p class="footer-domain"><a href="/itzinotes">ItziNotes</a> · <a href="/">itzigroup.com</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

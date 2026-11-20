@@ -26,6 +26,24 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://itzigroup.com/itzinotes</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itzigroup.com/itzinotes"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://itzigroup.com/itzinotes/ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itzigroup.com/itzinotes"/>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://itzigroup.com/itzinotes/ar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://itzigroup.com/itzinotes"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://itzigroup.com/itzinotes/ar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itzigroup.com/itzinotes"/>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://itzigroup.com/itzipdf/privacy</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>yearly</changefreq>
@@ -33,6 +51,18 @@
   </url>
   <url>
     <loc>https://itzigroup.com/itzipdf/terms</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://itzigroup.com/itzinotes/privacy</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://itzigroup.com/itzinotes/terms</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
